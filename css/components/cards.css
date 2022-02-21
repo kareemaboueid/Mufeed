@@ -6,24 +6,43 @@ component: cards
 
 /* card */
 .card {
-  max-width: fit-content;
+  display: block;
   box-shadow: var(--box-shadow-base);
   overflow: hidden;
   background-color: var(--white);
+  border-radius: var(--border-radius-base);
+  padding: 3rem 0;
+  border: 5px solid transparent;
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
   transition: var(--transition-base);
-  border-radius: .3rem;
+  -webkit-transition: var(--transition-base);
+  -moz-transition: var(--transition-base);
+  -ms-transition: var(--transition-base);
+  -o-transition: var(--transition-base);
+}
+
+.card:hover {
+  border: 5px solid var(--white);
+  background-color: var(--prim-color-50);
+  box-shadow: var(--box-shadow-alt);
+  color: var(--prim-color-700);
+  text-decoration: none;
 }
 
 .card-header {
+  font-size: var(--font-size-h4);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 10rem;
+  gap: 1rem;
 }
 
-.card-content {
-  padding: var(--padding-lg);
+.card-header i {
+  font-size: 2.5rem;
 }

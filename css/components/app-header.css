@@ -1,0 +1,19 @@
+.app_header {
+  background-color: var(--prim-color-600);
+  color: var(--sec-color-100);
+}
+
+.app_header-logo a {
+  color: var(--prim-color-100);
+}
+
+.app_header-logo a h1 {
+  font-size: var(--font-size-h4);
+  font-family: var(--font-family-brand);
+}
+
+.app_header-logo a:hover,
+.app_header-logo a:focus {
+  text-decoration: none;
+  color: var(--sec-color-50);
+}

@@ -1,1 +1,118 @@
-CUST_ACC_OPEN page
+<!-- CUST_ACC_OPEN page -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- primary tags -->
+  <meta charset="UTF-8" />
+  <title>Mufeed - New Account Opening</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- app favicons -->
+  <link rel="icon" href="media/logo.png" type="image/png" />
+  <!-- app info -->
+  <meta name="title" content="Mufeed" />
+  <meta name="description" content="Daily office work routine and tasks organizer" />
+  <meta name="author" content="Kareem Aboueid" />
+  <meta name="language" content="arabic" />
+  <!-- app fonticons (CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
+  <!-- app stylesheet -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <!-- app script -->
+  <script defer src="../js/app.js"></script>
+</head>
+
+<body>
+  <main>
+    <!-- START APP HEADER -->
+    <header class="app_header">
+      <div class="container">
+        <div class="row items-center">
+          <div class="col-6">
+            <div class="app_header-logo">
+              <a href="index.html">
+                <h1 class="brand"><span>🤖</span> مفيد</h1>
+              </a>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="app_header-description text-left">
+              <p> إعمل بذكاء وانجز مهامك بسهولة. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END APP HEADER -->
+    <!-- START BREADCRUMBS -->
+    <div class="breadcrumbs p-t-1rem p-b-1rem">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 justify-center items-center">
+            <span class="prev">
+              <i class="ri-home-7-fill"></i>
+              <a class="underline" href="../index.html">الرئيسية</a>
+            </span>
+            <span class="separator"><i class="ri-arrow-left-s-line"></i></span>
+            <span class="currant"><i class="ri-user-add-fill"></i> فتح حساب جديد</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END BREADCRUMBS -->
+    <!-- START SERVICES SECTION -->
+    <section class="data_input p-2rem">
+      <div class="container">
+        <!-- 1. open_acc_index_table -->
+        <p>إسم العميل:</p>
+        <br>
+        <div class="row items-center justify-center p-t-0-25rem p-b-0-25rem">
+          <div class="col-2">
+            <select class="app-global-input" name="CUST_NAME_START" id="CUST_NAME_START">
+              <option selected value="none"></option>
+              <option value="مؤسسة">مؤسسة</option>
+              <option value="شركة">شركة</option>
+              <option value="محل">محل</option>
+              <option value="مفروشات">مفروشات</option>
+              <option value="هيئة">هيئة</option>
+              <option value="مجموعة">مجموعة</option>
+              <option value="مركز">مركز</option>
+              <option value="المؤسسة">المؤسسة</option>
+              <option value="الشركة">الشركة</option>
+              <option value="المحل">المحل</option>
+              <option value="المفروشات">المفروشات</option>
+              <option value="الهيئة">الهيئة</option>
+              <option value="المجموعة">المجموعة</option>
+              <option value="المركز">المركز</option>
+            </select>
+          </div>
+          <div class="col-8">
+            <input class="app-global-input p-0-5rem p-r-1rem p-l-1rem" type="text" name="CUST_NAME" id="CUST_NAME"
+              placeholder="إسم العميل" required>
+          </div>
+          <div class="col-2">
+            <select class="app-global-input" name="CUST_NAME_END" id="CUST_NAME_END">
+              <option selected value="none"></option>
+              <option value="التجارية">التجارية</option>
+              <option value="للتجارة">للتجارة</option>
+              <option value="للمفروشات">للمفروشات</option>
+              <option value="للسجاد">للسجاد</option>
+              <option value="للأثاث">للأثاث</option>
+              <option value="للمقاولات">للمقاولات</option>
+              <option value="للمقاولات-العامة">للمقاولات العامة</option>
+              <option value="للتصدير">للتصدير</option>
+              <option value="للإستيراد-والتصدير">للإستيراد والتصدير</option>
+            </select>
+          </div>
+        </div>
+        <!-- 2. open_acc_system_text -->
+        <!-- 3. open_acc_file_sticker -->
+        <!-- 4. open_acc_email_text -->
+      </div>
+    </section>
+    <!-- END SERVICES SECTION -->
+  </main>
+</body>
+
+</html>

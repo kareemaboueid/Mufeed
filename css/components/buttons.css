@@ -3,12 +3,12 @@
   display: block;
   background-color: inherit;
   padding: 1rem 1.8rem;
-  border-radius: 0.3rem;
+  border-radius: var(--border-radius-base);
   font-size: var(--font-size-h5);
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
 }
 
 .prim-btn {
