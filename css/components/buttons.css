@@ -1,0 +1,22 @@
+.btn-reset {
+  border: none;
+  display: block;
+  background-color: inherit;
+  padding: 1rem 1.8rem;
+  border-radius: 0.3rem;
+  font-size: var(--font-size-h5);
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+
+.prim-btn {
+  background-color: var(--prim-color-500);
+  color: var(--sec-color-50);
+}
+
+.sec-btn {
+  background-color: var(--sec-color-400);
+  color: var(--sec-color-900);
+}

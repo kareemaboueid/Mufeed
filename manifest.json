@@ -1,0 +1,31 @@
+{
+  "short_name": "Boilerbase",
+  "name": "Boilerbase starter template",
+  "description": "A modern, solid, customizable, well-organized, configerable, npm-powered starter environment for building web apps fast.",
+  "icons": [
+    {
+      "src": "media/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "media/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#f1f1f1",
+  "display_override": [
+    "window-control-overlay",
+    "minimal-ui"
+  ],
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#f1f1f1"
+}

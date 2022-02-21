@@ -1,0 +1,31 @@
+/*
+==============================================
+layout: header
+==============================================
+*/
+
+
+.header .brand {
+	background-color: var(--prim-color-100);
+}
+
+.header .brand .brand-img {
+	width: 5rem;
+}
+
+.header .brand a:hover,
+.header .brand a:focus,
+.header .brand a:visited {
+	text-decoration: none;
+}
+
+.header .brand .title {
+	color: #005489;
+	font-size: var(--font-size-h2);
+}
+
+.header .brand .description {
+	font-size: var(--font-size-h5);
+	color: var(--prim-color-400);
+}
+

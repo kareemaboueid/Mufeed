@@ -1,0 +1,27 @@
+/*
+==============================================
+Custom reset styles
+==============================================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+:root {
+  --font-family-base: 'Cairo', sans-serif;
+}
+
+
+/* html */
+html {
+ font-size: var(--font-size-base);
+}
+
+/* body */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--black);
+  font-weight: var(--font-weight-400);
+  background: var(--sec-color-100);
+}

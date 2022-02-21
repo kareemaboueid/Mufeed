@@ -1,0 +1,8 @@
+{
+  "arrowParens": "avoid",
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "strict",
+  "singleQuote": false,
+  "bracketSpacing": true
+}

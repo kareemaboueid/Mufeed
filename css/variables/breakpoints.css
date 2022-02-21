@@ -1,0 +1,21 @@
+/** ==============================================
+* Breakpoints - for global use among css files
+*
+* Boilerbase provide set of breakpoints variables to use it for media queries.
+*
+* @example
+*
+* @media screen and (max-width: var(--tablet)) {
+*   body {
+*     your style here...
+*   }
+* }
+============================================== */
+
+/* customizable breakpoints */
+:root {
+  --phone: 360px;
+  --tablet: 768px;
+  --desktop: 1366px;
+  --LGdesktop: 1920px;
+}

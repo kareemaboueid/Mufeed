@@ -1,0 +1,24 @@
+/*
+==============================================
+Layout - for global use among css files
+==============================================
+*/
+
+:root {
+  /* Border Variables */
+  --border-radius-base: 0.3rem;
+  --border-radius-round: 500rem;
+
+  /* Transition Variables */
+  --transition-base: all 250ms cubic-bezier((0.4, 0, 0.2, 1));
+
+  /* Box Shadow Variables */
+  --box-shadow-base: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  --box-shadow-alt: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  --box-shadow-inset: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}

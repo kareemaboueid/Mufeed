@@ -1,0 +1,66 @@
+/*
+==============================================
+Utilities: typography
+==============================================
+*/
+
+.no-underline {
+  text-decoration: none;
+}
+
+/* no select */
+.no-select {
+  user-select: none;
+  cursor: default;
+}
+
+/* font weight */
+.font-w-100 {
+  font-weight: var(--font-weight-100);
+}
+.font-w-200 {
+  font-weight: var(--font-weight-200);
+}
+.font-w-300 {
+  font-weight: var(--font-weight-300);
+}
+.font-w-400 {
+  font-weight: var(--font-weight-400);
+}
+.font-w-500 {
+  font-weight: var(--font-weight-500);
+}
+.font-w-600 {
+  font-weight: var(--font-weight-600);
+}
+.font-w-700 {
+  font-weight: var(--font-weight-700);
+}
+.font-w-800 {
+  font-weight: var(--font-weight-800);
+}
+.font-w-900 {
+  font-weight: var(--font-weight-900);
+}
+
+/* text transform */
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+
+/* text align */
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}

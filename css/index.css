@@ -1,0 +1,29 @@
+/** ==============================================
+* Boilerbase css partials.
+* Everything is crucially organized.
+*
+* @author Kareem Aboeid
+*
+* @Structure
+*
+* variables/
+*     * contains: breakpoints, colors, fonts, spacers ...
+*
+* base/
+*      * contains: boilerplate, reset
+*
+* components/
+*     * contains styled UI components: cards, buttons ...
+*
+* layout/
+*     * contains styled page parts: header, aside, footer ...
+*
+* index.css
+*     * import all css partials by @import keyword.
+============================================== */
+
+@import "./variables/index.css";
+@import "./utilities/index.css";
+@import "./base/index.css";
+@import "./components/index.css";
+@import "./layout/index.css";

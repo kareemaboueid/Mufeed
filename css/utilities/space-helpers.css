@@ -1,0 +1,136 @@
+/*
+==============================================
+Utilities: space helpers
+==============================================
+*/
+
+/* Main Spacers */
+.p-0 {
+  padding: var(--padding-0);
+}
+.p-0-25rem {
+  padding: var(--padding-0-25rem);
+}
+.p-0-5rem {
+  padding: var(--padding-0-5rem);
+}
+.p-1rem {
+  padding: var(--padding-1rem);
+}
+.p-1-5rem {
+  padding: var(--padding-1-5rem);
+}
+.p-2rem {
+  padding: var(--padding-2rem);
+}
+.p-3rem {
+  padding: var(--padding-3rem);
+}
+.p-4rem {
+  padding: var(--padding-4rem);
+}
+.p-5rem {
+  padding: var(--padding-5rem);
+}
+
+/* Vertical Spacers */
+.p-t-0-25rem {
+  padding-top: var(--padding-0-25rem);
+}
+.p-t-0-5rem {
+  padding-top: var(--padding-0-5rem);
+}
+.p-t-1rem {
+  padding-top: var(--padding-1rem);
+}
+.p-t-1-5rem {
+  padding-top: var(--padding-1-5rem);
+}
+.p-t-2rem {
+  padding-top: var(--padding-2rem);
+}
+.p-t-3rem {
+  padding-top: var(--padding-3rem);
+}
+.p-t-4rem {
+  padding-top: var(--padding-4rem);
+}
+.p-t-5rem {
+  padding-top: var(--padding-5rem);
+}
+
+.p-b-0-25rem {
+  padding-bottom: var(--padding-0-25rem);
+}
+.p-b-0-5rem {
+  padding-bottom: var(--padding-0-5rem);
+}
+.p-b-1rem {
+  padding-bottom: var(--padding-1rem);
+}
+.p-b-1-5rem {
+  padding-bottom: var(--padding-1-5rem);
+}
+.p-b-2rem {
+  padding-bottom: var(--padding-2rem);
+}
+.p-b-3rem {
+  padding-bottom: var(--padding-3rem);
+}
+.p-b-4rem {
+  padding-bottom: var(--padding-4rem);
+}
+.p-b-5rem {
+  padding-bottom: var(--padding-5rem);
+}
+
+/* Horizontal Spacers */
+.p-l-0-25rem {
+  padding-left: var(--padding-0-25rem);
+}
+.p-l-0-5rem {
+  padding-left: var(--padding-0-5rem);
+}
+.p-l-1rem {
+  padding-left: var(--padding-1rem);
+}
+.p-l-1-5rem {
+  padding-left: var(--padding-1-5rem);
+}
+.p-l-2rem {
+  padding-left: var(--padding-2rem);
+}
+.p-l-3rem {
+  padding-left: var(--padding-3rem);
+}
+.p-l-4rem {
+  padding-left: var(--padding-4rem);
+}
+.p-l-5rem {
+  padding-left: var(--padding-5rem);
+}
+
+.p-r-0-25rem {
+  padding-right: var(--padding-0-25rem);
+}
+.p-r-0-5rem {
+  padding-right: var(--padding-0-5rem);
+}
+.p-r-1rem {
+  padding-right: var(--padding-1rem);
+}
+.p-r-1-5rem {
+  padding-right: var(--padding-1-5rem);
+}
+.p-r-2rem {
+  padding-right: var(--padding-2rem);
+}
+.p-r-3rem {
+  padding-right: var(--padding-3rem);
+}
+.p-r-4rem {
+  padding-right: var(--padding-4rem);
+}
+.p-r-5rem {
+  padding-right: var(--padding-5rem);
+}
