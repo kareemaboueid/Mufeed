@@ -1,0 +1,9 @@
+.PAGE_TITLE {
+  color: var(--sec-color-900);
+  font-size: var(--font-size-h5);
+}
+
+.PAGE_DESCRIPTION {
+  color: var(--sec-color-900);
+  font-size: var(--font-size-h7);
+}

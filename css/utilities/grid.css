@@ -24,8 +24,8 @@ Utilities: grid
 .col-11,
 .col-12 {
   flex: 0 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .col-1 {
   flex: 0 0 8.33333%;

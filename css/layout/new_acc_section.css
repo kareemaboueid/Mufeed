@@ -1,6 +1,7 @@
-.data_input {
-  margin: 2rem;
-  border: 1px solid var(--sec-color-400);
+.new_acc_form-div {
+  background-color: var(--sec-color-300);
+  padding: 0rem 0rem;
+  border: var(--border-500);
   border-radius: var(--border-radius-base);
   -webkit-border-radius: var(--border-radius-base);
   -moz-border-radius: var(--border-radius-base);
@@ -8,18 +9,18 @@
   -o-border-radius: var(--border-radius-base);
 }
 
-.data_input * {
-  font-size: var(--font-size-h7);
+.new_acc_form-label {
+  font-weight: var(--font-weight-700);
 }
 
-.app-global-input {
+.new_acc_form-input {
+  height: 100%;
   color: #000000;
-  font-size: var(--font-size-h7);
   font-family: inherit;
   background-color: var(--sec-color-50);
-  border-style: solid;
-  border-color: #828282;
-  border-width: 1px;
+  font-weight: var(--font-weight-500);
+  border: var(--border-500);
+  outline: none;
   width: 100%;
   border-radius: var(--border-radius-base);
   -webkit-border-radius: var(--border-radius-base);

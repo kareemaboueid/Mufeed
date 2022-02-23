@@ -14,8 +14,8 @@ Utilities: container
 
 .container {
   max-width: var(--desktop-xlg-bp);
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
 }
