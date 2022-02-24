@@ -1,77 +1,95 @@
 <!-- CUST_ACC_TRANS open -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <!-- primary tags -->
+    <meta charset="UTF-8" />
+    <title>مفيد - نقل رصيد عميل</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- app favicons -->
+    <link rel="icon" href="media/logo.png" type="image/png" />
+    <!-- app info -->
+    <meta name="title" content="Mufeed" />
+    <meta
+      name="description"
+      content="Daily office work routine and tasks organizer"
+    />
+    <meta name="author" content="Kareem Aboueid" />
+    <meta name="language" content="arabic" />
+    <!-- app fonticons (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    />
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- app script -->
+    <script defer src="../js/app.js"></script>
+  </head>
 
-<head>
-  <!-- primary tags -->
-  <meta charset="UTF-8" />
-  <title>مفيد - نقل رصيد عميل</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- app favicons -->
-  <link rel="icon" href="media/logo.png" type="image/png" />
-  <!-- app info -->
-  <meta name="title" content="Mufeed" />
-  <meta name="description" content="Daily office work routine and tasks organizer" />
-  <meta name="author" content="Kareem Aboueid" />
-  <meta name="language" content="arabic" />
-  <!-- app fonticons (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-  <!-- app stylesheet -->
-  <link rel="stylesheet" href="../css/index.css" />
-  <!-- app script -->
-  <script defer src="../js/app.js"></script>
-</head>
-
-<body>
-  <main>
-    <!-- START APP HEADER -->
-    <header class="app_header">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-6">
-            <div class="app_header-logo">
-              <a href="index.html" title="الصفحة الرئيسية">
-                <h1 class="brand"><span>🤖</span> مفيد</h1>
+  <body>
+    <main>
+      <!-- START APP HEADER -->
+      <header class="app_header p-t-0-5rem p-b-0-5rem">
+        <div class="container">
+          <div class="row items-center justify-space-between">
+            <div class="col-6">
+              <a
+                class="app_header-logo"
+                href="../index.html"
+                title="الصفحة الرئيسية"
+              >
+                <img
+                  src="../media/mufeed-logo-dark.png"
+                  alt="صورة مفيد"
+                  width="100px"
+                />
               </a>
             </div>
+            <div class="col-6">
+              <p class="app_header-description text-left">
+                إعمل بذكاء وانجز مهامك بسهولة.
+              </p>
+            </div>
           </div>
-          <div class="col-6">
-            <div class="app_header-description text-left">
-              <p> إعمل بذكاء وانجز مهامك بسهولة. </p>
+        </div>
+      </header>
+      <!-- END APP HEADER -->
+
+      <!-- START BREADCRUMBS -->
+      <div class="breadcrumbs p-t-1rem p-b-1rem">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 justify-center items-center">
+              <span class="prev">
+                <i class="ri-home-7-fill"></i>
+                <a
+                  class="underline"
+                  title="الصفحة الرئيسية"
+                  href="../index.html"
+                  >الرئيسية</a
+                >
+              </span>
+              <span class="separator"
+                ><i class="ri-arrow-left-s-line"></i
+              ></span>
+              <span class="currant"
+                ><i class="ri-user-add-fill"></i> فتح حساب جديد</span
+              >
             </div>
           </div>
         </div>
       </div>
-    </header>
-    <!-- END APP HEADER -->
+      <!-- END BREADCRUMBS -->
 
-    <!-- START BREADCRUMBS -->
-    <div class="breadcrumbs p-t-1rem p-b-1rem">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 justify-center items-center">
-            <span class="prev">
-              <i class="ri-home-7-fill"></i>
-              <a class="underline" title="الصفحة الرئيسية" href="../index.html">الرئيسية</a>
-            </span>
-            <span class="separator"><i class="ri-arrow-left-s-line"></i></span>
-            <span class="currant"><i class="ri-user-add-fill"></i> فتح حساب جديد</span>
-          </div>
+      <!-- START SERVICES SECTION -->
+      <section class="app_services p-3rem">
+        <div class="container">
+          <p>نقل رصيد عميل</p>
         </div>
-      </div>
-    </div>
-    <!-- END BREADCRUMBS -->
-
-    <!-- START SERVICES SECTION -->
-    <section class="app_services p-3rem">
-      <div class="container">
-        <p>نقل رصيد عميل</p>
-      </div>
-    </section>
-    <!-- END SERVICES SECTION -->
-
-  </main>
-</body>
-
+      </section>
+      <!-- END SERVICES SECTION -->
+    </main>
+  </body>
 </html>

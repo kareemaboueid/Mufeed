@@ -1,81 +1,115 @@
 <!-- HOME_PAGE -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <!-- primary tags -->
+    <meta charset="UTF-8" />
+    <title>Mufeed</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- app favicons -->
+    <link rel="icon" href="media/logo.png" type="image/png" />
+    <!-- app info -->
+    <meta name="title" content="Mufeed" />
+    <meta
+      name="description"
+      content="Daily office work routine and tasks organizer"
+    />
+    <meta name="author" content="Kareem Aboueid" />
+    <meta name="language" content="arabic" />
+    <!-- app fonticons (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    />
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- app script -->
+    <script defer src="./js/app.js"></script>
+  </head>
 
-<head>
-  <!-- primary tags -->
-  <meta charset="UTF-8" />
-  <title>Mufeed</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- app favicons -->
-  <link rel="icon" href="media/logo.png" type="image/png" />
-  <!-- app info -->
-  <meta name="title" content="Mufeed" />
-  <meta name="description" content="Daily office work routine and tasks organizer" />
-  <meta name="author" content="Kareem Aboueid" />
-  <meta name="language" content="arabic" />
-  <!-- app fonticons (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-  <!-- app stylesheet -->
-  <link rel="stylesheet" href="./css/index.css" />
-  <!-- app script -->
-  <script defer src="./js/app.js"></script>
-</head>
-
-<body>
-  <main>
-    <!-- START APP HEADER -->
-    <header class="app_header">
-      <div class="container">
-        <div class="row items-center">
-          <div class="col-6">
-            <div class="app_header-logo">
-              <a href="index.html">
-                <h1 class="brand"><span>🤖</span> مفيد</h1>
+  <body>
+    <main>
+      <!-- START APP HEADER -->
+      <header class="app_header p-t-0-5rem p-b-0-5rem">
+        <div class="container">
+          <div class="row items-center justify-space-between">
+            <div class="col-6">
+              <a
+                class="app_header-logo"
+                href="../index.html"
+                title="الصفحة الرئيسية"
+              >
+                <img
+                  src="../media/mufeed-logo-dark.png"
+                  alt="صورة مفيد"
+                  width="100px"
+                />
               </a>
             </div>
-          </div>
-          <div class="col-6">
-            <div class="app_header-description text-left">
-              <p> إعمل بذكاء وانجز مهامك بسهولة. </p>
+            <div class="col-6">
+              <p class="app_header-description text-left">
+                إعمل بذكاء وانجز مهامك بسهولة.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- END APP HEADER -->
-    <!-- START SERVICES SECTION -->
-    <section class="app_services p-3rem">
-      <div class="container">
+      </header>
+      <!-- END APP HEADER -->
+
+      <!-- START PAGE TITLE -->
+      <div class="container p-t-0-5rem">
         <div class="row">
-          <div class="col-6">
-            <!-- start new-account-opening -->
-            <a href="./pages/new-account-opening.html" id="CUST_ACC_OPEN" class="card p-1rem"
-              title="ذهاب الى صفحة فتح حساب جديد">
-              <h2 class="card-header">
-                <i class="ri-user-add-fill"></i>
-                <p> فتح حساب جديد </p>
-              </h2>
-            </a>
-            <!-- end new-account-opening -->
-          </div>
-          <div class="col-6">
-            <!-- start new-account-opening -->
-            <a href="./pages/transfer-account-credit.html" id="CUST_ACC_TRANS" class="card p-1rem"
-              title="ذهاب الى صفحة نقل رصيد عميل">
-              <h2 class="card-header">
-                <i class="ri-user-shared-2-fill"></i>
-                <p> نقل رصيد عميل </p>
-              </h2>
-            </a>
-            <!-- end new-account-opening -->
+          <div class="col-12">
+            <h1 class="font-w-400 font-s-h6">إختر ما تود أن تنجزه اليوم :</h1>
           </div>
         </div>
       </div>
-    </section>
-    <!-- END SERVICES SECTION -->
-  </main>
-</body>
+      <!-- END PAGE TITLE -->
 
+      <!-- START SERVICES SECTION -->
+      <section class="app_services m-t-2rem m-b-2rem">
+        <div class="container">
+          <div class="row">
+            <!-- START MUFEED SERVICE -->
+            <div class="col-6">
+              <a
+                class="mufeed_service card p-t-0-5rem p-b-0-5rem"
+                href="./pages/new-account-opening.html"
+                title="ذهاب الى صفحة فتح حساب جديد"
+              >
+                <img
+                  class="mufeed_service-img"
+                  src="./media/add-user.png"
+                  width="54px"
+                />
+                <h2 class="mufeed_service-title">فتح حساب جديد</h2>
+                <i class="mufeed_service-arrow ri-arrow-left-line"></i>
+              </a>
+            </div>
+            <!-- END MUFEED SERVICE -->
+
+            <!-- START MUFEED SERVICE -->
+            <div class="col-6">
+              <a
+                class="mufeed_service card p-t-0-5rem p-b-0-5rem"
+                href="./pages/transfer-account-credit.html"
+                title="ذهاب الى صفحة نقل رصيد عميل"
+              >
+                <img
+                  class="mufeed_service-img"
+                  src="./media/move-user.png"
+                  width="54px"
+                />
+                <h2 class="mufeed_service-title">نقل رصيد عميل</h2>
+                <i class="mufeed_service-arrow ri-arrow-left-line"></i>
+              </a>
+            </div>
+            <!-- END MUFEED SERVICE -->
+          </div>
+        </div>
+      </section>
+      <!-- END SERVICES SECTION -->
+    </main>
+  </body>
 </html>

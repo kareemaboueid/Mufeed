@@ -15,4 +15,14 @@ Spacers - for global use among css files
   --padding-0-5rem: 0.5rem;
   --padding-0-25rem: 0.25rem;
   --padding-0: 0;
+  /* Margin Variables */
+  --margin-5rem: 5rem;
+  --margin-4rem: 4rem;
+  --margin-3rem: 3rem;
+  --margin-2rem: 2rem;
+  --margin-1-5rem: 1.5rem;
+  --margin-1rem: 1rem;
+  --margin-0-5rem: 0.5rem;
+  --margin-0-25rem: 0.25rem;
+  --margin-0: 0;
 }

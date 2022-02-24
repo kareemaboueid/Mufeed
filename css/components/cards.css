@@ -11,8 +11,6 @@ component: cards
   overflow: hidden;
   background-color: var(--white);
   border-radius: var(--border-radius-base);
-  padding: 3rem 0;
-  border: 5px solid transparent;
   -webkit-border-radius: var(--border-radius-base);
   -moz-border-radius: var(--border-radius-base);
   -ms-border-radius: var(--border-radius-base);
@@ -25,24 +23,5 @@ component: cards
 }
 
 .card:hover {
-  border: 5px solid var(--white);
-  background-color: var(--prim-color-50);
   box-shadow: var(--box-shadow-alt);
-  color: var(--prim-color-700);
-  text-decoration: none;
-}
-
-.card-header {
-  font-size: var(--font-size-h4);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-}
-
-.card-header i {
-  font-size: 2.5rem;
 }

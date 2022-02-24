@@ -43,6 +43,31 @@ Utilities: typography
   font-weight: var(--font-weight-900);
 }
 
+/* font size */
+.font-s-h1 {
+  font-size: var(--font-size-h1);
+}
+
+.font-s-h2 {
+  font-size: var(--font-size-h2);
+}
+
+.font-s-h3 {
+  font-size: var(--font-size-h3);
+}
+
+.font-s-h4 {
+  font-size: var(--font-size-h4);
+}
+
+.font-s-h5 {
+  font-size: var(--font-size-h5);
+}
+
+.font-s-h6 {
+  font-size: var(--font-size-h6);
+}
+
 /* text transform */
 .uppercase {
   text-transform: uppercase;

@@ -1,9 +1,14 @@
+.PAGE_ICON {
+  font-size: calc(var(--font-size-h1) + 1rem);
+  color: var(--prim-color-600);
+}
+
 .PAGE_TITLE {
   color: var(--sec-color-900);
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h6);
 }
 
 .PAGE_DESCRIPTION {
   color: var(--sec-color-900);
-  font-size: var(--font-size-h7);
+  font-size: calc(var(--font-size-base) - 0.1rem);
 }

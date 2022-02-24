@@ -1,0 +1,16 @@
+/*
+==============================================
+layout: header
+==============================================
+*/
+
+.app_header {
+  background-color: var(--prim-color-400);
+  color: var(--prim-color-50);
+}
+
+.app_header a:hover,
+.app_header a:focus,
+.app_header a:visited {
+  text-decoration: none;
+}
