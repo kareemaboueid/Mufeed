@@ -1,3 +1,7 @@
+.PAGE_IMAGE {
+  margin-top: 1rem;
+}
+
 .PAGE_ICON {
   font-size: calc(var(--font-size-h1) + 1rem);
   color: var(--prim-color-600);

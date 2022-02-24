@@ -28,3 +28,9 @@
   -ms-border-radius: var(--border-radius-base);
   -o-border-radius: var(--border-radius-base);
 }
+
+#view_cust_name {
+  border: 1px solid var(--sec-color-400);
+  padding: 0.15rem 0.2rem;
+  border-radius: var(--border-radius-base);
+}

@@ -13,7 +13,7 @@ Layout - for global use among css files
   --border-700: 1px solid var(--sec-color-700);
 
   /* Transition Variables */
-  --transition-base: all 0.5s ease-in-out;
+  --transition-base: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Box Shadow Variables */
   --box-shadow-base: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
