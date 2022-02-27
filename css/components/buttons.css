@@ -1,10 +1,18 @@
+/*
+==============================================
+component: Buttons
+==============================================
+*/
+
+.clickable {
+  cursor: pointer;
+}
+
 .btn-reset {
   border: none;
   display: block;
   background-color: inherit;
-  padding: 1rem 1.8rem;
   border-radius: var(--border-radius-base);
-  font-size: var(--font-size-h5);
   -webkit-border-radius: var(--border-radius-base);
   -moz-border-radius: var(--border-radius-base);
   -ms-border-radius: var(--border-radius-base);
@@ -12,11 +20,15 @@
 }
 
 .prim-btn {
-  background-color: var(--prim-color-500);
+  font-size: var(--font-size-h5);
+  padding: 1rem 1.8rem;
+  background-color: var(--prim-color);
   color: var(--sec-color-50);
 }
 
 .sec-btn {
+  font-size: var(--font-size-h5);
+  padding: 1rem 1.8rem;
   background-color: var(--sec-color-400);
   color: var(--sec-color-900);
 }

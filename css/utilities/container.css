@@ -12,6 +12,10 @@ Utilities: container
   text-decoration: underline;
 }
 
+.bordered-left {
+  border-left: 1px solid var(--sec-color-500);
+}
+
 .container {
   max-width: var(--desktop-xlg-bp);
   padding-left: 30px;

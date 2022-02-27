@@ -13,7 +13,7 @@
 }
 .mufeed_service-link:hover {
   text-decoration: none;
-  border: 0.15rem solid var(--prim-color-500);
+  border: 0.15rem solid var(--prim-color);
 }
 
 .mufeed_service-img {
@@ -33,7 +33,7 @@
   -o-transition: var(--transition-base);
 }
 .mufeed_service-link:hover .mufeed_service-arrow {
-  color: var(--prim-color-500);
+  color: var(--prim-color);
   transform: translateX(-0.8rem);
   -webkit-transform: translateX(-0.8rem);
   -moz-transform: translateX(-0.8rem);

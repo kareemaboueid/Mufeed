@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!-- app favicons -->
-    <link rel="icon" href="media/logo.png" type="image/png" />
+    <link rel="icon" href="../media/mufeed-favicon.png" type="image/png" />
     <!-- app info -->
     <meta name="title" content="Mufeed" />
     <meta
@@ -25,43 +25,27 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="../css/index.css" />
     <!-- app script -->
-    <script defer src="../js/app.js"></script>
+    <script defer src="../js/new-acc-script.js"></script>
   </head>
 
   <body>
     <main>
       <!-- START APP HEADER -->
-      <header class="app_header p-t-0-5rem p-b-0-5rem">
+      <header class="app_header">
         <div class="container">
-          <div class="row items-center justify-space-between">
-            <div class="col-6">
+          <!-- logo -->
+          <div class="row p-t-0-5rem p-b-0-5rem">
+            <div class="col-2 bordered-left">
               <a
                 class="app_header-logo"
                 href="../index.html"
                 title="الصفحة الرئيسية"
               >
-                <img
-                  src="../media/mufeed-logo-dark.png"
-                  alt="صورة مفيد"
-                  width="80px"
-                />
+                <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
               </a>
             </div>
-            <div class="col-6">
-              <p class="app_header-description text-left">
-                إعمل بذكاء وانجز مهامك بسهولة.
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- END APP HEADER -->
-
-      <!-- START BREADCRUMBS -->
-      <div class="breadcrumbs p-t-1rem p-b-1rem">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 justify-center items-center">
+            <!-- breadcrumbs -->
+            <div class="col-4 breadcrumbs flex items-center justify-start">
               <span class="prev">
                 <i class="ri-home-7-fill"></i>
                 <a
@@ -78,26 +62,32 @@
                 ><i class="ri-user-add-fill"></i> فتح حساب جديد</span
               >
             </div>
+            <!-- description -->
+            <div class="col-6 flex items-center justify-end">
+              <p class="font-w-700 font-s-base text-left">
+                إعمل بذكاء وانجز مهامك بسهولة.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- END BREADCRUMBS -->
+      </header>
+      <!-- END APP HEADER -->
 
       <!-- START PAGE TITLE -->
-      <div class="container p-t-1rem p-b-1rem">
-        <div class="row items-center justify-start">
-          <div class="col-12 flex items-center justify-start gap-2rem">
+      <div class="container p-b-0-5rem p-t-0-5rem">
+        <div class="row flex items-center justify-start">
+          <div class="col-5 flex items-center justify-start gap-1rem">
             <img
               class="PAGE_IMAGE"
               src="../media/add-user.png"
               alt="فتح حساب عميل جديد"
             />
-            <div>
-              <h1 class="PAGE_TITLE">فتح حساب عميل جديد</h1>
-              <p class="PAGE_DESCRIPTION"
-                >أدخل جميع البيانات أدناه للمعالجة والطباعة</p
-              >
-            </div>
+            <h1 class="PAGE_TITLE">فتح حساب عميل جديد</h1>
+          </div>
+          <div class="col-7 flex items-center justify-end">
+            <p class="font-s-base text-left">
+              أدخل جميع البيانات أدناه للمعالجة والطباعة.
+            </p>
           </div>
         </div>
       </div>
@@ -110,15 +100,16 @@
           <div class="container flex f-column gap-1rem">
             <!-- new_acc_form-div ======================= -->
             <div class="new_acc_form-div">
-              <!-- START CUST_NAME -->
+              <!-- START CUST_NAME DIV -->
               <div
                 class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
               >
-                <div class="col-2 text-left">
+                <div class="col-1 text-left p-0">
                   <label class="new_acc_form-label" for="CUST_NAME"
                     >إسم العميل :</label
                   >
                 </div>
+                <!-- START CUST_NAME_START -->
                 <div class="col-2">
                   <select
                     class="new_acc_form-input"
@@ -126,23 +117,31 @@
                     id="CUST_NAME_START"
                   >
                     <option selected value="none"></option>
-                    <option value="مؤسسة">مؤسسة</option>
-                    <option value="شركة">شركة</option>
-                    <option value="محل">محل</option>
-                    <option value="مفروشات">مفروشات</option>
-                    <option value="هيئة">هيئة</option>
-                    <option value="مجموعة">مجموعة</option>
-                    <option value="مركز">مركز</option>
-                    <option value="المؤسسة">المؤسسة</option>
-                    <option value="الشركة">الشركة</option>
-                    <option value="المحل">المحل</option>
-                    <option value="المفروشات">المفروشات</option>
-                    <option value="الهيئة">الهيئة</option>
-                    <option value="المجموعة">المجموعة</option>
-                    <option value="المركز">المركز</option>
+                    <option>مؤسسة</option>
+                    <option>شركة</option>
+                    <option>مكتب</option>
+                    <option>وزارة</option>
+                    <option>محل</option>
+                    <option>مفروشات</option>
+                    <option>هيئة</option>
+                    <option>مجموعة</option>
+                    <option>مركز</option>
+                    <option>مستشفى</option>
+                    <option>المؤسسة</option>
+                    <option>الشركة</option>
+                    <option>المكتب</option>
+                    <option>الوزارة</option>
+                    <option>المحل</option>
+                    <option>المفروشات</option>
+                    <option>الهيئة</option>
+                    <option>المجموعة</option>
+                    <option>المركز</option>
+                    <option>المستشفى</option>
                   </select>
                 </div>
-                <div class="col-4">
+                <!-- END CUST_NAME_START -->
+                <!-- START CUST_NAME -->
+                <div class="col-2">
                   <input
                     class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
                     type="text"
@@ -152,6 +151,8 @@
                     required
                   />
                 </div>
+                <!-- END CUST_NAME -->
+                <!-- START CUST_NAME_END -->
                 <div class="col-2">
                   <select
                     class="new_acc_form-input"
@@ -159,19 +160,24 @@
                     id="CUST_NAME_END"
                   >
                     <option selected value="none"></option>
-                    <option value="التجارية">التجارية</option>
-                    <option value="للتجارة">للتجارة</option>
-                    <option value="للمفروشات">للمفروشات</option>
-                    <option value="للسجاد">للسجاد</option>
-                    <option value="للأثاث">للأثاث</option>
-                    <option value="للمقاولات">للمقاولات</option>
-                    <option value="للمقاولات-العامة">للمقاولات العامة</option>
-                    <option value="للتصدير">للتصدير</option>
-                    <option value="للإستيراد-والتصدير"
-                      >للإستيراد والتصدير</option
-                    >
+                    <option>التجارية</option>
+                    <option>التجاري</option>
+                    <option>للتجارة</option>
+                    <option>المحدودة</option>
+                    <option>التضامنية</option>
+                    <option>للأرضيات</option>
+                    <option>للأرضيات والمفروشات</option>
+                    <option>للمفروشات</option>
+                    <option>للسجاد</option>
+                    <option>للأثاث</option>
+                    <option>للمقاولات</option>
+                    <option>للمقاولات العامة</option>
+                    <option>للتصدير</option>
+                    <option>للإستيراد والتصدير</option>
                   </select>
                 </div>
+                <!-- END CUST_NAME_END -->
+                <!-- START CUST_NAME_ADD -->
                 <div class="col-2">
                   <input
                     class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
@@ -181,33 +187,36 @@
                     placeholder="(إضافة)"
                   />
                 </div>
-              </div>
-              <!-- END CUST_NAME -->
-              <!-- START VIEW CUST_NAME -->
-              <div
-                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-b-1rem"
-              >
-                <div class="col-2 text-left">
-                  <p class="new_acc_form-label">عرض:</p>
+                <!-- END CUST_NAME_ADD -->
+                <!-- START VIEW_CUST_NAME -->
+                <div class="col-3">
+                  <div class="flex justify-end items-center gap-0-5rem">
+                    <p id="VIEW_CUST_NAME">
+                      شركة السريع التجارية للأرضيات والمفروشات
+                    </p>
+                    <i
+                      title="عرض إسم العميل: هكذا سيظهر إسم العميل"
+                      class="ri-information-line clickable"
+                    >
+                    </i>
+                  </div>
                 </div>
-                <div class="col-10">
-                  <p id="view_cust_name"
-                    >شركة السريع التجارية للأرضيات والمفروشات</p
-                  >
-                </div>
+                <!-- END VIEW_CUST_NAME -->
               </div>
-              <!-- END VIEW CUST_NAME -->
+              <!-- END CUST_NAME DIV -->
+              <!-- sperator ----------------- -->
               <hr />
+              <!-- sperator ----------------- -->
               <!-- START CUST_CREDIT_LIMIT -->
               <div
                 class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
               >
-                <div class="col-2 text-left">
-                  <label class="new_acc_form-label" for="CUST_CREDIT_LIMIT"
-                    >قيمة الحد الإئتماني :</label
-                  >
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="CUST_CREDIT_LIMIT">
+                    الحد الائتماني :
+                  </label>
                 </div>
-                <div class="col-4">
+                <div class="col-3">
                   <input
                     class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
                     type="number"
@@ -217,26 +226,80 @@
                     required
                   />
                 </div>
-                <div class="col-4">
+                <div class="col-2">
                   <select
                     class="new_acc_form-input"
                     name="CUST_CREDIT_LIMIT_CURRENCY"
                     id="CUST_CREDIT_LIMIT_CURRENCY"
                   >
-                    <option selected value="sar">ريال سعودي</option>
-                    <option value="usd">دولار أمريكي</option>
-                    <option value="egp">جنيه مصري</option>
-                    <option value="jpy">ين ياباني</option>
-                    <option value="dhs">درهم إماراتي</option>
-                    <option value="gbp">جنيه إسترليني</option>
-                    <option value="eur">يورو</option>
-                    <option value="kwd">دينار كويتي</option>
-                    <option value="jod">دينار أردني</option>
-                    <option value="syp">ليرة سورية</option>
+                    <option selected>ريال سعودي</option>
+                    <option>دولار أمريكي</option>
+                    <option>جنيه مصري</option>
+                    <option>ين ياباني</option>
+                    <option>درهم إماراتي</option>
+                    <option>جنيه إسترليني</option>
+                    <option>يورو</option>
+                    <option>دينار كويتي</option>
+                    <option>دينار أردني</option>
+                    <option>ليرة سورية</option>
                   </select>
                 </div>
+                <!-- START VIEW_CREDIT_LIMIT -->
+                <div class="col-6">
+                  <div class="flex justify-end items-center gap-0-5rem">
+                    <p id="VIEW_CREDIT_LIMIT"></p>
+                  </div>
+                </div>
+                <!-- END VIEW_CREDIT_LIMIT -->
               </div>
               <!-- END CUST_CREDIT_LIMIT -->
+              <!-- sperator ----------------- -->
+              <hr />
+              <!-- sperator ----------------- -->
+              <!-- START SALESMAN_NAME -->
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="SALESMAN_NAME">
+                    إسم المندوب :
+                  </label>
+                </div>
+                <div class="col-4">
+                  <select
+                    class="new_acc_form-input"
+                    name="SALESMAN_NAME"
+                    id="SALESMAN_NAME"
+                  >
+                    <option selected value="select">إختر</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+                <!-- END SALESMAN_NAME -->
+                <!-- START ACC_OUTLET -->
+                <div class="col-1 text-right">
+                  <label class="new_acc_form-label" for="ACC_OUTLET">
+                    تابـــع لمنفــذ :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="ACC_OUTLET"
+                    id="ACC_OUTLET"
+                  >
+                    <option selected value="select">إختر</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+                <!-- START ACC_OUTLET -->
+              </div>
             </div>
             <!-- =================================================== -->
             <!-- new_acc_form-div ======================= -->
@@ -249,28 +312,30 @@
                 </div>
                 <div class="col-1">
                   <input
-                    type="checkbox"
-                    name="TASHEEL_APP_CHECK_TRUE"
+                    type="radio"
+                    name="TASHEEL_APP_CHECK"
                     id="TASHEEL_APP_CHECK_TRUE"
+                    value="TASHEEL_APP_CHECK_TRUE"
                   />
                   <label for="TASHEEL_APP_CHECK_TRUE">موجود</label>
                 </div>
                 <div class="col-1">
                   <input
-                    type="checkbox"
-                    name="TASHEEL_APP_CHECK_FALSE"
+                    type="radio"
+                    name="TASHEEL_APP_CHECK"
                     id="TASHEEL_APP_CHECK_FALSE"
+                    value="TASHEEL_APP_CHECK_FALSE"
                   />
                   <label for="TASHEEL_APP_CHECK_FALSE">غير موجود</label>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <select
                     class="new_acc_form-input"
                     name="TASHEEL_APP_VERFIY"
                     id="TASHEEL_APP_VERFIY"
                   >
-                    <option selected value="not-verify">غير مصدق</option>
-                    <option value="verify">مصدق</option>
+                    <option selected value="verify">مصدق</option>
+                    <option value="not-verify">غير مصدق</option>
                   </select>
                 </div>
               </div>

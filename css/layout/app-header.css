@@ -5,8 +5,15 @@ layout: header
 */
 
 .app_header {
-  background-color: var(--prim-color-400);
-  color: var(--prim-color-50);
+  background-color: var(--sec-color-300);
+  color: var(--prim-color);
+  border-bottom: 1px solid var(--sec-color-500);
+}
+
+.app_header-logo img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
 }
 
 .app_header a:hover,

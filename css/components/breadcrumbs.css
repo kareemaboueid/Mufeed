@@ -1,12 +1,3 @@
-.breadcrumbs {
-  border-bottom: 1px solid var(--sec-color-500);
-  background-color: var(--sec-color-300);
-}
-
-.breadcrumbs i {
-  font-size: 1.1rem;
-}
-
 .breadcrumbs span {
   display: inline-flex;
   justify-content: center;

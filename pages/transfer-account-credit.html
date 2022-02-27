@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!-- app favicons -->
-    <link rel="icon" href="media/logo.png" type="image/png" />
+    <link rel="icon" href="../media/mufeed-favicon.png" type="image/png" />
     <!-- app info -->
     <meta name="title" content="Mufeed" />
     <meta
@@ -31,37 +31,21 @@
   <body>
     <main>
       <!-- START APP HEADER -->
-      <header class="app_header p-t-0-5rem p-b-0-5rem">
+      <header class="app_header">
         <div class="container">
-          <div class="row items-center justify-space-between">
-            <div class="col-6">
+          <!-- logo -->
+          <div class="row p-t-0-5rem p-b-0-5rem">
+            <div class="col-2 bordered-left">
               <a
                 class="app_header-logo"
                 href="../index.html"
                 title="الصفحة الرئيسية"
               >
-                <img
-                  src="../media/mufeed-logo-dark.png"
-                  alt="صورة مفيد"
-                  width="80px"
-                />
+                <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
               </a>
             </div>
-            <div class="col-6">
-              <p class="app_header-description text-left">
-                إعمل بذكاء وانجز مهامك بسهولة.
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- END APP HEADER -->
-
-      <!-- START BREADCRUMBS -->
-      <div class="breadcrumbs p-t-1rem p-b-1rem">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 justify-center items-center">
+            <!-- breadcrumbs -->
+            <div class="col-4 breadcrumbs flex items-center justify-start">
               <span class="prev">
                 <i class="ri-home-7-fill"></i>
                 <a
@@ -71,33 +55,39 @@
                   >الرئيسية</a
                 >
               </span>
-              <span class="separator"
-                ><i class="ri-arrow-left-s-line"></i
-              ></span>
-              <span class="currant"
-                ><i class="ri-user-add-fill"></i> فتح حساب جديد</span
-              >
+              <span class="separator">
+                <i class="ri-arrow-left-s-line"></i>
+              </span>
+              <span class="currant">
+                <i class="ri-user-received-2-fill"></i> نقل رصيد عميل
+              </span>
+            </div>
+            <!-- description -->
+            <div class="col-6 flex items-center justify-end">
+              <p class="font-w-700 font-s-base text-left">
+                إعمل بذكاء وانجز مهامك بسهولة.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <!-- END BREADCRUMBS -->
+      </header>
+      <!-- END APP HEADER -->
 
       <!-- START PAGE TITLE -->
-      <div class="container p-t-1rem p-b-1rem">
-        <div class="row items-center justify-start">
-          <div class="col-12 flex items-center justify-start gap-2rem">
+      <div class="container p-b-0-5rem p-t-0-5rem">
+        <div class="row flex items-center justify-start">
+          <div class="col-5 flex items-center justify-start gap-1rem">
             <img
               class="PAGE_IMAGE"
               src="../media/move-user.png"
-              alt="فتح حساب عميل جديد"
+              alt="نقل رصيد عميل"
             />
-            <div>
-              <h1 class="PAGE_TITLE">نقل رصيد عميل</h1>
-              <p class="PAGE_DESCRIPTION"
-                >أدخل جميع البيانات أدناه للمعالجة والطباعة</p
-              >
-            </div>
+            <h1 class="PAGE_TITLE">نقل رصيد عميل</h1>
+          </div>
+          <div class="col-7 flex items-center justify-end">
+            <p class="font-s-base text-left">
+              أدخل جميع البيانات أدناه للمعالجة والطباعة.
+            </p>
           </div>
         </div>
       </div>

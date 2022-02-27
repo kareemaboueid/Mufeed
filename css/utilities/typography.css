@@ -44,6 +44,10 @@ Utilities: typography
 }
 
 /* font size */
+.font-s-base {
+  font-size: var(--font-size-base);
+}
+
 .font-s-h1 {
   font-size: var(--font-size-h1);
 }
