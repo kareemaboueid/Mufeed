@@ -1498,63 +1498,6 @@ let convertToWords = num => {
         " و " +
         multiOfTen[str[4] - 1];
     }
-
-    // if number > 10000 and not multi of 1000 and multi of 100 and multi of 10:
-    // [10010, 10020, 10030, 10040, 10050, 10060, 10070, 10080, 10090]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and < 20 and > 10:
-    // [10011, 10012, 10013, 10014, 10015, 10016, 10017, 10018, 10019]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and > 20:
-    // [10021, 10022, 10023, 10024, 10025, 10026, 10027, 10028, 10029]:
-    // if number > 10000 and not multi of 1000 and multi of 100:
-    // [10100, 10200, 10300, 10400, 10500, 10600, 10700, 10800, 10900]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and multi of 10:
-    // [10110, 10120, 10130, 10140, 10150, 10160, 10170, 10180, 10190]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and < 10:
-    // [10101, 10102, 10103, 10104, 10105, 10106, 10107, 10108, 10109]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and < 20 and > 10:
-    // [10111, 10112, 10113, 10114, 10115, 10116, 10117, 10118, 10119]:
-    // if number > 10000 and not multi of 1000 and multi of 100 and > 20:
-    // [10121, 10122, 10123, 10124, 10125, 10126, 10127, 10128, 10129]:
-    // if number > 10000 and multi of 1000 and multi of 100 and multi of 10:
-    // [11000, 12000, 13000, 14000, 15000, 16000, 17000, 18000, 19000]:
-    // if number > 10000 and multi of 1000 and multi of 100 and < 10:
-    // [11001, 11002, 11003, 11004, 11005, 11006, 11007, 11008, 11009]:
-    // if number > 10000 and multi of 1000 and multi of 100 and < 20 and > 10:
-    // [11011, 11012, 11013, 11014, 11015, 11016, 11017, 11018, 11019]:
-    // if number > 10000 and multi of 1000 and not multi of 100 and multi of 10:
-    // [11010, 11020, 11030, 11040, 11050, 11060, 11070, 11080, 11090]:
-    // if number > 10000 and multi of 1000 and multi of 100 and multi of 10:
-    // [11110, 11120, 11130, 11140, 11150, 11160, 11170, 11180, 11190]:
-    // if number > 10000 and multi of 1000 and multi of 100 and > 20:
-    // [11021, 11022, 11023, 11024, 11025, 11026, 11027, 11028, 11029]:
-    // if number > 10000 and multi of 1000 and < 100 and multi of 10:
-    // [11100,11200,11300,11400,11500,11600,11700,11800,11900]:
-    // if number > 10000 and multi of 1000 and multi of 100 and < 10:
-    // [11101, 11102, 11103, 11104, 11105, 11106, 11107, 11108, 11109]:
-    // if number > 10000 and multi of 1000 and multi of 100 and < 20 and > 10:
-    // [11111, 11112, 11113, 11114, 11115, 11116, 11117, 11118, 11119]:
-    // if number > 10000 and multi of 1000 and multi of 100 and > 20:
-    // [11121, 11122, 11123, 11124, 11125, 11126, 11127, 11128, 11129]:
-    // if number > 20999 and not multi of 1000 and not multi of 100 and < 10:
-    // [21000, 31000, 41000, 51000, 61000, 71000, 81000, 91000,..., 99000]:
-    // if number > 20999 and not multi of 1000 and not multi of 100 and < 10:
-    // [21001, 31001, 41001, 51001, 61001, 71001, 81001, 91001,..., 99001]:
-    // if number > 20999 and not multi of 1000 and not multi of 100 and < 20 and > 10:
-    // [21011, 31011, 41011, 51011, 61011, 71011, 81011, 91011,..., 99011]:
-    // if number > 20999 and not multi of 1000 and not multi of 100 and > 20:
-    // [21121, 31121, 41121, 51121, 61121, 71221, 81221, 91221,..., 99220]:
-    // if number > 20999 and not multi of 1000 and not multi of 100 and multi of 10:
-    // [21010, 31020, 41030, 51040, 61050, 71060, 81070, 91080,..., 99090]:
-    // if number > 20999 and not multi of 1000 and multi of 100:
-    // [21100, 31200, 41300, 51400, 61500, 71600, 81700, 91800,..., 99200]:
-    // if number > 20999 and not multi of 1000 and multi of 100 and < 10:
-    // [21101, 31201, 41301, 51401, 61501, 71601, 81701, 91801,..., 99210]:
-    // if number > 20999 and not multi of 1000 and multi of 100 and < 20 and > 10:
-    // [21111, 31211, 41311, 51411, 61511, 71611, 81711, 91811,..., 99220]:
-    // if number > 20999 and not multi of 1000 and multi of 100 and > 20:
-    // [21121, 31221, 41321, 51421, 61521, 71621, 81721, 91821,..., 99220]:
-    // if number > 20999 and not multi of 1000 and multi of 100 and multi of 10:
-    // [21010, 31020, 41030, 51040, 61050, 71060, 81070, 91080,..., 99090]:
   }
 
   // return result

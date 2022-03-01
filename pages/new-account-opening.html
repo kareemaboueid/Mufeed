@@ -304,6 +304,7 @@
             <!-- =================================================== -->
             <!-- new_acc_form-div ======================= -->
             <div class="new_acc_form-div">
+              <!-- START TASHEEL_APP_CHECK -->
               <div
                 class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
               >
@@ -316,6 +317,7 @@
                     name="TASHEEL_APP_CHECK"
                     id="TASHEEL_APP_CHECK_TRUE"
                     value="TASHEEL_APP_CHECK_TRUE"
+                    checked
                   />
                   <label for="TASHEEL_APP_CHECK_TRUE">موجود</label>
                 </div>
@@ -334,22 +336,98 @@
                     name="TASHEEL_APP_VERFIY"
                     id="TASHEEL_APP_VERFIY"
                   >
-                    <option selected value="verify">مصدق</option>
-                    <option value="not-verify">غير مصدق</option>
+                    <option selected value="verified">مصدق</option>
+                    <option value="not-verified">غير مصدق</option>
                   </select>
                 </div>
               </div>
-            </div>
-            <!-- =================================================== -->
-            <!-- new_acc_form-div ======================= -->
-            <div class="new_acc_form-div">
+              <!-- END TASHEEL_APP_CHECK -->
+              <!-- sperator ----------------- -->
+              <hr />
+              <!-- sperator ----------------- -->
+              <!-- START WARRANT_SUPPORT_CHECK -->
               <div
                 class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
               >
                 <div class="col-2 text-left">
-                  <label class="new_acc_form-label" for="">اسم البيان :</label>
+                  <p class="new_acc_form-label">أصل سند لأمر :</p>
+                </div>
+                <div class="col-1">
+                  <input
+                    type="radio"
+                    name="WARRANT_SUPPORT_CHECK"
+                    id="WARRANT_SUPPORT_CHECK_TRUE"
+                    value="WARRANT_SUPPORT_CHECK_TRUE"
+                    checked
+                  />
+                  <label for="WARRANT_SUPPORT_CHECK_TRUE">موجود</label>
+                </div>
+                <div class="col-1">
+                  <input
+                    type="radio"
+                    name="WARRANT_SUPPORT_CHECK"
+                    id="WARRANT_SUPPORT_CHECK_FALSE"
+                    value="WARRANT_SUPPORT_CHECK_FALSE"
+                  />
+                  <label for="WARRANT_SUPPORT_CHECK_FALSE">غير موجود</label>
+                </div>
+                <div class="col-2">
+                  <select
+                    class="new_acc_form-input"
+                    name="WARRANT_SUPPORT_CHECK_VERFIY"
+                    id="WARRANT_SUPPORT_CHECK_VERFIY"
+                  >
+                    <option selected value="finger-print">مبصم</option>
+                    <option value="stamp">مختم</option>
+                    <option value="none">لا يوجد</option>
+                  </select>
                 </div>
               </div>
+              <!-- END WARRANT_SUPPORT_CHECK -->
+              <!-- sperator ----------------- -->
+              <hr />
+              <!-- sperator ----------------- -->
+              <!-- START CUST_TRADE_LOG -->
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <div class="col-2 text-left">
+                  <p class="new_acc_form-label">السجل التجاري :</p>
+                </div>
+                <div class="col-1">
+                  <input
+                    type="radio"
+                    name="CUST_TRADE_LOG"
+                    id="CUST_TRADE_LOG_TRUE"
+                    value="CUST_TRADE_LOG_TRUE"
+                    checked
+                  />
+                  <label for="CUST_TRADE_LOG_TRUE">موجود</label>
+                </div>
+                <div class="col-1">
+                  <input
+
+                    type="radio"
+                    name="CUST_TRADE_LOG"
+                    id="CUST_TRADE_LOG_FALSE"
+                    value="CUST_TRADE_LOG_FALSE"
+                  />
+                  <label for="CUST_TRADE_LOG_FALSE">غير موجود</label>
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-2">
+                  <p class="new_acc_form-label">تاريخ إنتهاء السجل التجاري :</p>
+                </div>
+                <div class="col-2">
+                  <input
+                    type="date"
+                    name="CUST_TRADE_LOG_EXPIRY_DATE"
+                    id="CUST_TRADE_LOG_EXPIRY_DATE"
+                    class="new_acc_form-input"
+                  />
+                </div>
+              <!-- END CUST_TRADE_LOG -->
             </div>
             <!-- =================================================== -->
           </div>
