@@ -1,0 +1,23 @@
+.date-input-div {
+  padding: 0.4rem;
+  height: 100%;
+  color: #000000;
+  font-family: inherit;
+  background-color: var(--sec-color-50);
+  font-weight: var(--font-weight-500);
+  border: var(--border-500);
+  outline: none;
+  width: 100%;
+  border-radius: var(--border-radius-base);
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
+}
+
+.date-input-div input {
+  background-color: inherit;
+  border: none;
+  text-align: center;
+  width: 30%;
+}

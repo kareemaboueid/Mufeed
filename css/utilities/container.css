@@ -4,8 +4,20 @@ Utilities: container
 ==============================================
 */
 
+.sperator {
+  height: 1px;
+  background-color: var(--sec-color-500);
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
 .hide {
   display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
 }
 
 .underline {
@@ -17,7 +29,7 @@ Utilities: container
 }
 
 .container {
-  max-width: var(--desktop-xlg-bp);
+  max-width: var(--LGdesktop);
   padding-left: 30px;
   padding-right: 30px;
   margin-left: auto;

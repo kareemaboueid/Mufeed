@@ -1,0 +1,30 @@
+.back-shade-50 {
+  background-color: var(--sec-color-50);
+}
+.back-shade-100 {
+  background-color: var(--sec-color-100);
+}
+.back-shade-200 {
+  background-color: var(--sec-color-200);
+}
+.back-shade-300 {
+  background-color: var(--sec-color-300);
+}
+.back-shade-400 {
+  background-color: var(--sec-color-400);
+}
+.back-shade-500 {
+  background-color: var(--sec-color-500);
+}
+.back-shade-600 {
+  background-color: var(--sec-color-600);
+}
+.back-shade-700 {
+  background-color: var(--sec-color-700);
+}
+.back-shade-800 {
+  background-color: var(--sec-color-800);
+}
+.back-shade-900 {
+  background-color: var(--sec-color-900);
+}
