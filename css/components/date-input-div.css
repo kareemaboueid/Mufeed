@@ -1,5 +1,4 @@
 .date-input-div {
-  padding: 0.4rem;
   height: 100%;
   color: #000000;
   font-family: inherit;
@@ -15,9 +14,10 @@
   -o-border-radius: var(--border-radius-base);
 }
 
-.date-input-div input {
+.date-input-div input,
+.date-input-div select {
+  display: inline-block;
   background-color: inherit;
   border: none;
-  text-align: center;
-  width: 30%;
+  text-align: right;
 }

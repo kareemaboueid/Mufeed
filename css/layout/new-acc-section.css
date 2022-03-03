@@ -28,3 +28,8 @@
   -ms-border-radius: var(--border-radius-base);
   -o-border-radius: var(--border-radius-base);
 }
+
+#CUST_CREDIT_LIMIT_CURRENCY {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
