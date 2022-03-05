@@ -1,523 +1,924 @@
 <!-- CUST_ACC_OPEN page -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <!-- primary tags -->
+    <meta charset="UTF-8" />
+    <title>مفيد - فتح حساب جديد</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- app favicons -->
+    <link rel="icon" href="../media/mufeed-favicon.png" type="image/png" />
+    <!-- app info -->
+    <meta name="title" content="Mufeed" />
+    <meta
+      name="description"
+      content="Daily office work routine and tasks organizer"
+    />
+    <meta name="author" content="Kareem Aboueid" />
+    <meta name="language" content="arabic" />
+    <!-- app fonticons (CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+    />
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- app script -->
+    <script defer src="../js/new-acc-script.js"></script>
+  </head>
 
-<head>
-  <!-- primary tags -->
-  <meta charset="UTF-8" />
-  <title>مفيد - فتح حساب جديد</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <!-- app favicons -->
-  <link rel="icon" href="../media/mufeed-favicon.png" type="image/png" />
-  <!-- app info -->
-  <meta name="title" content="Mufeed" />
-  <meta name="description" content="Daily office work routine and tasks organizer" />
-  <meta name="author" content="Kareem Aboueid" />
-  <meta name="language" content="arabic" />
-  <!-- app fonticons (CDN) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" />
-  <!-- app stylesheet -->
-  <link rel="stylesheet" href="../css/index.css" />
-  <!-- app script -->
-  <script defer src="../js/new-acc-script.js"></script>
-</head>
+  <body>
+    <main>
+      <!-- START APP_HEADER -->
+      <header class="app_header">
+        <div class="container">
+          <!-- logo -->
+          <div class="row p-t-0-5rem p-b-0-5rem">
+            <div class="col-2 bordered-left">
+              <a
+                class="app_header-logo"
+                href="../index.html"
+                title="الصفحة الرئيسية"
+              >
+                <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
+              </a>
+            </div>
+            <!-- breadcrumbs -->
+            <div class="col-4 breadcrumbs flex items-center justify-start">
+              <span class="prev">
+                <i class="ri-home-7-fill"></i>
+                <a
+                  class="underline"
+                  title="الصفحة الرئيسية"
+                  href="../index.html"
+                  >الرئيسية</a
+                >
+              </span>
+              <span class="separator"
+                ><i class="ri-arrow-left-s-line"></i
+              ></span>
+              <span class="currant"
+                ><i class="ri-user-add-fill"></i> فتح حساب جديد</span
+              >
+            </div>
+            <!-- description -->
+            <div class="col-6 flex items-center justify-end">
+              <p class="font-w-700 font-s-base text-left">
+                إعمل بذكاء وانجز مهامك بسهولة.
+              </p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- END APP_HEADER -->
 
-<body>
-  <main>
-    <!-- START APP HEADER -->
-    <header class="app_header">
-      <div class="container">
-        <!-- logo -->
-        <div class="row p-t-0-5rem p-b-0-5rem">
-          <div class="col-2 bordered-left">
-            <a class="app_header-logo" href="../index.html" title="الصفحة الرئيسية">
-              <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
-            </a>
+      <!-- START PAGE_TITLE -->
+      <section class="container p-b-0-5rem p-t-0-5rem">
+        <div class="row flex items-center justify-start">
+          <div class="col-5 flex items-center justify-start gap-1rem">
+            <img
+              class="PAGE_IMAGE"
+              src="../media/add-user.png"
+              alt="فتح حساب عميل جديد"
+            />
+            <h1 class="PAGE_TITLE">فتح حساب عميل جديد</h1>
           </div>
-          <!-- breadcrumbs -->
-          <div class="col-4 breadcrumbs flex items-center justify-start">
-            <span class="prev">
-              <i class="ri-home-7-fill"></i>
-              <a class="underline" title="الصفحة الرئيسية" href="../index.html">الرئيسية</a>
-            </span>
-            <span class="separator"><i class="ri-arrow-left-s-line"></i></span>
-            <span class="currant"><i class="ri-user-add-fill"></i> فتح حساب جديد</span>
-          </div>
-          <!-- description -->
-          <div class="col-6 flex items-center justify-end">
-            <p class="font-w-700 font-s-base text-left">
-              إعمل بذكاء وانجز مهامك بسهولة.
+          <div class="col-7 flex items-center justify-end">
+            <p class="font-s-base text-left">
+              أدخل جميع البيانات أدناه للمعالجة والطباعة.
             </p>
           </div>
         </div>
-      </div>
-    </header>
-    <!-- END APP HEADER -->
+      </section>
+      <!-- END PAGE_TITLE -->
 
-    <!-- START PAGE TITLE -->
-    <section class="container p-b-0-5rem p-t-0-5rem">
-      <div class="row flex items-center justify-start">
-        <div class="col-5 flex items-center justify-start gap-1rem">
-          <img class="PAGE_IMAGE" src="../media/add-user.png" alt="فتح حساب عميل جديد" />
-          <h1 class="PAGE_TITLE">فتح حساب عميل جديد</h1>
-        </div>
-        <div class="col-7 flex items-center justify-end">
-          <p class="font-s-base text-left">
-            أدخل جميع البيانات أدناه للمعالجة والطباعة.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- END PAGE TITLE -->
-
-    <!-- START new_acc_section SECTION -->
-    <section class="new_acc_section p-t-1rem p-b-1rem">
-      <!-- START </1.new_acc_form> -->
-      <form action="" id="new_acc_form">
-        <div class="container flex f-column gap-1rem">
-
-          <!-- new_acc_form-div ======================= -->
-          <div class="new_acc_form-div">
-
-            <!-- START CUST_NAME DIV -->
-            <div class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem">
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="CUST_NAME">إسم العميل :</label>
-              </div>
-
-              <div class="col-8">
-                <div class="date-input-div">
-                  <div class="row flex items-center justify-space-between p-r-1rem p-l-1rem">
-                    <!-- START CUST_NAME_START -->
-                    <div class="col-3 bordered-left">
-                      <select class="new_acc_form-input width-100" name="CUST_NAME_START" id="CUST_NAME_START">
-                        <option value="none">لا يوجد</option>
-                        <option selected>مؤسسة</option>
-                        <option>شركة</option>
-                        <option>مكتب</option>
-                        <option>وزارة</option>
-                        <option>محل</option>
-                        <option>مفروشات</option>
-                        <option>هيئة</option>
-                        <option>مجموعة</option>
-                        <option>مركز</option>
-                        <option>مستشفى</option>
-                        <option>المؤسسة</option>
-                        <option>الشركة</option>
-                        <option>المكتب</option>
-                        <option>الوزارة</option>
-                        <option>المحل</option>
-                        <option>المفروشات</option>
-                        <option>الهيئة</option>
-                        <option>المجموعة</option>
-                        <option>المركز</option>
-                        <option>المستشفى</option>
-                      </select>
-                    </div>
-                    <!-- END CUST_NAME_START -->
-                    <!-- START CUST_NAME -->
-                    <div class="col-3 bordered-left">
-                      <input class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem" type="text" name="CUST_NAME"
-                        id="CUST_NAME" placeholder="إسم العميل" required />
-                    </div>
-                    <!-- END CUST_NAME -->
-                    <!-- START CUST_NAME_END -->
-                    <div class="col-3 bordered-left">
-                      <select class="new_acc_form-input width-100" name="CUST_NAME_END" id="CUST_NAME_END">
-                        <option value="none">لا يوجد</option>
-                        <option selected>التجارية</option>
-                        <option>التجاري</option>
-                        <option>للتجارة</option>
-                        <option>المحدودة</option>
-                        <option>التضامنية</option>
-                        <option>للأرضيات</option>
-                        <option>للأرضيات والمفروشات</option>
-                        <option>للمفروشات</option>
-                        <option>للسجاد</option>
-                        <option>للأثاث</option>
-                        <option>للمقاولات</option>
-                        <option>للمقاولات العامة</option>
-                        <option>للتصدير</option>
-                        <option>للإستيراد والتصدير</option>
-                      </select>
-                    </div>
-                    <!-- END CUST_NAME_END -->
-                    <!-- START CUST_NAME_ADD -->
-                    <div class="col-3">
-                      <input class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem" type="text" name="CUST_NAME_ADD"
-                        id="CUST_NAME_ADD" placeholder="(إضافة)" />
-                    </div>
-                    <!-- END CUST_NAME_ADD -->
-                  </div>
+      <!-- START new_acc_section SECTION -->
+      <section class="new_acc_section p-t-1rem p-b-1rem">
+        <!-- START </1.new_acc_form> -->
+        <form action="" id="new_acc_form">
+          <div class="container flex f-column gap-1rem">
+            <!-- new_acc_form-section -->
+            <section class="new_acc_form-section">
+              <!-- START CUST_NAME DIV -->
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="CUST_NAME"
+                    >إسم العميل :</label
+                  >
                 </div>
-              </div>
-              <!-- START VIEW_CUST_NAME -->
-              <div class="col-3">
-                <div class="flex justify-end items-center gap-0-5rem">
-                  <p id="VIEW_CUST_NAME">
-                    شركة السريع التجارية للأرضيات والمفروشات
-                  </p>
-                  <i title="عرض إسم العميل: هكذا سيظهر إسم العميل" class="ri-information-line clickable">
-                  </i>
-                </div>
-              </div>
-              <!-- END VIEW_CUST_NAME -->
-            </div>
-            <!-- END CUST_NAME DIV -->
 
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
+                <div class="col-8">
+                  <div class="date-input-div">
+                    <div
+                      class="row flex items-center justify-space-between p-r-1rem p-l-1rem"
+                    >
+                      <!-- START CUST_NAME_START -->
+                      <div class="col-3 bordered-left">
+                        <select
+                          class="new_acc_form-input width-100"
+                          name="CUST_NAME_START"
+                          id="CUST_NAME_START"
+                        >
+                          <option value="none">لا يوجد</option>
+                          <option selected>مؤسسة</option>
+                          <option>شركة</option>
+                          <option>مكتب</option>
+                          <option>وزارة</option>
+                          <option>محل</option>
+                          <option>مفروشات</option>
+                          <option>هيئة</option>
+                          <option>مجموعة</option>
+                          <option>مركز</option>
+                          <option>مستشفى</option>
+                          <option>المؤسسة</option>
+                          <option>الشركة</option>
+                          <option>المكتب</option>
+                          <option>الوزارة</option>
+                          <option>المحل</option>
+                          <option>المفروشات</option>
+                          <option>الهيئة</option>
+                          <option>المجموعة</option>
+                          <option>المركز</option>
+                          <option>المستشفى</option>
+                        </select>
+                      </div>
+                      <!-- END CUST_NAME_START -->
 
-            <div class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem">
-              <!-- START CUST_CREDIT_LIMIT -->
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="CUST_CREDIT_LIMIT">
-                  الحد الائتماني :
-                </label>
-              </div>
-              <div class="col-3">
-                <div class="date-input-div">
-                  <div class="row flex items-center justify-space-between p-r-1rem p-l-1rem">
-                    <div class="col-7 bordered-left">
-                      <input class="new_acc_form-input width-90" type="number" name="CUST_CREDIT_LIMIT"
-                        id="CUST_CREDIT_LIMIT" placeholder="أدخل قيمة الحد الإئتماني" required />
-                    </div>
-                    <div class="col-5">
-                      <select class="new_acc_form-input width-10" name="CUST_CREDIT_LIMIT_CURRENCY"
-                        id="CUST_CREDIT_LIMIT_CURRENCY">
-                        <option selected>ريال سعودي</option>
-                        <option>دولار أمريكي</option>
-                        <option>جنيه مصري</option>
-                        <option>ين ياباني</option>
-                        <option>درهم إماراتي</option>
-                        <option>جنيه إسترليني</option>
-                        <option>يورو</option>
-                        <option>دينار كويتي</option>
-                        <option>دينار أردني</option>
-                        <option>ليرة سورية</option>
-                      </select>
+                      <!-- START CUST_NAME -->
+                      <div class="col-3 bordered-left">
+                        <input
+                          class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
+                          type="text"
+                          name="CUST_NAME"
+                          id="CUST_NAME"
+                          placeholder="إسم العميل"
+                          required
+                        />
+                      </div>
+                      <!-- END CUST_NAME -->
+
+                      <!-- START CUST_NAME_END -->
+                      <div class="col-3 bordered-left">
+                        <select
+                          class="new_acc_form-input width-100"
+                          name="CUST_NAME_END"
+                          id="CUST_NAME_END"
+                        >
+                          <option value="none">لا يوجد</option>
+                          <option selected>التجارية</option>
+                          <option>التجاري</option>
+                          <option>للتجارة</option>
+                          <option>المحدودة</option>
+                          <option>التضامنية</option>
+                          <option>للأرضيات</option>
+                          <option>للأرضيات والمفروشات</option>
+                          <option>للمفروشات</option>
+                          <option>للسجاد</option>
+                          <option>للأثاث</option>
+                          <option>للمقاولات</option>
+                          <option>للمقاولات العامة</option>
+                          <option>للتصدير</option>
+                          <option>للإستيراد والتصدير</option>
+                        </select>
+                      </div>
+                      <!-- END CUST_NAME_END -->
+
+                      <!-- START CUST_NAME_ADD -->
+                      <div class="col-3">
+                        <input
+                          class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
+                          type="text"
+                          name="CUST_NAME_ADD"
+                          id="CUST_NAME_ADD"
+                          placeholder="(إضافة)"
+                        />
+                      </div>
+                      <!-- END CUST_NAME_ADD -->
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- END CUST_CREDIT_LIMIT -->
-              <!-- START ACC_OUTLET -->
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="ACC_OUTLET">
-                  المنفــذ :
-                </label>
-              </div>
-              <div class="col-3">
-                <select class="new_acc_form-input" name="ACC_OUTLET" id="ACC_OUTLET">
-                  <option selected value="select">إختر</option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                </select>
-              </div>
-              <!-- START ACC_OUTLET -->
-              <!-- START SALESMAN_NAME -->
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="SALESMAN_NAME">
-                  المندوب :
-                </label>
-              </div>
-              <div class="col-3">
-                <select class="new_acc_form-input" name="SALESMAN_NAME" id="SALESMAN_NAME">
-                  <option selected value="select">إختر</option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                </select>
-              </div>
-              <!-- END SALESMAN_NAME -->
-            </div>
-          </div>
-          <!-- =================================================== -->
 
-          <!-- new_acc_form-div ======================= -->
-          <div class="new_acc_form-div overflow-hidden">
-            <!-- START TASHEEL_APP_CHECK -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400 p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">ملف طلب تسهيلات :</p>
+                <!-- START VIEW_CUST_NAME -->
+                <div class="col-3">
+                  <div class="flex justify-end items-center gap-0-5rem">
+                    <p id="VIEW_CUST_NAME">
+                      شركة السريع التجارية للأرضيات والمفروشات
+                    </p>
+                    <i
+                      title="عرض إسم العميل: هكذا سيظهر إسم العميل"
+                      class="ri-information-line clickable"
+                    >
+                    </i>
+                  </div>
+                </div>
+                <!-- END VIEW_CUST_NAME -->
               </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="TASHEEL_APP_CHECK" id="TASHEEL_APP_CHECK_TRUE" value="TASHEEL_APP_CHECK_TRUE"
-                  checked />
-                <label for="TASHEEL_APP_CHECK_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="TASHEEL_APP_CHECK" id="TASHEEL_APP_CHECK_FALSE"
-                  value="TASHEEL_APP_CHECK_FALSE" />
-                <label for="TASHEEL_APP_CHECK_FALSE">غير موجود</label>
-              </div>
-              <div class="col-2">
-                <select class="new_acc_form-input" name="TASHEEL_APP_VERFIY" id="TASHEEL_APP_VERFIY">
-                  <option selected value="verified">مصدق</option>
-                  <option value="not-verified">غير مصدق</option>
-                </select>
-              </div>
-            </div>
-            <!-- END TASHEEL_APP_CHECK -->
+              <!-- END CUST_NAME DIV -->
 
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
+              <div class="_______sperator_______"></div>
 
-            <!-- START WARRANT_SUPPORT_CHECK -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">أصل سند لأمر :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="WARRANT_SUPPORT_CHECK" id="WARRANT_SUPPORT_CHECK_TRUE"
-                  value="WARRANT_SUPPORT_CHECK_TRUE" checked />
-                <label for="WARRANT_SUPPORT_CHECK_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="WARRANT_SUPPORT_CHECK" id="WARRANT_SUPPORT_CHECK_FALSE"
-                  value="WARRANT_SUPPORT_CHECK_FALSE" />
-                <label for="WARRANT_SUPPORT_CHECK_FALSE">غير موجود</label>
-              </div>
-              <div class="col-2">
-                <select class="new_acc_form-input" name="WARRANT_SUPPORT_CHECK_VERFIY"
-                  id="WARRANT_SUPPORT_CHECK_VERFIY">
-                  <option selected value="finger-print">مبصم</option>
-                  <option value="stamp">مختم</option>
-                  <option value="none">لا يوجد</option>
-                </select>
-              </div>
-            </div>
-            <!-- END WARRANT_SUPPORT_CHECK -->
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START CUST_CREDIT_LIMIT -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="CUST_CREDIT_LIMIT">
+                    الحد الائتماني :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <div class="date-input-div">
+                    <div
+                      class="row flex items-center justify-space-between p-r-1rem p-l-1rem"
+                    >
+                      <div class="col-7 bordered-left">
+                        <input
+                          class="new_acc_form-input width-90"
+                          type="number"
+                          name="CUST_CREDIT_LIMIT"
+                          id="CUST_CREDIT_LIMIT"
+                          placeholder="أدخل قيمة الحد الإئتماني"
+                          required
+                        />
+                      </div>
+                      <div class="col-5">
+                        <select
+                          class="new_acc_form-input width-10"
+                          name="CUST_CREDIT_LIMIT_CURRENCY"
+                          id="CUST_CREDIT_LIMIT_CURRENCY"
+                        >
+                          <option selected>ريال سعودي</option>
+                          <option>دولار أمريكي</option>
+                          <option>جنيه مصري</option>
+                          <option>ين ياباني</option>
+                          <option>درهم إماراتي</option>
+                          <option>جنيه إسترليني</option>
+                          <option>يورو</option>
+                          <option>دينار كويتي</option>
+                          <option>دينار أردني</option>
+                          <option>ليرة سورية</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END CUST_CREDIT_LIMIT -->
 
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
+                <!-- START ACC_OUTLET -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="ACC_OUTLET">
+                    المنفــذ :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="ACC_OUTLET"
+                    id="ACC_OUTLET"
+                  >
+                    <option selected value="select">إختر</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+                <!-- START ACC_OUTLET -->
 
-            <!-- START CUST_TRADE_LOG -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">السجل التجاري :</p>
+                <!-- START SALESMAN_NAME -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="SALESMAN_NAME">
+                    المندوب :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="SALESMAN_NAME"
+                    id="SALESMAN_NAME"
+                  >
+                    <option selected value="select">إختر</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </div>
+                <!-- END SALESMAN_NAME -->
               </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="CUST_TRADE_LOG" id="CUST_TRADE_LOG_TRUE" value="CUST_TRADE_LOG_TRUE"
-                  checked />
-                <label for="CUST_TRADE_LOG_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="CUST_TRADE_LOG" id="CUST_TRADE_LOG_FALSE" value="CUST_TRADE_LOG_FALSE" />
-                <label for="CUST_TRADE_LOG_FALSE">غير موجود</label>
-              </div>
-              <p>تاريخ الإنتهاء :</p>
-              <div class="col-2">
-                <div class="date-input-div flex items-center justify-start gap-0-25rem p-0-5rem">
-                  <input class="width-100" type="number" name="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
-                    id="CUST_TRADE_LOG_EXPIRY_DATE-DAY" required value="1" min="1" max="31" />
-                  <span>/</span>
-                  <input class="width-100" type="number" name="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
-                    id="CUST_TRADE_LOG_EXPIRY_DATE-MONTH" required value="12" min="1" max="12" />
-                  <span>/</span>
-                  <input class="width-100" type="number" name="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
-                    id="CUST_TRADE_LOG_EXPIRY_DATE-YEAR" required value="1444" min="1400" max="9999" />
-                  <span>هـ</span>
+            </section>
+            <!-- ========================================= -->
+
+            <!-- new_acc_form-section -->
+            <section class="new_acc_form-section overflow-hidden">
+              <!-- START TASHEEL_APP_CHECK -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">ملف طلب تسهيلات :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="TASHEEL_APP_CHECK"
+                      id="TASHEEL_APP_CHECK_TRUE"
+                      value="TASHEEL_APP_CHECK_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="TASHEEL_APP_CHECK"
+                      id="TASHEEL_APP_CHECK_FALSE"
+                      value="TASHEEL_APP_CHECK_FALSE"
+                    />
+
+                    <div class="new_acc_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="TASHEEL_APP_CHECK_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label
+                        class="check-label-false"
+                        for="TASHEEL_APP_CHECK_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 flex items-center justify-space-between">
+                  <select
+                    class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
+                    name="TASHEEL_APP_VERFIY"
+                    id="TASHEEL_APP_VERFIY"
+                  >
+                    <option selected value="verified">مصدق</option>
+                    <option value="not-verified">غير مصدق</option>
+                  </select>
                 </div>
               </div>
-              <!-- END CUST_TRADE_LOG -->
-            </div>
+              <!-- END TASHEEL_APP_CHECK -->
 
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
+              <div class="_______sperator_______"></div>
 
-            <!-- START VAT_CERT -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">شهادة ضريبية :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="VAT_CERT" id="VAT_CERT_TRUE" value="VAT_CERT_TRUE" checked />
-                <label for="VAT_CERT_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="VAT_CERT" id="VAT_CERT_FALSE" value="VAT_CERT_FALSE" />
-                <label for="VAT_CERT_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END VAT_CERT -->
+              <!-- START WARRANT_SUPPORT_CHECK -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">أصل سند لأمر :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="WARRANT_SUPPORT_CHECK"
+                      id="WARRANT_SUPPORT_CHECK_TRUE"
+                      value="WARRANT_SUPPORT_CHECK_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="WARRANT_SUPPORT_CHECK"
+                      id="WARRANT_SUPPORT_CHECK_FALSE"
+                      value="WARRANT_SUPPORT_CHECK_FALSE"
+                    />
 
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
-
-            <!-- SRART NATIONAL_ID -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">هوية وطنية :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="NATIONAL_ID" id="NATIONAL_ID_TRUE" value="NATIONAL_ID_TRUE" checked />
-                <label for="NATIONAL_ID_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="NATIONAL_ID" id="NATIONAL_ID_FALSE" value="NATIONAL_ID_FALSE" />
-                <label for="NATIONAL_ID_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END NATIONAL_ID -->
-
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
-
-            <!-- SRART FORIGN_ID -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">هوية أجنبي :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="FORIGN_ID" id="FORIGN_ID_TRUE" value="FORIGN_ID_TRUE" checked />
-                <label for="FORIGN_ID_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="FORIGN_ID" id="FORIGN_ID_FALSE" value="FORIGN_ID_FALSE" />
-                <label for="FORIGN_ID_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END FORIGN_ID -->
-
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
-
-            <!-- SRART CUST_ATTORNEY -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">إثبات وكالة :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="CUST_ATTORNEY" id="CUST_ATTORNEY_TRUE" value="CUST_ATTORNEY_TRUE" checked />
-                <label for="CUST_ATTORNEY_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="CUST_ATTORNEY" id="CUST_ATTORNEY_FALSE" value="CUST_ATTORNEY_FALSE" />
-                <label for="CUST_ATTORNEY_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END CUST_ATTORNEY -->
-
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
-
-            <!-- SRART CUST_LICENSE -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">رخصة نشاط تجاري :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="CUST_LICENSE" id="CUST_LICENSE_TRUE" value="CUST_LICENSE_TRUE" checked />
-                <label for="CUST_LICENSE_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="CUST_LICENSE" id="CUST_LICENSE_FALSE" value="CUST_LICENSE_FALSE" />
-                <label for="CUST_LICENSE_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END CUST_LICENSE -->
-
-            <!----------------- sperator ----------------->
-            <div class="sperator"></div>
-            <!----------------- sperator ----------------->
-
-            <!-- SRART NATIONAL_ADDRESS -->
-            <div class="row items-center justify-start p-r-0-25rem p-l-0-25rem">
-              <div class="col-2 text-center back-shade-400  p-t-1-5rem p-b-1-5rem">
-                <p class="new_acc_form-label">عنوان وطني :</p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="NATIONAL_ADDRESS" id="NATIONAL_ADDRESS_TRUE" value="NATIONAL_ADDRESS_TRUE"
-                  checked />
-                <label for="NATIONAL_ADDRESS_TRUE">موجود</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="NATIONAL_ADDRESS" id="NATIONAL_ADDRESS_FALSE"
-                  value="NATIONAL_ADDRESS_FALSE" />
-                <label for="NATIONAL_ADDRESS_FALSE">غير موجود</label>
-              </div>
-            </div>
-            <!-- END NATIONAL_ADDRESS -->
-
-          </div>
-          <!-- =================================================== -->
-
-          <!-- START CHECK_CUST_SAVED -->
-          <div class="new_acc_form-div">
-            <div class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem">
-              <div class="col-2 text-center">
-                <p class="new_acc_form-label">تم حفظ الحساب في النظام الآلي </p>
-              </div>
-              <div class="col-1 p-r-2rem">
-                <input type="radio" name="CHECK_CUST_SAVED" id="CHECK_CUST_SAVED_TRUE" value="CHECK_CUST_SAVED_TRUE"
-                  checked />
-                <label for="CHECK_CUST_SAVED_TRUE">نعم</label>
-              </div>
-              <div class="col-1">
-                <input type="radio" name="CHECK_CUST_SAVED" id="CHECK_CUST_SAVED_FALSE"
-                  value="CHECK_CUST_SAVED_FALSE" />
-                <label for="CHECK_CUST_SAVED_FALSE">لا</label>
-              </div>
-            </div>
-          </div>
-          <!-- END CHECK_CUST_SAVED -->
-
-          <!-- new_acc_form-div ======================= -->
-          <div class="new_acc_form-div">
-            <div class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem">
-              <!-- START MAKE_DATE DIV -->
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="MAKE_DATE">تاريخ الإعداد :</label>
-              </div>
-              <div class="col-2">
-                <div class="date-input-div flex items-center justify-start gap-0-25rem p-0-5rem">
-                  <input class="width-100" type="number" name="MAKE_DATE-DAY" id="MAKE_DATE-DAY" required value="1"
-                    min="1" max="31" />
-                  <span>/</span>
-                  <input class="width-100" type="number" name="MAKE_DATE-MONTH" id="MAKE_DATE-MONTH" required value="12"
-                    min="1" max="12" />
-                  <span>/</span>
-                  <input class="width-100" type="number" name="MAKE_DATE-YEAR" id="MAKE_DATE-YEAR" required value="2022"
-                    min="2000" max="9999" />
-                  <span>م</span>
+                    <div class="new_acc_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="WARRANT_SUPPORT_CHECK_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label
+                        class="check-label-false"
+                        for="WARRANT_SUPPORT_CHECK_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 flex items-center justify-space-between">
+                  <select
+                    class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
+                    name="WARRANT_SUPPORT_CHECK_VERFIY"
+                    id="WARRANT_SUPPORT_CHECK_VERFIY"
+                  >
+                    <option selected value="finger-print">مبصم</option>
+                    <option value="stamp">مختم</option>
+                    <option value="none">لا يوجد</option>
+                  </select>
                 </div>
               </div>
-              <!-- END MAKE_DATE DIV -->
-              <!-- START CUST_NO -->
-              <div class="col-1 text-left p-0">
-                <label class="new_acc_form-label" for="CUST_NO">رقم العميل :</label>
+              <!-- END WARRANT_SUPPORT_CHECK -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- START CUST_TRADE_LOG -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">السجل التجاري :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="CUST_TRADE_LOG"
+                      id="CUST_TRADE_LOG_TRUE"
+                      value="CUST_TRADE_LOG_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="CUST_TRADE_LOG"
+                      id="CUST_TRADE_LOG_FALSE"
+                      value="CUST_TRADE_LOG_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="CUST_TRADE_LOG_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label
+                        class="check-label-false"
+                        for="CUST_TRADE_LOG_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 flex items-center justify-center">
+                  <div
+                    class="date-input-div flex items-stretch justify-start gap-0-25rem p-r-0-5rem p-l-0-5rem"
+                  >
+                    <p
+                      class="width-100 bordered-left flex items-center justify-start"
+                    >
+                      تاريخ الإنتهاء
+                    </p>
+                    <input
+                      class="width-60 p-t-0-5rem p-b-0-5rem"
+                      type="number"
+                      name="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
+                      id="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
+                      required
+                      value="1"
+                      min="1"
+                      max="31"
+                    />
+                    <span class="flex items-center justify-start">/</span>
+                    <input
+                      class="width-70 p-t-0-5rem p-b-0-5rem"
+                      type="number"
+                      name="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
+                      id="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
+                      required
+                      value="12"
+                      min="1"
+                      max="12"
+                    />
+                    <span class="flex items-center justify-start">/</span>
+                    <input
+                      class="width-70 p-t-0-5rem p-b-0-5rem"
+                      type="number"
+                      name="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
+                      id="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
+                      required
+                      value="1444"
+                      min="1400"
+                      max="9999"
+                    />
+                    <span class="font-w-900 p-t-0-5rem p-b-0-5rem">هـ</span>
+                  </div>
+                </div>
+                <!-- END CUST_TRADE_LOG -->
               </div>
-              <div class="col-2">
-                <input class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem" type="number" name="CUST_NO"
-                  id="CUST_NO" required placeholder="أدخل رقم العميل" min="1" max="9999" />
+
+              <div class="_______sperator_______"></div>
+
+              <!-- START VAT_CERT -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">شهادة ضريبية :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="VAT_CERT"
+                      id="VAT_CERT_TRUE"
+                      value="VAT_CERT_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="VAT_CERT"
+                      id="VAT_CERT_FALSE"
+                      value="VAT_CERT_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="VAT_CERT_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="VAT_CERT_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-3 flex items-center justify-center">
+                  <a
+                    href="https://zatca.gov.sa/ar/eServices/Pages/TaxpayerLookup.aspx"
+                    target="_blank"
+                    class="btn-reset prim-btn bordered width-100 p-t-0-5rem p-b-0-5rem p-r-1rem p-l-1rem"
+                  >
+                    التحقق من ضريبة القيمة المضافة
+                    <i class="ri-arrow-left-line"></i>
+                  </a>
+                </div>
               </div>
-              <!-- END CUST_NO -->
-            </div>
+              <!-- END VAT_CERT -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- SRART NATIONAL_ID -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">هوية وطنية :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="NATIONAL_ID"
+                      id="NATIONAL_ID_TRUE"
+                      value="NATIONAL_ID_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="NATIONAL_ID"
+                      id="NATIONAL_ID_FALSE"
+                      value="NATIONAL_ID_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="NATIONAL_ID_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="NATIONAL_ID_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END NATIONAL_ID -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- SRART FORIGN_ID -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">هوية أجنبي :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="FORIGN_ID"
+                      id="FORIGN_ID_TRUE"
+                      value="FORIGN_ID_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="FORIGN_ID"
+                      id="FORIGN_ID_FALSE"
+                      value="FORIGN_ID_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="FORIGN_ID_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="FORIGN_ID_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END FORIGN_ID -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- SRART CUST_ATTORNEY -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">إثبات وكالة :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="CUST_ATTORNEY"
+                      id="CUST_ATTORNEY_TRUE"
+                      value="CUST_ATTORNEY_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="CUST_ATTORNEY"
+                      id="CUST_ATTORNEY_FALSE"
+                      value="CUST_ATTORNEY_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="CUST_ATTORNEY_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="CUST_ATTORNEY_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END CUST_ATTORNEY -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- SRART CUST_LICENSE -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">رخصة نشاط تجاري :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="CUST_LICENSE"
+                      id="CUST_LICENSE_TRUE"
+                      value="CUST_LICENSE_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="CUST_LICENSE"
+                      id="CUST_LICENSE_FALSE"
+                      value="CUST_LICENSE_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="CUST_LICENSE_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="CUST_LICENSE_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END CUST_LICENSE -->
+
+              <div class="_______sperator_______"></div>
+
+              <!-- SRART NATIONAL_ADDRESS -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">عنوان وطني :</p>
+                </div>
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="NATIONAL_ADDRESS"
+                      id="NATIONAL_ADDRESS_TRUE"
+                      value="NATIONAL_ADDRESS_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="NATIONAL_ADDRESS"
+                      id="NATIONAL_ADDRESS_FALSE"
+                      value="NATIONAL_ADDRESS_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="NATIONAL_ADDRESS_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label
+                        class="check-label-false"
+                        for="NATIONAL_ADDRESS_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END NATIONAL_ADDRESS -->
+            </section>
             <!-- =================================================== -->
 
+            <!-- START CHECK_CUST_SAVED -->
+            <section class="new_acc_form-section">
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <div class="col-2 text-center">
+                  <p class="new_acc_form-label">
+                    تم حفظ الحساب في النظام الآلي
+                  </p>
+                </div>
+
+                <div class="col-2 p-r-2rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="CHECK_CUST_SAVED"
+                      id="CHECK_CUST_SAVED_TRUE"
+                      value="CHECK_CUST_SAVED_TRUE"
+                      checked
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="CHECK_CUST_SAVED"
+                      id="CHECK_CUST_SAVED_FALSE"
+                      value="CHECK_CUST_SAVED_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="CHECK_CUST_SAVED_TRUE"
+                        >نعم</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label
+                        class="check-label-false"
+                        for="CHECK_CUST_SAVED_FALSE"
+                        >ليس بعد</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- START MAKE_DATE DIV -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="MAKE_DATE"
+                    >تاريخ الإعداد :</label
+                  >
+                </div>
+                <div class="col-3">
+                  <div
+                    class="date-input-div flex items-center justify-start gap-0-25rem p-0-5rem"
+                  >
+                    <input
+                      class="width-100"
+                      type="number"
+                      name="MAKE_DATE-DAY"
+                      id="MAKE_DATE-DAY"
+                      required
+                      value="1"
+                      min="1"
+                      max="31"
+                    />
+                    <span>/</span>
+                    <input
+                      class="width-100"
+                      type="number"
+                      name="MAKE_DATE-MONTH"
+                      id="MAKE_DATE-MONTH"
+                      required
+                      value="12"
+                      min="1"
+                      max="12"
+                    />
+                    <span>/</span>
+                    <input
+                      class="width-100"
+                      type="number"
+                      name="MAKE_DATE-YEAR"
+                      id="MAKE_DATE-YEAR"
+                      required
+                      value="2022"
+                      min="2000"
+                      max="9999"
+                    />
+                    <span>م</span>
+                  </div>
+                </div>
+                <!-- END MAKE_DATE DIV -->
+
+                <!-- START CUST_NO -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="CUST_NO"
+                    >رقم العميل :</label
+                  >
+                </div>
+                <div class="col-3">
+                  <input
+                    class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
+                    type="number"
+                    name="CUST_NO"
+                    id="CUST_NO"
+                    required
+                    placeholder="أدخل رقم العميل"
+                    min="1"
+                    max="9999"
+                  />
+                </div>
+                <!-- END CUST_NO -->
+              </div>
+            </section>
+            <!-- END CHECK_CUST_SAVED -->
           </div>
-      </form>
-      <!-- END </1.new_acc_form> -->
+        </form>
+        <!-- END </1.new_acc_form> -->
 
-      <!-- 2. open_acc_system_text -->
-      <!-- 3. open_acc_file_sticker -->
-      <!-- 4. open_acc_email_text -->
-    </section>
-    <!-- END new_acc_section SECTION -->
-  </main>
-</body>
-
+        <!-- 2. open_acc_system_text -->
+        <!-- 3. open_acc_file_sticker -->
+        <!-- 4. open_acc_email_text -->
+      </section>
+      <!-- END new_acc_section SECTION -->
+    </main>
+  </body>
 </html>

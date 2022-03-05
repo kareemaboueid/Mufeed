@@ -10,8 +10,11 @@ component: Buttons
 
 .btn-reset {
   border: none;
-  display: block;
   background-color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
   border-radius: var(--border-radius-base);
   -webkit-border-radius: var(--border-radius-base);
   -moz-border-radius: var(--border-radius-base);
@@ -20,10 +23,19 @@ component: Buttons
 }
 
 .prim-btn {
-  font-size: var(--font-size-h5);
-  padding: 1rem 1.8rem;
+  font-size: inherit;
   background-color: var(--prim-color);
+  color: var(--sec-color-200);
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+.prim-btn:hover {
   color: var(--sec-color-50);
+  text-decoration: none;
+  opacity: 0.95;
 }
 
 .sec-btn {

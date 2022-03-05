@@ -4,7 +4,7 @@ Utilities: container
 ==============================================
 */
 
-.sperator {
+._______sperator_______ {
   height: 1px;
   background-color: var(--sec-color-500);
   border: none;
@@ -16,6 +16,35 @@ Utilities: container
   display: none;
 }
 
+.radius-base {
+  border-radius: var(--border-radius-base);
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
+}
+
+.radius-t-r {
+  border-top-right-radius: var(--border-radius-base);
+}
+.radius-t-l {
+  border-top-left-radius: var(--border-radius-base);
+}
+.radius-b-r {
+  border-bottom-right-radius: var(--border-radius-base);
+}
+.radius-b-l {
+  border-bottom-left-radius: var(--border-radius-base);
+}
+
+.radius-round {
+  border-radius: var(--border-radius-round);
+  -webkit-border-radius: var(--border-radius-round);
+  -moz-border-radius: var(--border-radius-round);
+  -ms-border-radius: var(--border-radius-round);
+  -o-border-radius: var(--border-radius-round);
+}
+
 .overflow-hidden {
   overflow: hidden !important;
 }
@@ -24,8 +53,20 @@ Utilities: container
   text-decoration: underline;
 }
 
+.bordered {
+  border: 1px solid var(--sec-color-500);
+}
 .bordered-left {
   border-left: 1px solid var(--sec-color-500);
+}
+.bordered-right {
+  border-right: 1px solid var(--sec-color-500);
+}
+.bordered-top {
+  border-top: 1px solid var(--sec-color-500);
+}
+.bordered-bottom {
+  border-bottom: 1px solid var(--sec-color-500);
 }
 
 .container {

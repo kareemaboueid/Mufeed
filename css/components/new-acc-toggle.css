@@ -1,0 +1,54 @@
+.new_acc_switch {
+  background: #00bc9c;
+  transition: all 0.2s ease;
+  border-radius: var(--border-radius-base);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
+}
+
+.new_acc_switch i {
+  color: #fff;
+  font-size: var(--font-size-h6);
+  font-weight: 800;
+}
+
+.new_acc_switch label {
+  font-size: 1rem;
+  padding: 0.65rem 0.1rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease;
+  font-weight: 800;
+}
+
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch {
+  background: #eb4f37;
+}
+
+.new_acc_switch i.ri-close-line {
+  display: none;
+}
+
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.ri-check-line {
+  display: none;
+}
+
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.ri-close-line {
+  display: block;
+}
+
+.new_acc_toggle_radio-true:checked ~ .new_acc_switch label.check-label-true {
+  color: #fff;
+}
+
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch label.check-label-false {
+  color: #fff;
+}
