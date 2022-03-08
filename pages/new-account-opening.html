@@ -815,7 +815,6 @@
                       name="CHECK_CUST_SAVED"
                       id="CHECK_CUST_SAVED_TRUE"
                       value="CHECK_CUST_SAVED_TRUE"
-                      checked
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
@@ -823,6 +822,7 @@
                       name="CHECK_CUST_SAVED"
                       id="CHECK_CUST_SAVED_FALSE"
                       value="CHECK_CUST_SAVED_FALSE"
+                      checked
                     />
                     <div class="new_acc_switch bordered">
                       <label
@@ -842,17 +842,17 @@
                 </div>
 
                 <!-- START MAKE_DATE DIV -->
-                <div class="col-1 text-left p-0">
-                  <label class="new_acc_form-label" for="MAKE_DATE"
-                    >تاريخ الإعداد :</label
-                  >
-                </div>
-                <div class="col-3">
+                <div class="col-3 flex items-center justify-center">
                   <div
-                    class="date-input-div flex items-center justify-start gap-0-25rem p-0-5rem"
+                    class="date-input-div flex items-stretch justify-start gap-0-25rem p-r-0-5rem p-l-0-5rem"
                   >
+                    <p
+                      class="width-100 bordered-left flex items-center justify-start"
+                    >
+                      تاريخ الإعداد
+                    </p>
                     <input
-                      class="width-100"
+                      class="width-60 p-t-0-5rem p-b-0-5rem"
                       type="number"
                       name="MAKE_DATE-DAY"
                       id="MAKE_DATE-DAY"
@@ -861,9 +861,9 @@
                       min="1"
                       max="31"
                     />
-                    <span>/</span>
+                    <span class="flex items-center justify-start">/</span>
                     <input
-                      class="width-100"
+                      class="width-70 p-t-0-5rem p-b-0-5rem"
                       type="number"
                       name="MAKE_DATE-MONTH"
                       id="MAKE_DATE-MONTH"
@@ -872,9 +872,9 @@
                       min="1"
                       max="12"
                     />
-                    <span>/</span>
+                    <span class="flex items-center justify-start">/</span>
                     <input
-                      class="width-100"
+                      class="width-70 p-t-0-5rem p-b-0-5rem"
                       type="number"
                       name="MAKE_DATE-YEAR"
                       id="MAKE_DATE-YEAR"
@@ -883,7 +883,7 @@
                       min="2000"
                       max="9999"
                     />
-                    <span>م</span>
+                    <span class="font-w-900 p-t-0-5rem p-b-0-5rem">م</span>
                   </div>
                 </div>
                 <!-- END MAKE_DATE DIV -->
@@ -910,15 +910,46 @@
               </div>
             </section>
             <!-- END CHECK_CUST_SAVED -->
+            <!-- START SUBMIT BUTTONS -->
+            <section>
+              <div
+                class="flex items-center justify-center gap-3rem p-t-2rem p-b-2rem"
+              >
+                <input
+                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
+                  type="button"
+                  value="طباعة فهرس المستندات"
+                />
+                <input
+                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
+                  type="button"
+                  value="طباعة غلاف العميل"
+                />
+                <input
+                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
+                  type="button"
+                  value="إيميل التعميد بفتح الحساب"
+                />
+                <input
+                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
+                  type="button"
+                  value="إيميل تأكيد فتح الحساب"
+                />
+              </div>
+            </section>
+            <!-- END SUBMIT BUTTONS -->
           </div>
         </form>
         <!-- END </1.new_acc_form> -->
-
-        <!-- 2. open_acc_system_text -->
-        <!-- 3. open_acc_file_sticker -->
-        <!-- 4. open_acc_email_text -->
       </section>
       <!-- END new_acc_section SECTION -->
     </main>
+    <!-- START LOADING WINDOW -->
+    <div class="loading_window_layout"></div>
+    <div class="loading_window flex f-column items-center justify-center">
+      <img src="../media/loading-img.gif" alt="loading-screen" />
+      <p>جاري المعالجة</p>
+    </div>
+    <!-- END LOADING WINDOW -->
   </body>
 </html>

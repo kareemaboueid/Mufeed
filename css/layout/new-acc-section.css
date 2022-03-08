@@ -29,6 +29,12 @@
   -o-border-radius: var(--border-radius-base);
 }
 
+.new_acc_form-action-btn {
+  cursor: pointer;
+  font-weight: var(--font-weight-500);
+  font-size: var(--font-size-h7);
+}
+
 #CUST_CREDIT_LIMIT_CURRENCY {
   font-size: 0.8rem;
   font-weight: 700;
