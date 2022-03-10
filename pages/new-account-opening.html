@@ -25,6 +25,7 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="../css/index.css" />
     <!-- app script -->
+    <script defer src="../js/vendors/jquery.min.js"></script>
     <script defer src="../js/new-acc-script.js"></script>
   </head>
 
@@ -122,8 +123,8 @@
                           name="CUST_NAME_START"
                           id="CUST_NAME_START"
                         >
-                          <option value="none">لا يوجد</option>
-                          <option selected>مؤسسة</option>
+                          <option selected value="">لا يوجد</option>
+                          <option>مؤسسة</option>
                           <option>شركة</option>
                           <option>مكتب</option>
                           <option>وزارة</option>
@@ -167,8 +168,8 @@
                           name="CUST_NAME_END"
                           id="CUST_NAME_END"
                         >
-                          <option value="none">لا يوجد</option>
-                          <option selected>التجارية</option>
+                          <option selected value="">لا يوجد</option>
+                          <option>التجارية</option>
                           <option>التجاري</option>
                           <option>للتجارة</option>
                           <option>المحدودة</option>
@@ -186,17 +187,28 @@
                       </div>
                       <!-- END CUST_NAME_END -->
 
-                      <!-- START CUST_NAME_ADD -->
-                      <div class="col-3">
+                      <!-- START CUST_NAME_SUFFIX -->
+                      <div
+                        class="col-3 flex items-center justify-space-between"
+                      >
                         <input
-                          class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
+                          class="new_acc_form-input width-80 p-0"
                           type="text"
-                          name="CUST_NAME_ADD"
-                          id="CUST_NAME_ADD"
+                          name="CUST_NAME_SUFFIX"
+                          id="CUST_NAME_SUFFIX"
                           placeholder="(إضافة)"
                         />
+                        <!-- add pra -->
+                        <button
+                          id="add_parenthesis"
+                          class="width-20 back-shade-50 bordered-right"
+                          type="button"
+                          title="إضافة قوسين"
+                        >
+                          ( )
+                        </button>
                       </div>
-                      <!-- END CUST_NAME_ADD -->
+                      <!-- END CUST_NAME_SUFFIX -->
                     </div>
                   </div>
                 </div>
@@ -204,8 +216,13 @@
                 <!-- START VIEW_CUST_NAME -->
                 <div class="col-3">
                   <div class="flex justify-end items-center gap-0-5rem">
-                    <p id="VIEW_CUST_NAME">
-                      شركة السريع التجارية للأرضيات والمفروشات
+                    <p>
+                      <span id="VIEW_CUST_NAME1"></span>
+                      <span id="VIEW_CUST_NAME2"></span>
+                      <span id="VIEW_CUST_NAME3"></span>
+                      <span id="parenthesis1" class="hide">(</span>
+                      <span id="VIEW_CUST_NAME4"></span>
+                      <span id="parenthesis2" class="hide">)</span>
                     </p>
                     <i
                       title="عرض إسم العميل: هكذا سيظهر إسم العميل"
@@ -944,12 +961,5 @@
       </section>
       <!-- END new_acc_section SECTION -->
     </main>
-    <!-- START LOADING WINDOW -->
-    <div class="loading_window_layout"></div>
-    <div class="loading_window flex f-column items-center justify-center">
-      <img src="../media/loading-img.gif" alt="loading-screen" />
-      <p>جاري المعالجة</p>
-    </div>
-    <!-- END LOADING WINDOW -->
   </body>
 </html>

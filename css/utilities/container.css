@@ -57,15 +57,19 @@ Utilities: container
   border: 1px solid var(--sec-color-500);
 }
 .bordered-left {
+  border: none;
   border-left: 1px solid var(--sec-color-500);
 }
 .bordered-right {
+  border: none;
   border-right: 1px solid var(--sec-color-500);
 }
 .bordered-top {
+  border: none;
   border-top: 1px solid var(--sec-color-500);
 }
 .bordered-bottom {
+  border: none;
   border-bottom: 1px solid var(--sec-color-500);
 }
 
