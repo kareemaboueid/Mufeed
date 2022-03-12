@@ -1,0 +1,24 @@
+#ALERT_BOX {
+  position: absolute;
+  width: fit-content;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.6rem 1rem;
+  overflow: hidden;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--border-radius-base);
+  transition: var(--transition-base);
+  -webkit-transition: var(--transition-base);
+  -moz-transition: var(--transition-base);
+  -ms-transition: var(--transition-base);
+  -o-transition: var(--transition-base);
+  -webkit-border-radius: var(--border-radius-base);
+  -moz-border-radius: var(--border-radius-base);
+  -ms-border-radius: var(--border-radius-base);
+  -o-border-radius: var(--border-radius-base);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}

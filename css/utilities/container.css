@@ -6,7 +6,7 @@ Utilities: container
 
 ._______sperator_______ {
   height: 1px;
-  background-color: var(--sec-color-500);
+  background-color: var(--sec-color-500) !important;
   border: none;
   margin: 0;
   outline: none;
@@ -38,11 +38,11 @@ Utilities: container
 }
 
 .radius-round {
-  border-radius: var(--border-radius-round);
-  -webkit-border-radius: var(--border-radius-round);
-  -moz-border-radius: var(--border-radius-round);
-  -ms-border-radius: var(--border-radius-round);
-  -o-border-radius: var(--border-radius-round);
+  border-radius: var(--border-radius-round) !important;
+  -webkit-border-radius: var(--border-radius-round) !important;
+  -moz-border-radius: var(--border-radius-round) !important;
+  -ms-border-radius: var(--border-radius-round) !important;
+  -o-border-radius: var(--border-radius-round) !important;
 }
 
 .overflow-hidden {
@@ -53,24 +53,28 @@ Utilities: container
   text-decoration: underline;
 }
 
+.border-none {
+  border: none !important;
+}
+
 .bordered {
-  border: 1px solid var(--sec-color-500);
+  border: 1px solid var(--sec-color-500) !important;
 }
 .bordered-left {
   border: none;
-  border-left: 1px solid var(--sec-color-500);
+  border-left: 1px solid var(--sec-color-500) !important;
 }
 .bordered-right {
   border: none;
-  border-right: 1px solid var(--sec-color-500);
+  border-right: 1px solid var(--sec-color-500) !important;
 }
 .bordered-top {
   border: none;
-  border-top: 1px solid var(--sec-color-500);
+  border-top: 1px solid var(--sec-color-500) !important;
 }
 .bordered-bottom {
   border: none;
-  border-bottom: 1px solid var(--sec-color-500);
+  border-bottom: 1px solid var(--sec-color-500) !important;
 }
 
 .container {

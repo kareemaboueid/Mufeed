@@ -1,23 +1,33 @@
 .loading_window {
+  cursor: wait;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
-  background-color: #fff;
-  border-radius: var(--border-radius-base);
-  -webkit-border-radius: var(--border-radius-base);
-  -moz-border-radius: var(--border-radius-base);
-  -ms-border-radius: var(--border-radius-base);
-  -o-border-radius: var(--border-radius-base);
+  width: 22%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.loading_window img {
+  width: 100%;
 }
 
 .loading_window_layout {
+  cursor: wait;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;

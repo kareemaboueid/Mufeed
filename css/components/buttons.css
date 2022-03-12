@@ -9,17 +9,12 @@ component: Buttons
 }
 
 .btn-reset {
-  border: none;
   background-color: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.25rem;
-  border-radius: var(--border-radius-base);
-  -webkit-border-radius: var(--border-radius-base);
-  -moz-border-radius: var(--border-radius-base);
-  -ms-border-radius: var(--border-radius-base);
-  -o-border-radius: var(--border-radius-base);
+  border: none;
 }
 
 .prim-btn {

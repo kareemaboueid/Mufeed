@@ -26,7 +26,8 @@
     <link rel="stylesheet" href="../css/index.css" />
     <!-- app script -->
     <script defer src="../js/vendors/jquery.min.js"></script>
-    <script defer src="../js/new-acc-script.js"></script>
+    <script defer src="../js/view-cust-name-script.js"></script>
+    <script defer src="../js/new-acc-open-script.js"></script>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
       <!-- START APP_HEADER -->
       <header class="app_header">
         <div class="container">
-          <!-- logo -->
+          <!-- start logo -->
           <div class="row p-t-0-5rem p-b-0-5rem">
             <div class="col-2 bordered-left">
               <a
@@ -45,60 +46,90 @@
                 <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
               </a>
             </div>
-            <!-- breadcrumbs -->
-            <div class="col-4 breadcrumbs flex items-center justify-start">
-              <span class="prev">
-                <i class="ri-home-7-fill"></i>
-                <a
-                  class="underline"
-                  title="الصفحة الرئيسية"
-                  href="../index.html"
-                  >الرئيسية</a
-                >
-              </span>
-              <span class="separator"
-                ><i class="ri-arrow-left-s-line"></i
-              ></span>
-              <span class="currant"
-                ><i class="ri-user-add-fill"></i> فتح حساب جديد</span
-              >
+            <!-- end logo -->
+            <!-- start page title -->
+            <div class="col-7 flex items-center justify-start gap-0-5rem">
+              <img
+                class="PAGE_IMAGE"
+                src="../media/add-user.png"
+                alt="فتح حساب عميل"
+              />
+              <h1 class="PAGE_TITLE">فتح حساب عميل</h1>
             </div>
-            <!-- description -->
-            <div class="col-6 flex items-center justify-end">
+            <!-- end page title -->
+            <!-- start description -->
+            <div class="col-3 flex items-center justify-end">
               <p class="font-w-700 font-s-base text-left">
                 إعمل بذكاء وانجز مهامك بسهولة.
               </p>
             </div>
+            <!-- end description -->
           </div>
         </div>
       </header>
       <!-- END APP_HEADER -->
-
-      <!-- START PAGE_TITLE -->
-      <section class="container p-b-0-5rem p-t-0-5rem">
-        <div class="row flex items-center justify-start">
-          <div class="col-5 flex items-center justify-start gap-1rem">
-            <img
-              class="PAGE_IMAGE"
-              src="../media/add-user.png"
-              alt="فتح حساب عميل جديد"
-            />
-            <h1 class="PAGE_TITLE">فتح حساب عميل جديد</h1>
-          </div>
-          <div class="col-7 flex items-center justify-end">
-            <p class="font-s-base text-left">
-              أدخل جميع البيانات أدناه للمعالجة والطباعة.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- END PAGE_TITLE -->
 
       <!-- START new_acc_section SECTION -->
       <section class="new_acc_section p-t-1rem p-b-1rem">
         <!-- START </1.new_acc_form> -->
         <form action="" id="new_acc_form">
           <div class="container flex f-column gap-1rem">
+            <!-- new_acc_form-section -->
+            <section>
+              <div class="row back-shade-200">
+                <!-- START SUBMIT BUTTONS -->
+                <section
+                  class="col-12 flex items-center justify-start gap-0-25rem"
+                >
+                  <button
+                    class="btn-reset flex bordered p-t-0-25rem p-b-0-25rem radius-base justify-center items-center"
+                    type="button"
+                    title="خروج"
+                    id="exit_to_main_page_btn"
+                  >
+                    <a
+                      href="../index.html"
+                      class="flex justify-center items-center"
+                    >
+                      <img src="../media/close.png" class="width-70" />
+                    </a>
+                  </button>
+                  <button
+                    class="btn-reset flex bordered p-t-0-25rem p-b-0-25rem radius-base justify-center items-center"
+                    type="button"
+                    title="طباعة فهرس المستندات"
+                    id="print_index_btn"
+                  >
+                    <img src="../media/checklist.png" class="width-70" />
+                  </button>
+                  <button
+                    class="btn-reset flex bordered p-t-0-25rem p-b-0-25rem radius-base justify-center items-center"
+                    type="button"
+                    title="طباعة غلاف العميل"
+                    id="print_cust_cover_btn"
+                  >
+                    <img src="../media/cover.png" class="width-70" />
+                  </button>
+                  <button
+                    class="btn-reset flex bordered p-t-0-25rem p-b-0-25rem radius-base justify-center items-center"
+                    type="button"
+                    title="إيميل التعميد بفتح الحساب"
+                    id="email_auth_open_acc_btn"
+                  >
+                    <img src="../media/verify-email.png" class="width-70" />
+                  </button>
+                  <button
+                    class="btn-reset flex bordered p-t-0-25rem p-b-0-25rem radius-base justify-center items-center"
+                    type="button"
+                    title="إيميل تأكيد فتح الحساب"
+                    id="email_confirm_open_acc_btn"
+                  >
+                    <img src="../media/send-email.png" class="width-70" />
+                  </button>
+                </section>
+              </div>
+              <!-- END SUBMIT BUTTONS -->
+            </section>
             <!-- new_acc_form-section -->
             <section class="new_acc_form-section">
               <!-- START CUST_NAME DIV -->
@@ -216,7 +247,10 @@
                 <!-- START VIEW_CUST_NAME -->
                 <div class="col-3">
                   <div class="flex justify-end items-center gap-0-5rem">
-                    <p>
+                    <p
+                      id="VIEW_CUST_NAME"
+                      title="عرض إسم العميل: هكذا سيظهر إسم العميل"
+                    >
                       <span id="VIEW_CUST_NAME1"></span>
                       <span id="VIEW_CUST_NAME2"></span>
                       <span id="VIEW_CUST_NAME3"></span>
@@ -224,11 +258,13 @@
                       <span id="VIEW_CUST_NAME4"></span>
                       <span id="parenthesis2" class="hide">)</span>
                     </p>
-                    <i
-                      title="عرض إسم العميل: هكذا سيظهر إسم العميل"
-                      class="ri-information-line clickable"
+                    <button
+                      id="COPY_VIEW_CUST_NAME"
+                      class="btn-reset prim-btn bordered p-0-25rem radius-base"
+                      title="نسخ اسم العميل"
                     >
-                    </i>
+                      <i class="ri-file-copy-line font-s-h6"></i>
+                    </button>
                   </div>
                 </div>
                 <!-- END VIEW_CUST_NAME -->
@@ -249,21 +285,22 @@
                 <div class="col-3">
                   <div class="date-input-div">
                     <div
-                      class="row flex items-center justify-space-between p-r-1rem p-l-1rem"
+                      class="flex items-center justify-space-between p-r-1rem p-l-1rem"
                     >
-                      <div class="col-7 bordered-left">
+                      <div class="width-60 bordered-left">
                         <input
-                          class="new_acc_form-input width-90"
+                          class="new_acc_form-input"
                           type="number"
+                          min="1"
                           name="CUST_CREDIT_LIMIT"
                           id="CUST_CREDIT_LIMIT"
                           placeholder="أدخل قيمة الحد الإئتماني"
                           required
                         />
                       </div>
-                      <div class="col-5">
+                      <div class="width-40">
                         <select
-                          class="new_acc_form-input width-10"
+                          class="new_acc_form-input"
                           name="CUST_CREDIT_LIMIT_CURRENCY"
                           id="CUST_CREDIT_LIMIT_CURRENCY"
                         >
@@ -927,39 +964,35 @@
               </div>
             </section>
             <!-- END CHECK_CUST_SAVED -->
-            <!-- START SUBMIT BUTTONS -->
-            <section>
-              <div
-                class="flex items-center justify-center gap-3rem p-t-2rem p-b-2rem"
-              >
-                <input
-                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
-                  type="button"
-                  value="طباعة فهرس المستندات"
-                />
-                <input
-                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
-                  type="button"
-                  value="طباعة غلاف العميل"
-                />
-                <input
-                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
-                  type="button"
-                  value="إيميل التعميد بفتح الحساب"
-                />
-                <input
-                  class="new_acc_form-action-btn btn-reset prim-btn p-t-1rem p-b-1rem p-l-1rem p-r-1rem"
-                  type="button"
-                  value="إيميل تأكيد فتح الحساب"
-                />
-              </div>
-            </section>
-            <!-- END SUBMIT BUTTONS -->
           </div>
         </form>
         <!-- END </1.new_acc_form> -->
       </section>
       <!-- END new_acc_section SECTION -->
     </main>
+    <!-- START LOADING WINDOW -->
+    <div
+      class="loading_window_layout hide"
+      title="جاري معالجة البيانات المدخلة"
+    ></div>
+    <div id="LOADING_WIN" class="hide">
+      <div
+        class="loading_window flex f-column items-center justify-center"
+        title="جاري معالجة البيانات المدخلة"
+      >
+        <img
+          src="../media/mufeed-loading-img.gif"
+          alt="loading-screen-mufeed"
+        />
+      </div>
+    </div>
+    <!-- END LOADING WINDOW -->
+    <!-- START ALERT BOX -->
+    <div id="ALERT_BOX" class="hide">
+      <div class="flex items-center justify-center">
+        <p id="ALERT_BOX_TEXT">خطا</p>
+      </div>
+    </div>
+    <!-- END ALERT BOX -->
   </body>
 </html>
