@@ -8,6 +8,10 @@ Utilities: space helpers
 * Width
 ------------------------------------ */
 
+.width-0 {
+  width: 0;
+}
+
 .width-100 {
   width: 100%;
 }

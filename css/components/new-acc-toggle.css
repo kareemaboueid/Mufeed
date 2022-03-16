@@ -1,5 +1,5 @@
 .new_acc_switch {
-  background: #00bc9c;
+  background: rgb(177, 177, 177);
   transition: all 0.2s ease;
   border-radius: var(--border-radius-base);
   display: flex;
@@ -10,6 +10,10 @@
   -moz-border-radius: var(--border-radius-base);
   -ms-border-radius: var(--border-radius-base);
   -o-border-radius: var(--border-radius-base);
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
 }
 
 .new_acc_switch i {
@@ -27,10 +31,18 @@
   text-align: center;
   transition: all 0.2s ease;
   font-weight: 800;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
 }
 
 .new_acc_toggle_radio-false:checked ~ .new_acc_switch {
   background: #eb4f37;
+}
+
+.new_acc_toggle_radio-true:checked ~ .new_acc_switch {
+  background: #00bc9c;
 }
 
 .new_acc_switch i.ri-close-line {
