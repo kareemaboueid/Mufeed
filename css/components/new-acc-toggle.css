@@ -45,15 +45,15 @@
   background: #00bc9c;
 }
 
-.new_acc_switch i.ri-close-line {
+.new_acc_switch i.bi-x-square {
   display: none;
 }
 
-.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.ri-check-line {
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.bi-check-square {
   display: none;
 }
 
-.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.ri-close-line {
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch i.bi-x-square {
   display: block;
 }
 

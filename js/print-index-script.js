@@ -166,14 +166,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         justify-content: space-between;
         align-items: center;
       }
-      #INDEX_ID {
-        text-align: center;
-        letter-spacing: 2px;
-        font-family: monospace;
-        font-size: 14px;
-        font-weight: bold;
-        color: rgb(46, 46, 46);
-      }
       .tg {
         border-collapse: collapse;
         border-spacing: 0;
@@ -259,10 +251,12 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       </div>
     </div>
     <div class="print-button">
-      <button id="closePage" title="إغلاق">
+      <button id="closePage" title="Exit">
+        Exit
         <i class="bi bi-x-lg"></i>
       </button>
-      <button id="printPage" title="طباعة">
+      <button id="printPage" title="Print">
+        Print
         <i class="bi bi-printer"></i>
       </button>
     </div>
@@ -273,7 +267,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
           src="https://alsourayia.com/images/thumbs/0000531.png"
           alt="شركة السريع التجارية للأرضيات والمفروشات"
         />
-        <p id="INDEX_ID"></p>
+        <div></div>
       </div>
       <h2 class="index-title">فهرس مستندات فتح حساب</h2>
       <div>
@@ -446,8 +440,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       </div>
     </main>
     <script>
-      const index_random_id = Math.floor(Math.random() * 90000) + 10000;
-      document.getElementById("INDEX_ID").textContent = index_random_id;
       ALERT_BOX.textContent = "تم معالجة البيانات بنجاح!";
       ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
       ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
@@ -500,21 +492,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       resWin = window.open("", "", "fullscreen=no");
       resWin.document.write(INDEX_RESULT_PAGE);
     }, 1201);
-    setTimeout(() => {
-      // clear all inputs:
-      CUST_NAME.value = "";
-      CUST_CREDIT_LIMIT.value = "";
-      CUST_NO.value = "";
-      CUST_TRADE_DATE_DAY.value = "";
-      CUST_TRADE_DATE_MONTH.value = "";
-      CUST_TRADE_DATE_YEAR.value = "";
-      MAKE_DATE_DAY.value = "";
-      MAKE_DATE_MONTH.value = "";
-      MAKE_DATE_YEAR.value = "";
-      MAKE_EMPLOYEE_NAME.value = "";
-      REVIEW_EMPLOYEE_NAME.value = "";
-      REGIST_EMPLOYEE_NAME.value = "";
-    }, 2200);
   } else {
     ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
     ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";

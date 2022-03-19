@@ -20,7 +20,10 @@
     <!-- app fonticons (CDN) -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- app stylesheet -->
     <link rel="stylesheet" href="../css/index.css" />
@@ -82,7 +85,7 @@
               class="back-shade-200 flex justify-start items-center gap-0-5rem"
             >
               <button
-                class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="خروج"
                 id="exit_to_main_page_btn"
@@ -91,26 +94,35 @@
                   href="../index.html"
                   class="flex justify-center items-center"
                 >
-                  <img src="../media/close.png" width="42px" />
+                  <i class="bi bi-x-lg font-s-h2 font-red"></i>
                 </a>
               </button>
               <button
-                class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
-                type="button"
+                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                type="submit"
                 title="طباعة فهرس المستندات"
                 id="print_index_btn"
               >
-                <img src="../media/checklist.png" width="42px" />
+                <i class="bi bi-list-check font-s-h2 font-prim"></i>
               </button>
               <button
-                class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
-                title="طباعة غلاف العميل"
+                title="طباعة غلاف ملصق للملف"
                 id="print_cust_cover_btn"
               >
-                <img src="../media/cover.png" width="42px" />
+                <i class="bi bi-card-heading font-s-h2 font-prim"></i>
               </button>
               <button
+                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                type="reset"
+                title="مسح جميع الحقول"
+                id="reset_form_btn"
+              >
+                <i class="bi bi-eraser font-s-h2 font-prim"></i>
+              </button>
+
+              <!-- <button
                 class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="إيميل التعميد بفتح الحساب"
@@ -125,7 +137,7 @@
                 id="email_confirm_open_acc_btn"
               >
                 <img src="../media/send-email.png" width="42px" />
-              </button>
+              </button> -->
             </div>
             <!-- END SUBMIT BUTTONS -->
 
@@ -259,10 +271,11 @@
                     </p>
                     <button
                       id="COPY_VIEW_CUST_NAME"
-                      class="btn-reset prim-btn bordered p-0-25rem radius-base"
+                      class="font-prim bordered p-0-25rem radius-base"
                       title="نسخ اسم العميل"
                     >
-                      <i class="ri-file-copy-line font-s-h6"></i>
+                      <i class="bi bi-clipboard font-s-h6"></i>
+                      <i class="bi bi-clipboard-check font-s-h6 hide"></i>
                     </button>
                   </div>
                 </div>
@@ -377,8 +390,8 @@
                         for="TASHEEL_APP_CHECK_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label
                         class="check-label-false"
                         for="TASHEEL_APP_CHECK_FALSE"
@@ -436,8 +449,8 @@
                         for="WARRANT_SUPPORT_CHECK_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label
                         class="check-label-false"
                         for="WARRANT_SUPPORT_CHECK_FALSE"
@@ -455,6 +468,7 @@
                   >
                     <option selected>مبصم</option>
                     <option>مختم</option>
+                    <option>مختم ومبصم</option>
                     <option value="">لا يوجد</option>
                   </select>
                 </div>
@@ -493,8 +507,8 @@
                       <label class="check-label-true" for="CUST_TRADE_LOG_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label
                         class="check-label-false"
                         for="CUST_TRADE_LOG_FALSE"
@@ -585,8 +599,8 @@
                       <label class="check-label-true" for="VAT_CERT_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="VAT_CERT_FALSE"
                         >غير موجود</label
                       >
@@ -601,7 +615,7 @@
                     class="btn-reset prim-btn bordered width-100 p-t-0-5rem p-b-0-5rem p-r-1rem p-l-1rem"
                   >
                     التحقق من ضريبة القيمة المضافة
-                    <i class="ri-arrow-left-line"></i>
+                    <i class="bi bi-box-arrow-up-left"></i>
                   </a>
                 </div>
               </div>
@@ -639,8 +653,8 @@
                       <label class="check-label-true" for="NATIONAL_ID_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="NATIONAL_ID_FALSE"
                         >غير موجود</label
                       >
@@ -682,8 +696,8 @@
                       <label class="check-label-true" for="FORIGN_ID_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="FORIGN_ID_FALSE"
                         >غير موجود</label
                       >
@@ -725,8 +739,8 @@
                       <label class="check-label-true" for="MOVE_CREDIT_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="MOVE_CREDIT_FALSE"
                         >غير موجود</label
                       >
@@ -767,8 +781,8 @@
                       <label class="check-label-true" for="CUST_ATTORNEY_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="CUST_ATTORNEY_FALSE"
                         >غير موجود</label
                       >
@@ -810,8 +824,8 @@
                       <label class="check-label-true" for="CUST_LICENSE_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label class="check-label-false" for="CUST_LICENSE_FALSE"
                         >غير موجود</label
                       >
@@ -855,8 +869,8 @@
                         for="NATIONAL_ADDRESS_TRUE"
                         >موجود</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label
                         class="check-label-false"
                         for="NATIONAL_ADDRESS_FALSE"
@@ -904,8 +918,8 @@
                         for="CHECK_CUST_SAVED_TRUE"
                         >نعم</label
                       >
-                      <i class="ri-check-line"></i>
-                      <i class="ri-close-line"></i>
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
                       <label
                         class="check-label-false"
                         for="CHECK_CUST_SAVED_FALSE"

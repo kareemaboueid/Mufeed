@@ -36,10 +36,14 @@ function copyCustName() {
     ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
     ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
     ALERT_BOX.classList.remove("hide");
+    document.querySelector(".bi-clipboard").classList.add("hide");
+    document.querySelector(".bi-clipboard-check").classList.remove("hide");
     setTimeout(function () {
       ALERT_BOX.style.backgroundColor = "none";
       ALERT_BOX.style.border = "none";
       ALERT_BOX.classList.add("hide");
+      document.querySelector(".bi-clipboard").classList.remove("hide");
+      document.querySelector(".bi-clipboard-check").classList.add("hide");
     }, 2800);
   }
   // else copy the whole customer name from VIEW_CUST_NAME text to clipboard:
@@ -51,10 +55,14 @@ function copyCustName() {
     ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
     ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
     ALERT_BOX.classList.remove("hide");
+    document.querySelector(".bi-clipboard").classList.add("hide");
+    document.querySelector(".bi-clipboard-check").classList.remove("hide");
     setTimeout(function () {
       ALERT_BOX.style.backgroundColor = "none";
       ALERT_BOX.style.border = "none";
       ALERT_BOX.classList.add("hide");
+      document.querySelector(".bi-clipboard").classList.remove("hide");
+      document.querySelector(".bi-clipboard-check").classList.add("hide");
     }, 2800);
   }
 }

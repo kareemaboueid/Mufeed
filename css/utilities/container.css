@@ -77,6 +77,14 @@ Utilities: container
   border-bottom: 1px solid var(--sec-color-500) !important;
 }
 
+.font-prim {
+  color: var(--prim-color) !important;
+}
+
+.font-red {
+  color: rgb(221, 67, 67);
+}
+
 .container {
   max-width: var(--LGdesktop);
   padding-left: 30px;

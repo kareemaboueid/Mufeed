@@ -24,7 +24,7 @@
         padding-top: 0;
         font-family: "Cairo", sans-serif;
         font-size: 1rem;
-        line-height: 1;
+        line-height: 1.2;
         color: #000;
         background-color: #fff;
       }
@@ -54,23 +54,22 @@
         width: 100%;
       }
       .print-button button {
-        padding: 6px;
+        padding: 10px;
         line-height: 1;
         cursor: pointer;
-        border: none;
-        border-radius: 6px;
+        border: 1px solid #9e9e9e;
+        border-radius: 3px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 8px;
         font-weight: normal;
-        align-items: center;
-        justify-content: center;
-        background-color: #486f8b;
-        font-size: 30px;
-        color: #fff;
+        background-color: #e0e0e0;
+        font-size: 26px;
+        color: #456b87;
       }
-      .print-button button:her {
-        background-color: #385e79;
-        color: rgb(240, 240, 240);
+      .print-button button#closePage {
+        color: #dd4343;
       }
       .index-title {
         text-align: center;
@@ -84,14 +83,6 @@
         display: none;
         justify-content: space-between;
         align-items: center;
-      }
-      #INDEX_ID {
-        text-align: center;
-        letter-spacing: 2px;
-        font-family: monospace;
-        font-size: 14px;
-        font-weight: bold;
-        color: rgb(46, 46, 46);
       }
       .tg {
         border-collapse: collapse;
@@ -113,7 +104,7 @@
       .table-data {
         border: 1px solid #000;
         overflow: hidden;
-        padding: 2px;
+        padding: 8px;
         word-break: normal;
         background-color: #fff;
         color: #000;
@@ -178,10 +169,10 @@
       </div>
     </div>
     <div class="print-button">
-      <button id="closePage" title="إغلاق">
+      <button id="closePage" title="Exit">
         <i class="bi bi-x-lg"></i>
       </button>
-      <button id="printPage" title="طباعة">
+      <button id="printPage" title="Print">
         <i class="bi bi-printer"></i>
       </button>
     </div>
@@ -192,7 +183,7 @@
           src="https://alsourayia.com/images/thumbs/0000531.png"
           alt="شركة السريع التجارية للأرضيات والمفروشات"
         />
-        <p id="INDEX_ID"></p>
+        <div></div>
       </div>
       <h2 class="index-title">فهرس مستندات فتح حساب</h2>
       <div>
@@ -356,8 +347,6 @@
       </div>
     </main>
     <script>
-      const index_random_id = Math.floor(Math.random() * 90000) + 10000;
-      document.getElementById("INDEX_ID").textContent = index_random_id;
       ALERT_BOX.textContent = "تم معالجة البيانات بنجاح!";
       ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
       ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
