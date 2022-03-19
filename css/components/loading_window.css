@@ -23,7 +23,7 @@
   width: 100%;
 }
 
-.loading_window_layout {
+#LOADING_WIN_LAYOUT {
   cursor: wait;
   width: 100vw;
   height: 100vh;

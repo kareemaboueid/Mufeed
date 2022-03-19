@@ -1,5 +1,5 @@
 #ALERT_BOX {
-  position: absolute;
+  position: fixed;
   width: fit-content;
   top: 2%;
   left: 50%;
@@ -7,7 +7,7 @@
   padding: 0.6rem 1rem;
   overflow: hidden;
   border-radius: var(--border-radius-base);
-  box-shadow: var(--border-radius-base);
+  box-shadow: 0px -8px 70px 15px rgba(0, 0, 0, 0.2);
   transition: var(--transition-base);
   -webkit-transition: var(--transition-base);
   -moz-transition: var(--transition-base);

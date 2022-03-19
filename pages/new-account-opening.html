@@ -28,6 +28,8 @@
     <script defer src="../js/vendors/jquery.min.js"></script>
     <script defer src="../js/view-cust-name-script.js"></script>
     <script defer src="../js/copy-viewed-cust-name.js"></script>
+    <script defer src="../js/checkboxs-data-vars.js"></script>
+    <!-- main page script -->
     <script defer src="../js/print-index-script.js"></script>
   </head>
 
@@ -112,7 +114,7 @@
                 class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="إيميل التعميد بفتح الحساب"
-                id="email_auth_open_acc_btn"
+                id="email0_auth_open_acc_btn"
               >
                 <img src="../media/verify-email.png" width="42px" />
               </button>
@@ -317,28 +319,6 @@
                   </div>
                 </div>
                 <!-- END CUST_CREDIT_LIMIT -->
-
-                <!-- START ACC_OUTLET -->
-                <div class="col-1 text-left p-0">
-                  <label class="new_acc_form-label" for="ACC_OUTLET">
-                    المنفــذ :
-                  </label>
-                </div>
-                <div class="col-3">
-                  <select
-                    class="new_acc_form-input"
-                    name="ACC_OUTLET"
-                    id="ACC_OUTLET"
-                  >
-                    <option selected value="select">إختر</option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                  </select>
-                </div>
-                <!-- START ACC_OUTLET -->
-
                 <!-- START SALESMAN_NAME -->
                 <div class="col-1 text-left p-0">
                   <label class="new_acc_form-label" for="SALESMAN_NAME">
@@ -352,7 +332,7 @@
                     id="SALESMAN_NAME"
                   >
                     <option selected value="select">إختر</option>
-                    <option></option>
+                    <option value="">لا يوجد</option>
                     <option></option>
                     <option></option>
                     <option></option>
@@ -498,14 +478,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="CUST_TRADE_LOG"
+                      name="CUST_TRADE_LOG_CHECK"
                       id="CUST_TRADE_LOG_TRUE"
                       value="CUST_TRADE_LOG_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="CUST_TRADE_LOG"
+                      name="CUST_TRADE_LOG_CHECK"
                       id="CUST_TRADE_LOG_FALSE"
                       value="CUST_TRADE_LOG_FALSE"
                     />
@@ -540,7 +520,7 @@
                         name="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
                         id="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
                         required
-                        value="1"
+                        placeholder="1"
                         min="1"
                         max="31"
                       />
@@ -551,7 +531,7 @@
                         name="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
                         id="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
                         required
-                        value="12"
+                        placeholder="12"
                         min="1"
                         max="12"
                       />
@@ -562,7 +542,7 @@
                         name="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
                         id="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
                         required
-                        value="1444"
+                        placeholder="1444"
                         min="1400"
                         max="9999"
                       />
@@ -590,14 +570,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="VAT_CERT"
+                      name="VAT_CERT_CHECK"
                       id="VAT_CERT_TRUE"
                       value="VAT_CERT_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="VAT_CERT"
+                      name="VAT_CERT_CHECK"
                       id="VAT_CERT_FALSE"
                       value="VAT_CERT_FALSE"
                     />
@@ -644,14 +624,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="NATIONAL_ID"
+                      name="NATIONAL_ID_CHECK"
                       id="NATIONAL_ID_TRUE"
                       value="NATIONAL_ID_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="NATIONAL_ID"
+                      name="NATIONAL_ID_CHECK"
                       id="NATIONAL_ID_FALSE"
                       value="NATIONAL_ID_FALSE"
                     />
@@ -687,14 +667,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="FORIGN_ID"
+                      name="FORIGN_ID_CHECK"
                       id="FORIGN_ID_TRUE"
                       value="FORIGN_ID_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="FORIGN_ID"
+                      name="FORIGN_ID_CHECK"
                       id="FORIGN_ID_FALSE"
                       value="FORIGN_ID_FALSE"
                     />
@@ -715,6 +695,48 @@
 
               <div class="_______sperator_______"></div>
 
+              <!-- START MOVE_CREDIT_CHECK -->
+              <div
+                class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
+              >
+                <div
+                  class="col-2 text-center bordered-left back-shade-400 p-t-1-5rem p-b-1-5rem"
+                >
+                  <p class="new_acc_form-label">إقرار نقل رصيد :</p>
+                </div>
+                <div class="col-2 p-r-1rem p-l-1rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      checked
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="MOVE_CREDIT_CHECK"
+                      id="MOVE_CREDIT_TRUE"
+                      value="MOVE_CREDIT_TRUE"
+                    />
+                    <input
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="MOVE_CREDIT_CHECK"
+                      id="MOVE_CREDIT_FALSE"
+                      value="MOVE_CREDIT_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label class="check-label-true" for="MOVE_CREDIT_TRUE"
+                        >موجود</label
+                      >
+                      <i class="ri-check-line"></i>
+                      <i class="ri-close-line"></i>
+                      <label class="check-label-false" for="MOVE_CREDIT_FALSE"
+                        >غير موجود</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END MOVE_CREDIT_CHECK -->
+              <div class="_______sperator_______"></div>
+
               <!-- SRART CUST_ATTORNEY -->
               <div
                 class="row items-center justify-start p-r-0-25rem p-l-0-25rem"
@@ -730,14 +752,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="CUST_ATTORNEY"
+                      name="CUST_ATTORNEY_CHECK"
                       id="CUST_ATTORNEY_TRUE"
                       value="CUST_ATTORNEY_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="CUST_ATTORNEY"
+                      name="CUST_ATTORNEY_CHECK"
                       id="CUST_ATTORNEY_FALSE"
                       value="CUST_ATTORNEY_FALSE"
                     />
@@ -773,14 +795,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="CUST_LICENSE"
+                      name="CUST_LICENSE_CHECK"
                       id="CUST_LICENSE_TRUE"
                       value="CUST_LICENSE_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="CUST_LICENSE"
+                      name="CUST_LICENSE_CHECK"
                       id="CUST_LICENSE_FALSE"
                       value="CUST_LICENSE_FALSE"
                     />
@@ -816,14 +838,14 @@
                       checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
-                      name="NATIONAL_ADDRESS"
+                      name="NATIONAL_ADDRESS_CHECK"
                       id="NATIONAL_ADDRESS_TRUE"
                       value="NATIONAL_ADDRESS_TRUE"
                     />
                     <input
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
-                      name="NATIONAL_ADDRESS"
+                      name="NATIONAL_ADDRESS_CHECK"
                       id="NATIONAL_ADDRESS_FALSE"
                       value="NATIONAL_ADDRESS_FALSE"
                     />
@@ -862,7 +884,6 @@
                 <div class="col-2 p-r-1rem p-l-1rem">
                   <div class="new_acc_toggle_radio">
                     <input
-                      checked
                       class="hide new_acc_toggle_radio-true"
                       type="radio"
                       name="CHECK_CUST_SAVED"
@@ -870,6 +891,7 @@
                       value="CHECK_CUST_SAVED_TRUE"
                     />
                     <input
+                      checked
                       class="hide new_acc_toggle_radio-false"
                       type="radio"
                       name="CHECK_CUST_SAVED"
@@ -895,7 +917,7 @@
 
                 <!-- START MAKE_DATE DIV -->
                 <div class="col-3 flex items-center justify-center">
-                  <div id="CUST_SAVED_DATE">
+                  <div id="CUST_SAVED_DATE" class="hide">
                     <div
                       class="date-input-div flex items-stretch justify-start gap-0-25rem p-r-0-5rem p-l-0-5rem"
                     >
@@ -910,7 +932,7 @@
                         name="MAKE_DATE-DAY"
                         id="MAKE_DATE-DAY"
                         required
-                        value="1"
+                        placeholder="1"
                         min="1"
                         max="31"
                       />
@@ -921,7 +943,7 @@
                         name="MAKE_DATE-MONTH"
                         id="MAKE_DATE-MONTH"
                         required
-                        value="12"
+                        placeholder="12"
                         min="1"
                         max="12"
                       />
@@ -932,7 +954,7 @@
                         name="MAKE_DATE-YEAR"
                         id="MAKE_DATE-YEAR"
                         required
-                        value="2022"
+                        placeholder="2022"
                         min="2000"
                         max="9999"
                       />
@@ -944,7 +966,7 @@
 
                 <!-- START CUST_NO -->
                 <div class="col-3 text-left">
-                  <div id="CUST_SAVED_NO">
+                  <div id="CUST_SAVED_NO" class="hide">
                     <div class="flex items-center justify-start gap-0-25rem">
                       <label class="new_acc_form-label width-50" for="CUST_NO"
                         >رقم العميل :</label
@@ -966,6 +988,74 @@
               </div>
             </section>
             <!-- END CHECK_CUST_SAVED -->
+            <!-- START EMPLOYEE_SIGN -->
+            <section class="new_acc_form-section">
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START MAKE_EMPLOYEE_NAME -->
+                <div class="col-1 text-left">
+                  <label class="new_acc_form-label" for="MAKE_EMPLOYEE_NAME">
+                    إعداد :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="MAKE_EMPLOYEE_NAME"
+                    id="MAKE_EMPLOYEE_NAME"
+                  >
+                    <option value="">لا يوجد</option>
+                    <option>أ/ خالد عبدالناصر</option>
+                    <option>أ/ كريم أبوعيد</option>
+                    <option>أ/ مها علي</option>
+                    <option>أ/ رحمة حسن</option>
+                  </select>
+                </div>
+                <!-- END MAKE_EMPLOYEE_NAME -->
+                <!-- START REVIEW_EMPLOYEE_NAME -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="REVIEW_EMPLOYEE_NAME">
+                    مراجعة :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="REVIEW_EMPLOYEE_NAME"
+                    id="REVIEW_EMPLOYEE_NAME"
+                  >
+                    <option value="">لا يوجد</option>
+                    <option>أ/ خالد عبدالناصر</option>
+                    <option>أ/ كريم أبوعيد</option>
+                    <option>أ/ مها علي</option>
+                    <option>أ/ رحمة حسن</option>
+                  </select>
+                </div>
+                <!-- END REVIEW_EMPLOYEE_NAME -->
+                <!-- START REGIST_EMPLOYEE_NAME -->
+                <div class="col-1 text-left p-0">
+                  <label class="new_acc_form-label" for="REGIST_EMPLOYEE_NAME">
+                    تسجيل في النظام الآلي :
+                  </label>
+                </div>
+                <div class="col-3">
+                  <select
+                    class="new_acc_form-input"
+                    name="REGIST_EMPLOYEE_NAME"
+                    id="REGIST_EMPLOYEE_NAME"
+                  >
+                    <option value="">لا يوجد</option>
+                    <option>أ/ خالد عبدالناصر</option>
+                    <option>أ/ كريم أبوعيد</option>
+                    <option>أ/ مها علي</option>
+                    <option>أ/ رحمة حسن</option>
+                  </select>
+                </div>
+                <!-- END REGIST_EMPLOYEE_NAME -->
+              </div>
+            </section>
+            <!-- START EMPLOYEE_SIGN -->
           </div>
         </form>
         <!-- END </1.new_acc_form> -->
@@ -974,7 +1064,8 @@
     </main>
     <!-- START LOADING WINDOW -->
     <div
-      class="loading_window_layout hide"
+      id="LOADING_WIN_LAYOUT"
+      class="hide"
       title="جاري معالجة البيانات المدخلة"
     ></div>
     <div id="LOADING_WIN" class="hide">
@@ -992,7 +1083,7 @@
     <!-- START ALERT BOX -->
     <div id="ALERT_BOX" class="hide">
       <div class="flex items-center justify-center">
-        <p id="ALERT_BOX_TEXT">خطا</p>
+        <p id="ALERT_BOX_TEXT"></p>
       </div>
     </div>
     <!-- END ALERT BOX -->

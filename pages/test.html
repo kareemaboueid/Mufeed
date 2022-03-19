@@ -1,85 +1,4 @@
-"use strict";
-
-/*
- * PRINT INDEX SCRIPT
- */
-
-// THE MAIN SCRIPT BUTTON: PRINT_INDEX_BTN
-const PRINT_INDEX_BTN = document.querySelector("#print_index_btn");
-// ========================================================================
-// CUSTOMER DATA VARIABLES:
-// CUSTOMER_NAME:
-const CUST_NAME = document.querySelector("#CUST_NAME");
-const custNameAll = document.getElementById("VIEW_CUST_NAME");
-//CREDIT_LIMIT:
-const CUST_CREDIT_LIMIT = document.getElementById("CUST_CREDIT_LIMIT");
-const CUST_CREDIT_LIMIT_CURRENCY = document.getElementById(
-  "CUST_CREDIT_LIMIT_CURRENCY"
-);
-// CUSTOMER_NO:
-const CUST_NO = document.getElementById("CUST_NO");
-//=========================================================================
-// 1) TASHEEL_APP:
-const TASHEEL_APP_CHECK = document.getElementsByName("TASHEEL_APP_CHECK");
-const TASHEEL_APP_VERFIY = document.querySelector("#TASHEEL_APP_VERFIY");
-// 2) WARRANT_SUPPORT:
-const WARRANT_SUPPORT_CHECK = document.getElementsByName(
-  "WARRANT_SUPPORT_CHECK"
-);
-const WARRANT_SUPPORT_VERFIY = document.querySelector(
-  "#WARRANT_SUPPORT_VERFIY"
-);
-// 3) CUST_TRADE_LOG:
-const CUST_TRADE_LOG_CHECK = document.getElementsByName("CUST_TRADE_LOG_CHECK");
-const CUST_TRADE_DATE_DAY = document.querySelector(
-  "#CUST_TRADE_LOG_EXPIRY_DATE-DAY"
-);
-const CUST_TRADE_DATE_MONTH = document.querySelector(
-  "#CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
-);
-const CUST_TRADE_DATE_YEAR = document.querySelector(
-  "#CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
-);
-// 4) VAT_CERT:
-const VAT_CERT_CHECK = document.getElementsByName("VAT_CERT_CHECK");
-// 5) NATIONAL_ID_CHECK:
-const NATIONAL_ID_CHECK = document.getElementsByName("NATIONAL_ID_CHECK");
-// 6) FORIGN_ID_CHECK:
-const FORIGN_ID_CHECK = document.getElementsByName("FORIGN_ID_CHECK");
-// 7) MOVE_CREDIT_CHECK:
-const MOVE_CREDIT_CHECK = document.getElementsByName("MOVE_CREDIT_CHECK");
-// 8) CUST_ATTORNEY_CHECK:
-const CUST_ATTORNEY_CHECK = document.getElementsByName("CUST_ATTORNEY_CHECK");
-// 9) CUST_LICENSE_CHECK:
-const CUST_LICENSE_CHECK = document.getElementsByName("CUST_LICENSE_CHECK");
-// 10) NATIONAL_ADDRESS_CHECK:
-const NATIONAL_ADDRESS_CHECK = document.getElementsByName(
-  "NATIONAL_ADDRESS_CHECK"
-);
-// 11) CHECK_CUST_SAVED:
-const CHECK_CUST_SAVED = document.getElementsByName("CHECK_CUST_SAVED");
-// 12) MAKE_DATE:
-const MAKE_DATE_DAY = document.getElementById("MAKE_DATE-DAY");
-const MAKE_DATE_MONTH = document.getElementById("MAKE_DATE-MONTH");
-const MAKE_DATE_YEAR = document.getElementById("MAKE_DATE-YEAR");
-// 13) EMPLOYEE_NAME:
-const MAKE_EMPLOYEE_NAME = document.getElementById("MAKE_EMPLOYEE_NAME");
-const REVIEW_EMPLOYEE_NAME = document.getElementById("REVIEW_EMPLOYEE_NAME");
-const REGIST_EMPLOYEE_NAME = document.getElementById("REGIST_EMPLOYEE_NAME");
-// ========================================================================
-// true/false marks
-const trueMark = `<i class="bi bi-check2"></i>`;
-const falseMark = `<i class="bi bi-x"></i>`;
-// the result window of customer data index
-let resWin;
-// ========================================================================
-
-// PRINT BUTTON FUNCTION:
-PRINT_INDEX_BTN.addEventListener("click", () => {
-  //==========================================//
-  // THE INDEX RESULT:
-  let INDEX_RESULT_PAGE = `
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
     <link
@@ -291,11 +210,8 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <tr>
               <td class="table-data">${CUST_NO.value}</td>
               <td class="table-data">
-                ${custNameAll.textContent
-                  .replace("(", " ")
-                  .replace(")", "")
-                  .trim()
-                  .replace(/\s+/g, " ")}
+                ${custNameAll.textContent.replace("(", " ").replace(")",
+                "").trim().replace(/\s+/g, " ")}
               </td>
               <td class="table-data">
                 ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
@@ -325,11 +241,8 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
               <td class="table-data">ملف طلب تسهيلات</td>
               <td class="table-data">
                 <div class="table-data-flex">
-                  ${
-                    TASHEEL_APP_CHECK[0].checked
-                      ? trueMark + TASHEEL_APP_VERFIY.value
-                      : falseMark
-                  }
+                  ${TASHEEL_APP_CHECK[0].checked ? trueMark +
+                  TASHEEL_APP_VERFIY.value : falseMark}
                 </div>
               </td>
             </tr>
@@ -338,11 +251,8 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
               <td class="table-data">أصل سند لأمر</td>
               <td class="table-data">
                 <div class="table-data-flex">
-                  ${
-                    WARRANT_SUPPORT_CHECK[0].checked
-                      ? trueMark + WARRANT_SUPPORT_VERFIY.value
-                      : falseMark
-                  }
+                  ${WARRANT_SUPPORT_CHECK[0].checked ? trueMark +
+                  WARRANT_SUPPORT_VERFIY.value : falseMark}
                 </div>
               </td>
             </tr>
@@ -470,65 +380,3 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     </script>
   </body>
 </html>
-`;
-  //==========================================//
-
-  // if custNameAll or cust_lim
-  if (
-    CUST_NAME.value !== "" &&
-    CUST_CREDIT_LIMIT.value !== "" &&
-    CUST_NO.value !== "" &&
-    CUST_TRADE_DATE_DAY.value !== "" &&
-    CUST_TRADE_DATE_MONTH.value !== "" &&
-    CUST_TRADE_DATE_YEAR.value !== "" &&
-    MAKE_DATE_DAY.value !== "" &&
-    MAKE_DATE_MONTH.value !== "" &&
-    MAKE_DATE_YEAR.value !== "" &&
-    MAKE_EMPLOYEE_NAME.value !== "" &&
-    REVIEW_EMPLOYEE_NAME.value !== "" &&
-    REGIST_EMPLOYEE_NAME.value !== ""
-  ) {
-    // show loading window for 1500 s:
-    document.querySelector("#LOADING_WIN").classList.remove("hide");
-    document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
-    setTimeout(() => {
-      document.querySelector("#LOADING_WIN").classList.add("hide");
-      document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
-    }, 1200);
-    // open the result window:
-    setTimeout(() => {
-      resWin = window.open("", "", "fullscreen=no");
-      resWin.document.write(INDEX_RESULT_PAGE);
-    }, 1201);
-  } else {
-    ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
-    ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
-    ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
-    ALERT_BOX.classList.remove("hide");
-    setTimeout(function () {
-      ALERT_BOX.style.backgroundColor = "none";
-      ALERT_BOX.style.border = "none";
-      ALERT_BOX.classList.add("hide");
-    }, 2000);
-  }
-
-  // clear all inputs:
-  CUST_NAME.value = "";
-  CUST_CREDIT_LIMIT.value = "";
-  CUST_NO.value = "";
-  CUST_TRADE_DATE_DAY.value = "";
-  CUST_TRADE_DATE_MONTH.value = "";
-  CUST_TRADE_DATE_YEAR.value = "";
-  MAKE_DATE_DAY.value = "";
-  MAKE_DATE_MONTH.value = "";
-  MAKE_DATE_YEAR.value = "";
-  MAKE_EMPLOYEE_NAME.value = "";
-  REVIEW_EMPLOYEE_NAME.value = "";
-  REGIST_EMPLOYEE_NAME.value = "";
-});
-
-// `
-// ${CHECK_CUST_SAVED[0].checked ? trueMark : falseMark}
-// `;
-// ``;
-// `${MAKE_DATE_DAY} / ${MAKE_DATE_MONTH} / ${MAKE_DATE_YEAR} م`;
