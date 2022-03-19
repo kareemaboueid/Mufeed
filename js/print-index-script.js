@@ -253,9 +253,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       <button onclick="window.close()" title="Exit">
         <i class="bi bi-x-lg"></i>
       </button>
-      <button onclick="window.print()" title="Print">
-        <i class="bi bi-printer"></i>
-      </button>
     </div>
     <main>
       <div class="page_head">
@@ -437,7 +434,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       </div>
     </main>
     <script>
-      ALERT_BOX.textContent = "تم معالجة البيانات بنجاح!";
+      ALERT_BOX.textContent = "تم معالجة البيانات بنجاح، جار الطباعة ...";
       ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
       ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
       ALERT_BOX.classList.remove("hide");
@@ -467,30 +464,32 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     REVIEW_EMPLOYEE_NAME.value !== "" &&
     REGIST_EMPLOYEE_NAME.value !== ""
   ) {
+    // show loading window for 1500 s:
+    document.querySelector("#LOADING_WIN").classList.remove("hide");
+    document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
+    setTimeout(() => {
+      document.querySelector("#LOADING_WIN").classList.add("hide");
+      document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
+    }, 1200);
+    // open the result window:
+    setTimeout(() => {
+      resWin = window.open("", "", "fullscreen=no");
+      resWin.document.write(INDEX_RESULT_PAGE);
+    }, 1201);
+    setTimeout(() => {
+      resWin.print();
+    }, 3100);
+  } else {
+    ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
+    ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
+    ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
+    ALERT_BOX.classList.remove("hide");
+    setTimeout(function () {
+      ALERT_BOX.style.backgroundColor = "none";
+      ALERT_BOX.style.border = "none";
+      ALERT_BOX.classList.add("hide");
+    }, 2000);
   }
-  // show loading window for 1500 s:
-  document.querySelector("#LOADING_WIN").classList.remove("hide");
-  document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
-  setTimeout(() => {
-    document.querySelector("#LOADING_WIN").classList.add("hide");
-    document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
-  }, 1200);
-  // open the result window:
-  setTimeout(() => {
-    resWin = window.open("", "", "fullscreen=no");
-    resWin.document.write(INDEX_RESULT_PAGE);
-  }, 1201);
-  // else {
-  //   ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
-  //   ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
-  //   ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
-  //   ALERT_BOX.classList.remove("hide");
-  //   setTimeout(function () {
-  //     ALERT_BOX.style.backgroundColor = "none";
-  //     ALERT_BOX.style.border = "none";
-  //     ALERT_BOX.classList.add("hide");
-  //   }, 2000);
-  // }
 });
 
 // `
