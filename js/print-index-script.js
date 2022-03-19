@@ -79,373 +79,278 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   //==========================================//
   // THE INDEX RESULT:
   let INDEX_RESULT_PAGE = `
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
-      integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+<style>
+  #RESULT_CONTENT * {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  #RESULT_CONTENT {
+    padding: 10px;
+    padding-top: 0;
+    font-family: "Cairo", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #000;
+    background-color: #fff;
+  }
+  #RESULT_CONTENT .index-title {
+    text-align: center;
+    text-decoration: underline;
+    margin: 25px 0;
+  }
+  #RESULT_CONTENT .page_head {
+    width: 100%;
+    padding: 0 50px;
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #RESULT_CONTENT .tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+  #RESULT_CONTENT .table-header {
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 8.5px 10px;
+    word-break: normal;
+    background-color: #ebebeb;
+    color: #000;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #RESULT_CONTENT .table-data {
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 8px;
+    word-break: normal;
+    background-color: #fff;
+    color: #000;
+    font-size: inherit;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+  #RESULT_CONTENT .table-data-flex {
+    display: flex;
+    justify-content: center;
+    align-items: cter;
+    gap: 20px;
+  }
+  #RESULT_CONTENT .bi-check2 {
+    font-size: 25px;
+  }
+  #RESULT_CONTENT .bi-x {
+    font-size: 28px;
+  }
+  #RESULT_CONTENT .employees-signs,
+  #RESULT_CONTENT .make-date {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #RESULT_CONTENT .sign-container,
+  #RESULT_CONTENT .make-date-container {
+    width: 33.33%;
+    text-align: center;
+  }
+  #RESULT_CONTENT .sign-title,
+  #RESULT_CONTENT .make-date-title {
+    text-decoration: underline;
+    padding-bottom: 15px;
+  }
+  @media print {
+    #RESULT_CONTENT * {
+      font-size: 15px;
+    }
+    #RESULT_CONTENT {
+      padding: 0 50px;
+    }
+  }
+</style>
+<section id="RESULT_CONTENT">
+  <div class="page_head">
+    <img
+      width="100px"
+      src="../media/alsourayia-logo.png"
+      alt="شركة السريع التجارية للأرضيات والمفروشات"
     />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap");
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        font-size: 12px;
-        font-weight: bold;
-      }
-      body {
-        padding: 10px;
-        padding-top: 0;
-        font-family: "Cairo", sans-serif;
-        font-size: 1rem;
-        line-height: 1.2;
-        color: #000;
-        background-color: #fff;
-      }
-      .hide {
-        display: none;
-      }
-      #ALERT_BOX {
-        position: absolute;
-        width: fit-content;
-        top: 2%;
-        left: 50%;
-        font-size: 18px;
-        transform: translateX(-50%);
-        padding: 6px 20px;
-        overflow: hidden;
-        border-radius: 3px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      }
-      .print-button {
-        border-bottom: 1px solid hsl(0, 0%, 62%);
-        padding: 10px 0;
-        margin-bottom: 20px;
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-      }
-      .print-button button {
-        padding: 10px;
-        line-height: 1;
-        cursor: pointer;
-        border: 1px solid #9e9e9e;
-        border-radius: 3px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        font-weight: normal;
-        background-color: #e0e0e0;
-        font-size: 26px;
-        color: #456b87;
-      }
-      .print-button button#closePage {
-        color: #dd4343;
-      }
-      .index-title {
-        text-align: center;
-        text-decoration: underline;
-        margin: 25px 0;
-      }
-      .page_head {
-        width: 100%;
-        padding: 0 50px;
-        background-color: rgb(180, 180, 180);
-        display: none;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .tg {
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: 100%;
-      }
-      .table-header {
-        border: 1px solid #000;
-        overflow: hidden;
-        padding: 8.5px 10px;
-        word-break: normal;
-        background-color: #ebebeb;
-        color: #000;
-        font-size: inherit;
-        font-weight: bold;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .table-data {
-        border: 1px solid #000;
-        overflow: hidden;
-        padding: 8px;
-        word-break: normal;
-        background-color: #fff;
-        color: #000;
-        font-size: inherit;
-        font-weight: bold;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .table-data-flex {
-        display: flex;
-        justify-content: center;
-        align-items: cter;
-        gap: 20px;
-      }
-      .bi-check2 {
-        font-size: 25px;
-      }
-      .bi-x {
-        font-size: 28px;
-      }
-      .employees-signs,
-      .make-date {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .sign-container,
-      .make-date-container {
-        width: 33.33%;
-        text-align: center;
-      }
-      .sign-title,
-      .make-date-title {
-        text-decoration: underline;
-        padding-bottom: 15px;
-      }
-      @media print {
-        html {
-          font-size: 15px;
-        }
-        body {
-          padding: 0 50px;
-        }
-        .print-button {
-          display: none;
-        }
-        #ALERT_BOX {
-          display: none;
-        }
-        .page_head {
-          display: flex;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="ALERT_BOX" class="hide">
-      <div class="flex items-center justify-center">
-        <p id="ALERT_BOX_TEXT"></p>
+    <div></div>
+  </div>
+  <h5 class="index-title">فهرس مستندات فتح حساب</h5>
+  <div>
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="table-header" style="width: 20%">رقم العميل</th>
+          <th class="table-header" style="width: 50%">إسم العميل</th>
+          <th class="table-header" style="width: 30%">قيمة الحد الإئتماني</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-data">${CUST_NO.value}</td>
+          <td class="table-data">
+            ${custNameAll.textContent
+              .replace("(", " ")
+              .replace(")", "")
+              .trim()
+              .replace(/\s+/g, " ")}
+          </td>
+          <td class="table-data">
+            ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <br />
+  <div>
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="table-header" style="width: 10%">م</th>
+          <th class="table-header" style="width: 50%">المستنــــــــــــــد</th>
+          <th class="table-header" style="width: 40%">
+            الحالــــــــــــــة ( موجود - غير موجود )
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="table-header">1</td>
+          <td class="table-data">ملف طلب تسهيلات</td>
+          <td class="table-data">
+            <div class="table-data-flex">
+              ${
+                TASHEEL_APP_CHECK[0].checked
+                  ? trueMark + TASHEEL_APP_VERFIY.value
+                  : falseMark
+              }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">2</td>
+          <td class="table-data">أصل سند لأمر</td>
+          <td class="table-data">
+            <div class="table-data-flex">
+              ${
+                WARRANT_SUPPORT_CHECK[0].checked
+                  ? trueMark + WARRANT_SUPPORT_VERFIY.value
+                  : falseMark
+              }
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">3</td>
+          <td class="table-data">السجل التجاري</td>
+          <td class="table-data">
+            ${CUST_TRADE_LOG_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">4</td>
+          <td class="table-data">شهادة التسجيل في ضريبة القيمة المضافة</td>
+          <td class="table-data">
+            ${VAT_CERT_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">5</td>
+          <td class="table-data">هوية سعودي</td>
+          <td class="table-data">
+            ${NATIONAL_ID_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">6</td>
+          <td class="table-data">هوية أجنبي</td>
+          <td class="table-data">
+            ${FORIGN_ID_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">7</td>
+          <td class="table-data">إقرار نقل رصيد</td>
+          <td class="table-data">
+            ${MOVE_CREDIT_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">8</td>
+          <td class="table-data">إثبات وكالة</td>
+          <td class="table-data">
+            ${CUST_ATTORNEY_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">9</td>
+          <td class="table-data">رخصة نشاط تجاري</td>
+          <td class="table-data">
+            ${CUST_LICENSE_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">10</td>
+          <td class="table-data">عنوان وطني</td>
+          <td class="table-data">
+            ${NATIONAL_ADDRESS_CHECK[0].checked ? trueMark : falseMark}
+          </td>
+        </tr>
+        <tr>
+          <td class="table-header">11</td>
+          <td class="table-data">تاريخ إنتهاء السجل التجاري</td>
+          <td class="table-data">
+            ${CUST_TRADE_DATE_DAY.value} / ${CUST_TRADE_DATE_MONTH.value} /
+            ${CUST_TRADE_DATE_YEAR.value} هـ
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br />
+  <br />
+  <div class="employees-signs">
+    <div class="sign-container">
+      <div class="sign-title">إعداد :</div>
+      <div class="sign-name">${MAKE_EMPLOYEE_NAME.value}</div>
+    </div>
+    <div class="sign-container">
+      <div class="sign-title">مراجعة :</div>
+      <div class="sign-name">${REVIEW_EMPLOYEE_NAME.value}</div>
+    </div>
+    <div class="sign-container">
+      <div class="sign-title">تسجيل في النظام الآلي :</div>
+      <div class="sign-name">${REGIST_EMPLOYEE_NAME.value}</div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="make-date">
+    <div class="make-date-container">
+      <div class="make-date-title">تاريخ الإعداد :</div>
+      <div class="make-date-value">
+        ${MAKE_DATE_DAY.value} / ${MAKE_DATE_MONTH.value} /
+        ${MAKE_DATE_YEAR.value} م
       </div>
     </div>
-    <div class="print-button">
-      <button onclick="window.close()" title="Exit">
-        <i class="bi bi-x-lg"></i>
-      </button>
-    </div>
-    <main>
-      <div class="page_head">
-        <img
-          width="100px"
-          src="https://alsourayia.com/images/thumbs/0000531.png"
-          alt="شركة السريع التجارية للأرضيات والمفروشات"
-        />
-        <div></div>
-      </div>
-      <h2 class="index-title">فهرس مستندات فتح حساب</h2>
-      <div>
-        <table class="tg">
-          <thead>
-            <tr>
-              <th class="table-header" style="width: 20%">رقم العميل</th>
-              <th class="table-header" style="width: 50%">إسم العميل</th>
-              <th class="table-header" style="width: 30%">
-                قيمة الحد الإئتماني
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="table-data">${CUST_NO.value}</td>
-              <td class="table-data">
-                ${custNameAll.textContent
-                  .replace("(", " ")
-                  .replace(")", "")
-                  .trim()
-                  .replace(/\s+/g, " ")}
-              </td>
-              <td class="table-data">
-                ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <br />
-      <br />
-      <div>
-        <table class="tg">
-          <thead>
-            <tr>
-              <th class="table-header" style="width: 10%">م</th>
-              <th class="table-header" style="width: 50%">
-                المستنــــــــــــــد
-              </th>
-              <th class="table-header" style="width: 40%">
-                الحالــــــــــــــة ( موجود - غير موجود )
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="table-header">1</td>
-              <td class="table-data">ملف طلب تسهيلات</td>
-              <td class="table-data">
-                <div class="table-data-flex">
-                  ${
-                    TASHEEL_APP_CHECK[0].checked
-                      ? trueMark + TASHEEL_APP_VERFIY.value
-                      : falseMark
-                  }
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">2</td>
-              <td class="table-data">أصل سند لأمر</td>
-              <td class="table-data">
-                <div class="table-data-flex">
-                  ${
-                    WARRANT_SUPPORT_CHECK[0].checked
-                      ? trueMark + WARRANT_SUPPORT_VERFIY.value
-                      : falseMark
-                  }
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">3</td>
-              <td class="table-data">السجل التجاري</td>
-              <td class="table-data">
-                ${CUST_TRADE_LOG_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">4</td>
-              <td class="table-data">شهادة التسجيل في ضريبة القيمة المضافة</td>
-              <td class="table-data">
-                ${VAT_CERT_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">5</td>
-              <td class="table-data">هوية سعودي</td>
-              <td class="table-data">
-                ${NATIONAL_ID_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">6</td>
-              <td class="table-data">هوية أجنبي</td>
-              <td class="table-data">
-                ${FORIGN_ID_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">7</td>
-              <td class="table-data">إقرار نقل رصيد</td>
-              <td class="table-data">
-                ${MOVE_CREDIT_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">8</td>
-              <td class="table-data">إثبات وكالة</td>
-              <td class="table-data">
-                ${CUST_ATTORNEY_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">9</td>
-              <td class="table-data">رخصة نشاط تجاري</td>
-              <td class="table-data">
-                ${CUST_LICENSE_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">10</td>
-              <td class="table-data">عنوان وطني</td>
-              <td class="table-data">
-                ${NATIONAL_ADDRESS_CHECK[0].checked ? trueMark : falseMark}
-              </td>
-            </tr>
-            <tr>
-              <td class="table-header">11</td>
-              <td class="table-data">تاريخ إنتهاء السجل التجاري</td>
-              <td class="table-data">
-                ${CUST_TRADE_DATE_DAY.value} / ${CUST_TRADE_DATE_MONTH.value} /
-                ${CUST_TRADE_DATE_YEAR.value} هـ
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <br />
-      <br />
-      <div class="employees-signs">
-        <div class="sign-container">
-          <div class="sign-title">إعداد :</div>
-          <div class="sign-name">${MAKE_EMPLOYEE_NAME.value}</div>
-        </div>
-        <div class="sign-container">
-          <div class="sign-title">مراجعة :</div>
-          <div class="sign-name">${REVIEW_EMPLOYEE_NAME.value}</div>
-        </div>
-        <div class="sign-container">
-          <div class="sign-title">تسجيل في النظام الآلي :</div>
-          <div class="sign-name">${REGIST_EMPLOYEE_NAME.value}</div>
-        </div>
-      </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <div class="make-date">
-        <div class="make-date-container">
-          <div class="make-date-title">تاريخ الإعداد :</div>
-          <div class="make-date-value">
-            ${MAKE_DATE_DAY.value} / ${MAKE_DATE_MONTH.value} /
-            ${MAKE_DATE_YEAR.value} م
-          </div>
-        </div>
-        <div class="make-date-container"></div>
-        <div class="make-date-container"></div>
-      </div>
-    </main>
-    <script>
-      ALERT_BOX.textContent = "تم معالجة البيانات بنجاح، جار الطباعة ...";
-      ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
-      ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
-      ALERT_BOX.classList.remove("hide");
-      setTimeout(function () {
-        ALERT_BOX.style.backgroundColor = "none";
-        ALERT_BOX.style.border = "none";
-        ALERT_BOX.classList.add("hide");
-      }, 2800);
-    </script>
-  </body>
-</html>
+    <div class="make-date-container"></div>
+    <div class="make-date-container"></div>
+  </div>
+</section>
+
+
 `;
   //==========================================//
 
@@ -464,32 +369,40 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     REVIEW_EMPLOYEE_NAME.value !== "" &&
     REGIST_EMPLOYEE_NAME.value !== ""
   ) {
-    // show loading window for 1500 s:
-    document.querySelector("#LOADING_WIN").classList.remove("hide");
-    document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
-    setTimeout(() => {
-      document.querySelector("#LOADING_WIN").classList.add("hide");
-      document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
-    }, 1200);
-    // open the result window:
-    setTimeout(() => {
-      resWin = window.open("", "", "fullscreen=no");
-      resWin.document.write(INDEX_RESULT_PAGE);
-    }, 1201);
-    setTimeout(() => {
-      resWin.print();
-    }, 3100);
-  } else {
-    ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
-    ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
-    ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
-    ALERT_BOX.classList.remove("hide");
-    setTimeout(function () {
-      ALERT_BOX.style.backgroundColor = "none";
-      ALERT_BOX.style.border = "none";
-      ALERT_BOX.classList.add("hide");
-    }, 2000);
   }
+  // show loading window for 1500 s:
+  document.querySelector("#LOADING_WIN").classList.remove("hide");
+  document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
+  setTimeout(() => {
+    document.querySelector("#LOADING_WIN").classList.add("hide");
+    document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
+  }, 1200);
+  // open the result window:
+  setTimeout(() => {
+    document.getElementById("INDEX_MAIN_PAGE").classList.add("hide");
+    document.getElementById("INDEX_RESULT_PAGE").classList.remove("hide");
+    document.getElementById("INDEX_RESULT_PAGE").innerHTML = INDEX_RESULT_PAGE;
+    document.body.style.backgroundColor = "#fff";
+    window.print();
+    document.getElementById("INDEX_MAIN_PAGE").classList.remove("hide");
+    document.getElementById("INDEX_RESULT_PAGE").classList.add("hide");
+    document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
+    document.body.style.backgroundColor = "var(--sec-color-200)";
+  }, 1201);
+  // setTimeout(() => {
+  //   resWin.print();
+  // }, 3100);
+  // else {
+  //   ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
+  //   ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
+  //   ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
+  //   ALERT_BOX.classList.remove("hide");
+  //   setTimeout(function () {
+  //     ALERT_BOX.style.backgroundColor = "none";
+  //     ALERT_BOX.style.border = "none";
+  //     ALERT_BOX.classList.add("hide");
+  //   }, 2000);
+  // }
 });
 
 // `
