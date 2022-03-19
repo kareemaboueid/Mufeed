@@ -105,7 +105,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         padding-top: 0;
         font-family: "Cairo", sans-serif;
         font-size: 1rem;
-        line-height: 1.1;
+        line-height: 1.2;
         color: #000;
         background-color: #fff;
       }
@@ -250,10 +250,10 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       </div>
     </div>
     <div class="print-button">
-      <button id="closePage" title="Exit">
+      <button onclick="window.print()" title="Exit">
         <i class="bi bi-x-lg"></i>
       </button>
-      <button id="printPage" title="Print">
+      <button onclick="window.close()" title="Print">
         <i class="bi bi-printer"></i>
       </button>
     </div>
@@ -296,6 +296,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         </table>
       </div>
       <br />
+      <br />
       <div>
         <table class="tg">
           <thead>
@@ -305,7 +306,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
                 المستنــــــــــــــد
               </th>
               <th class="table-header" style="width: 40%">
-                الحالــــــــــــــة<br>( موجود - غير موجود )
+                الحالــــــــــــــة ( موجود - غير موجود )
               </th>
             </tr>
           </thead>
@@ -445,20 +446,9 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         ALERT_BOX.style.border = "none";
         ALERT_BOX.classList.add("hide");
       }, 2800);
-      document
-        .getElementById("closePage")
-        .addEventListener("click", function () {
-          window.close();
-        });
-      document
-        .getElementById("printPage")
-        .addEventListener("click", function () {
-          window.print();
-        });
     </script>
   </body>
-</html>
-`;
+</html>`;
   //==========================================//
 
   // check if all inputs are filled
