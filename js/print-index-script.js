@@ -500,6 +500,21 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       resWin = window.open("", "", "fullscreen=no");
       resWin.document.write(INDEX_RESULT_PAGE);
     }, 1201);
+    setTimeout(() => {
+      // clear all inputs:
+      CUST_NAME.value = "";
+      CUST_CREDIT_LIMIT.value = "";
+      CUST_NO.value = "";
+      CUST_TRADE_DATE_DAY.value = "";
+      CUST_TRADE_DATE_MONTH.value = "";
+      CUST_TRADE_DATE_YEAR.value = "";
+      MAKE_DATE_DAY.value = "";
+      MAKE_DATE_MONTH.value = "";
+      MAKE_DATE_YEAR.value = "";
+      MAKE_EMPLOYEE_NAME.value = "";
+      REVIEW_EMPLOYEE_NAME.value = "";
+      REGIST_EMPLOYEE_NAME.value = "";
+    }, 2200);
   } else {
     ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
     ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
@@ -511,20 +526,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       ALERT_BOX.classList.add("hide");
     }, 2000);
   }
-
-  // clear all inputs:
-  CUST_NAME.value = "";
-  CUST_CREDIT_LIMIT.value = "";
-  CUST_NO.value = "";
-  CUST_TRADE_DATE_DAY.value = "";
-  CUST_TRADE_DATE_MONTH.value = "";
-  CUST_TRADE_DATE_YEAR.value = "";
-  MAKE_DATE_DAY.value = "";
-  MAKE_DATE_MONTH.value = "";
-  MAKE_DATE_YEAR.value = "";
-  MAKE_EMPLOYEE_NAME.value = "";
-  REVIEW_EMPLOYEE_NAME.value = "";
-  REGIST_EMPLOYEE_NAME.value = "";
 });
 
 // `
