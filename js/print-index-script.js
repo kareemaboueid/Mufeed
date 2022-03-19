@@ -105,7 +105,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         padding-top: 0;
         font-family: "Cairo", sans-serif;
         font-size: 1rem;
-        line-height: 1;
+        line-height: 1.1;
         color: #000;
         background-color: #fff;
       }
@@ -135,23 +135,22 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         width: 100%;
       }
       .print-button button {
-        padding: 6px;
+        padding: 10px;
         line-height: 1;
         cursor: pointer;
-        border: none;
-        border-radius: 6px;
+        border: 1px solid #9e9e9e;
+        border-radius: 3px;
         display: flex;
+        justify-content: center;
+        align-items: center;
         gap: 8px;
         font-weight: normal;
-        align-items: center;
-        justify-content: center;
-        background-color: #486f8b;
-        font-size: 30px;
-        color: #fff;
+        background-color: #e0e0e0;
+        font-size: 26px;
+        color: #456b87;
       }
-      .print-button button:her {
-        background-color: #385e79;
-        color: rgb(240, 240, 240);
+      .print-button button#closePage {
+        color: #dd4343;
       }
       .index-title {
         text-align: center;
@@ -186,7 +185,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       .table-data {
         border: 1px solid #000;
         overflow: hidden;
-        padding: 2px;
+        padding: 8px;
         word-break: normal;
         background-color: #fff;
         color: #000;
@@ -252,11 +251,9 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     </div>
     <div class="print-button">
       <button id="closePage" title="Exit">
-        Exit
         <i class="bi bi-x-lg"></i>
       </button>
       <button id="printPage" title="Print">
-        Print
         <i class="bi bi-printer"></i>
       </button>
     </div>
@@ -299,7 +296,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
         </table>
       </div>
       <br />
-      <br />
       <div>
         <table class="tg">
           <thead>
@@ -309,7 +305,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
                 المستنــــــــــــــد
               </th>
               <th class="table-header" style="width: 40%">
-                الحالــــــــــــــة ( موجود - غير موجود )
+                الحالــــــــــــــة<br>( موجود - غير موجود )
               </th>
             </tr>
           </thead>
@@ -465,7 +461,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
 `;
   //==========================================//
 
-  // if custNameAll or cust_lim
+  // check if all inputs are filled
   if (
     CUST_NAME.value !== "" &&
     CUST_CREDIT_LIMIT.value !== "" &&
