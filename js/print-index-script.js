@@ -83,13 +83,13 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   #RESULT_CONTENT * {
     font-size: 12px;
     font-weight: bold;
+    line-height: 1.1;
   }
   #RESULT_CONTENT {
     padding: 10px;
     padding-top: 0;
     font-family: "Cairo", sans-serif;
     font-size: 1rem;
-    line-height: 1.2;
     color: #000;
     background-color: #fff;
   }
@@ -114,7 +114,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   #RESULT_CONTENT .table-header {
     border: 1px solid #000;
     overflow: hidden;
-    padding: 8.5px 10px;
+    padding: 8px 10px;
     word-break: normal;
     background-color: #ebebeb;
     color: #000;
@@ -126,7 +126,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   #RESULT_CONTENT .table-data {
     border: 1px solid #000;
     overflow: hidden;
-    padding: 8px;
+    padding: 6px;
     word-break: normal;
     background-color: #fff;
     color: #000;
@@ -137,8 +137,10 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   }
   #RESULT_CONTENT .table-data-flex {
     display: flex;
+    line-height: 1;
+    padding: 0;
     justify-content: center;
-    align-items: cter;
+    align-items: center;
     gap: 20px;
   }
   #RESULT_CONTENT .bi-check2 {
@@ -171,6 +173,9 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     }
     #RESULT_CONTENT {
       padding: 0 50px;
+    }
+    #RESULT_CONTENT .page_head {
+      display: flex;
     }
   }
 </style>
@@ -219,7 +224,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
           <th class="table-header" style="width: 10%">م</th>
           <th class="table-header" style="width: 50%">المستنــــــــــــــد</th>
           <th class="table-header" style="width: 40%">
-            الحالــــــــــــــة ( موجود - غير موجود )
+            الحالــــــــــــــة <br> ( موجود - غير موجود )
           </th>
         </tr>
       </thead>
@@ -350,7 +355,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   </div>
 </section>
 
-
 `;
   //==========================================//
 
@@ -369,40 +373,39 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     REVIEW_EMPLOYEE_NAME.value !== "" &&
     REGIST_EMPLOYEE_NAME.value !== ""
   ) {
+    // show loading window for 1500 s:
+    document.querySelector("#LOADING_WIN").classList.remove("hide");
+    document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
+    setTimeout(() => {
+      document.querySelector("#LOADING_WIN").classList.add("hide");
+      document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
+    }, 1500);
+    setTimeout(() => {
+      document.getElementById("INDEX_MAIN_PAGE").classList.add("hide");
+      document.getElementById("INDEX_RESULT_PAGE").classList.remove("hide");
+      document.getElementById("INDEX_RESULT_PAGE").innerHTML =
+        INDEX_RESULT_PAGE;
+      document.body.style.backgroundColor = "#fff";
+    }, 2000);
+    // open the result window:
+    setTimeout(() => {
+      window.print();
+      document.getElementById("INDEX_MAIN_PAGE").classList.remove("hide");
+      document.getElementById("INDEX_RESULT_PAGE").classList.add("hide");
+      document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
+      document.body.style.backgroundColor = "var(--sec-color-200)";
+    }, 2500);
+  } else {
+    ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
+    ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
+    ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
+    ALERT_BOX.classList.remove("hide");
+    setTimeout(function () {
+      ALERT_BOX.style.backgroundColor = "none";
+      ALERT_BOX.style.border = "none";
+      ALERT_BOX.classList.add("hide");
+    }, 2000);
   }
-  // show loading window for 1500 s:
-  document.querySelector("#LOADING_WIN").classList.remove("hide");
-  document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
-  setTimeout(() => {
-    document.querySelector("#LOADING_WIN").classList.add("hide");
-    document.querySelector("#LOADING_WIN_LAYOUT").classList.add("hide");
-  }, 1200);
-  // open the result window:
-  setTimeout(() => {
-    document.getElementById("INDEX_MAIN_PAGE").classList.add("hide");
-    document.getElementById("INDEX_RESULT_PAGE").classList.remove("hide");
-    document.getElementById("INDEX_RESULT_PAGE").innerHTML = INDEX_RESULT_PAGE;
-    document.body.style.backgroundColor = "#fff";
-    window.print();
-    document.getElementById("INDEX_MAIN_PAGE").classList.remove("hide");
-    document.getElementById("INDEX_RESULT_PAGE").classList.add("hide");
-    document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
-    document.body.style.backgroundColor = "var(--sec-color-200)";
-  }, 1201);
-  // setTimeout(() => {
-  //   resWin.print();
-  // }, 3100);
-  // else {
-  //   ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";
-  //   ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
-  //   ALERT_BOX.style.border = "1px solid rgb(182, 84, 84)";
-  //   ALERT_BOX.classList.remove("hide");
-  //   setTimeout(function () {
-  //     ALERT_BOX.style.backgroundColor = "none";
-  //     ALERT_BOX.style.border = "none";
-  //     ALERT_BOX.classList.add("hide");
-  //   }, 2000);
-  // }
 });
 
 // `
