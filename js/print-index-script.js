@@ -106,10 +106,10 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <td class="table-data">${CUST_NO.value}</td>
             <td class="table-data">
               ${custNameAll.textContent
-      .replace("(", " ")
-      .replace(")", "")
-      .trim()
-      .replace(/\s+/g, " ")}
+                .replace("(", " ")
+                .replace(")", "")
+                .trim()
+                .replace(/\s+/g, " ")}
             </td>
             <td class="table-data">
               ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
@@ -140,10 +140,11 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <td class="table-data">ملف طلب تسهيلات</td>
             <td class="table-data">
               <div class="table-data-flex">
-                ${TASHEEL_APP_CHECK[0].checked
-      ? trueMark + TASHEEL_APP_VERFIY.value
-      : falseMark
-    }
+                ${
+                  TASHEEL_APP_CHECK[0].checked
+                    ? trueMark + TASHEEL_APP_VERFIY.value
+                    : falseMark
+                }
               </div>
             </td>
           </tr>
@@ -152,10 +153,11 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <td class="table-data">أصل سند لأمر</td>
             <td class="table-data">
               <div class="table-data-flex">
-                ${WARRANT_SUPPORT_CHECK[0].checked
-      ? trueMark + WARRANT_SUPPORT_VERFIY.value
-      : falseMark
-    }
+                ${
+                  WARRANT_SUPPORT_CHECK[0].checked
+                    ? trueMark + WARRANT_SUPPORT_VERFIY.value
+                    : falseMark
+                }
               </div>
             </td>
           </tr>
@@ -250,7 +252,9 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       <div class="make-date-container">
         <div class="make-date-title">تاريخ الإعداد :</div>
         <div class="make-date-value">
-          ${MAKE_DATE_DAY.value == "" ? nowDay : MAKE_DATE_DAY.value} / ${MAKE_DATE_MONTH.value == "" ? nowMonth : MAKE_DATE_MONTH.value} /
+          ${MAKE_DATE_DAY.value == "" ? nowDay : MAKE_DATE_DAY.value} / ${
+    MAKE_DATE_MONTH.value == "" ? nowMonth : MAKE_DATE_MONTH.value
+  } /
           ${MAKE_DATE_YEAR.value == "" ? nowYear : MAKE_DATE_YEAR.value} م
           </div>
       </div>
@@ -285,7 +289,8 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       document.getElementById("INDEX_MAIN_PAGE").classList.add("hide");
       document.getElementById("INDEX_RESULT_PAGE").classList.remove("hide");
       document.getElementById("RESULT_ACTION_BUTTONS").classList.remove("hide");
-      document.getElementById("INDEX_RESULT_PAGE").innerHTML = INDEX_RESULT_PAGE;
+      document.getElementById("INDEX_RESULT_PAGE").innerHTML =
+        INDEX_RESULT_PAGE;
       document.body.style.backgroundColor = "#fff";
     }, 2000);
     // 3. show success message:
@@ -316,13 +321,15 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
 });
 
 // RESULT_CONTENT_CLOSE_BUTTON
-document.getElementById("RESULT_CONTENT_CLOSE_BUTTON").addEventListener("click", () => {
-  document.getElementById("INDEX_MAIN_PAGE").classList.remove("hide");
-  document.getElementById("INDEX_RESULT_PAGE").classList.add("hide");
-  document.getElementById("RESULT_ACTION_BUTTONS").classList.add("hide");
-  document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
-  document.body.style.backgroundColor = "var(--sec-color-200)";
-});
+document
+  .getElementById("RESULT_CONTENT_CLOSE_BUTTON")
+  .addEventListener("click", () => {
+    document.getElementById("INDEX_MAIN_PAGE").classList.remove("hide");
+    document.getElementById("INDEX_RESULT_PAGE").classList.add("hide");
+    document.getElementById("RESULT_ACTION_BUTTONS").classList.add("hide");
+    document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
+    document.body.style.backgroundColor = "var(--sec-color-200)";
+  });
 
 // Reset Button
 document.getElementById("reset_form_btn").addEventListener("click", () => {
