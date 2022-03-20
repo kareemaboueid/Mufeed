@@ -25,8 +25,10 @@ $("#CUST_TRADE_LOG_TRUE").click(() => {
 $("#CHECK_CUST_SAVED_FALSE").click(() => {
   $("#CUST_SAVED_NO").addClass("hide");
   $("#CUST_SAVED_DATE").addClass("hide");
+  $("#MAKE_DATE_NOTE").addClass("hide");
 });
 $("#CHECK_CUST_SAVED_TRUE").click(() => {
   $("#CUST_SAVED_NO").removeClass("hide");
   $("#CUST_SAVED_DATE").removeClass("hide");
+  $("#MAKE_DATE_NOTE").removeClass("hide");
 });

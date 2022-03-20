@@ -62,6 +62,10 @@ const CHECK_CUST_SAVED = document.getElementsByName("CHECK_CUST_SAVED");
 const MAKE_DATE_DAY = document.getElementById("MAKE_DATE-DAY");
 const MAKE_DATE_MONTH = document.getElementById("MAKE_DATE-MONTH");
 const MAKE_DATE_YEAR = document.getElementById("MAKE_DATE-YEAR");
+// generate date dow day / month / year:
+const nowDay = new Date().getDate();
+const nowMonth = new Date().getMonth() + 1;
+const nowYear = new Date().getFullYear();
 // 13) EMPLOYEE_NAME:
 const MAKE_EMPLOYEE_NAME = document.getElementById("MAKE_EMPLOYEE_NAME");
 const REVIEW_EMPLOYEE_NAME = document.getElementById("REVIEW_EMPLOYEE_NAME");
@@ -71,8 +75,6 @@ const REGIST_EMPLOYEE_NAME = document.getElementById("REGIST_EMPLOYEE_NAME");
 const ALERT_BOX = document.getElementById("ALERT_BOX");
 const trueMark = `<i class="bi bi-check2"></i>`;
 const falseMark = `<i class="bi bi-x"></i>`;
-// the result window of customer data index
-let resWin;
 // ========================================================================
 
 // PRINT BUTTON FUNCTION:
@@ -248,9 +250,9 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       <div class="make-date-container">
         <div class="make-date-title">تاريخ الإعداد :</div>
         <div class="make-date-value">
-          ${MAKE_DATE_DAY.value} / ${MAKE_DATE_MONTH.value} /
-          ${MAKE_DATE_YEAR.value} م
-        </div>
+          ${MAKE_DATE_DAY.value == "" ? nowDay : MAKE_DATE_DAY.value} / ${MAKE_DATE_MONTH.value == "" ? nowMonth : MAKE_DATE_MONTH.value} /
+          ${MAKE_DATE_YEAR.value == "" ? nowYear : MAKE_DATE_YEAR.value} م
+          </div>
       </div>
       <div class="make-date-container"></div>
       <div class="make-date-container"></div>
@@ -259,6 +261,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
   `;
   //==========================================//
   // check if all inputs are filled
+
   if (
     CUST_NAME.value !== "" &&
     CUST_CREDIT_LIMIT.value !== "" &&
@@ -266,9 +269,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     CUST_TRADE_DATE_DAY.value !== "" &&
     CUST_TRADE_DATE_MONTH.value !== "" &&
     CUST_TRADE_DATE_YEAR.value !== "" &&
-    MAKE_DATE_DAY.value !== "" &&
-    MAKE_DATE_MONTH.value !== "" &&
-    MAKE_DATE_YEAR.value !== "" &&
     MAKE_EMPLOYEE_NAME.value !== "" &&
     REVIEW_EMPLOYEE_NAME.value !== "" &&
     REGIST_EMPLOYEE_NAME.value !== ""

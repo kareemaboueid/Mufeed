@@ -23,6 +23,15 @@ body {
   font-size: var(--font-size-base);
   line-height: var(--line-height-base);
   color: var(--black);
-  font-weight: var(--font-weight-500);
+  font-weight: 700;
   background: var(--sec-color-200);
+}
+
+button:focus-visible,
+select:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  transition: none;
+  outline-offset: -0.5rem;
+  outline: dashed 1px rgba(0, 0, 0, 0.5);
 }
