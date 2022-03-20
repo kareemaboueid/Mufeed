@@ -1,20 +1,20 @@
 {
-  "short_name": "Boilerbase",
-  "name": "Boilerbase starter template",
-  "description": "A modern, solid, customizable, well-organized, configerable, npm-powered starter environment for building web apps fast.",
+  "short_name": "Mufeed",
+  "name": "Mufeed",
+  "description": "Mufeed is a daily office-work tasks organizer - مفيد ينجز لك مهامك اليومية بسرعة وذكاء",
   "icons": [
     {
-      "src": "media/logo.svg",
-      "type": "image/svg+xml",
+      "src": "./media/mufeed-ogimage.jpg",
+      "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "media/logo.png",
+      "src": "./media/mufeed-ogimage.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "media/logo.png",
+      "src": "./media/mufeed-ogimage.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -27,5 +27,5 @@
   ],
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#f1f1f1"
+  "theme_color": "#456b87"
 }
