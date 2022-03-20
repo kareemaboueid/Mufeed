@@ -10,14 +10,12 @@ layout: header
   border-bottom: 1px solid var(--sec-color-500);
 }
 
-.app_header-logo img {
-  width: 50%;
-  height: auto;
-  margin: 0 auto;
-}
-
 .app_header a:hover,
 .app_header a:focus,
 .app_header a:visited {
   text-decoration: none;
+}
+
+.PAGE_TITLE {
+  color: var(--sec-color-800);
 }

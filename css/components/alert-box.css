@@ -1,5 +1,6 @@
 #ALERT_BOX {
   position: fixed;
+  font-size: 1.2rem;
   width: fit-content;
   top: 2%;
   left: 50%;

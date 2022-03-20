@@ -13,7 +13,7 @@ Utilities: container
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .radius-base {
@@ -83,6 +83,14 @@ Utilities: container
 
 .font-red {
   color: rgb(221, 67, 67);
+}
+
+.logo-color {
+  color: #5a95b1;
+}
+
+.line-h-1 {
+  line-height: 1;
 }
 
 .container {

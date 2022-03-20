@@ -1,7 +1,7 @@
 <!-- CUST_ACC_OPEN page -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head id="ORIGNAL_HEAD">
+  <head>
     <!-- primary tags -->
     <meta charset="UTF-8" />
     <title>مفيد - فتح حساب جديد</title>
@@ -37,41 +37,60 @@
   </head>
 
   <body>
+    <!-- START RESULT_ACTION_BUTTONS -->
+    <div id="RESULT_ACTION_BUTTONS" class="hide">
+      <div>
+        <button
+          class="btn-reset p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
+          type="button"
+          title="إغلاق"
+          id="RESULT_CONTENT_CLOSE_BUTTON"
+        >
+          <i class="bi bi-x-lg line-h-1 font-s-h3 font-red"></i>
+        </button>
+        <button
+          class="btn-reset p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
+          type="button"
+          title="طباعة"
+          onclick="window.print()"
+        >
+          <i class="bi bi-printer-fill line-h-1 font-s-h3 font-prim"></i>
+        </button>
+      </div>
+      <div>
+        <img src="../media/mufeed-favicon.png" />
+      </div>
+    </div>
+    <!-- END RESULT_ACTION_BUTTONS -->
+
     <div id="INDEX_RESULT_PAGE" class="hide"></div>
     <main id="INDEX_MAIN_PAGE" class>
       <!-- START APP_HEADER -->
-      <header class="app_header">
-        <div class="container">
-          <!-- start logo -->
-          <div class="row p-t-0-5rem p-b-0-5rem">
-            <div class="col-2 bordered-left">
-              <a
-                class="app_header-logo"
-                href="../index.html"
-                title="الصفحة الرئيسية"
-              >
-                <img src="../media/mufeed-logo-light.png" alt="صورة مفيد" />
-              </a>
-            </div>
-            <!-- end logo -->
-            <!-- start page title -->
-            <div class="col-7 flex items-center justify-start gap-0-5rem">
-              <img
-                class="PAGE_IMAGE"
-                src="../media/add-user.png"
-                alt="فتح حساب عميل"
-              />
-              <h1 class="PAGE_TITLE">فتح حساب عميل</h1>
-            </div>
-            <!-- end page title -->
-            <!-- start description -->
-            <div class="col-3 flex items-center justify-end">
-              <p class="font-w-700 font-s-base text-left">
-                إعمل بذكاء وانجز مهامك بسهولة.
-              </p>
-            </div>
-            <!-- end description -->
+      <header class="app_header flex justify-space-between items-center">
+        <!-- start logo -->
+        <div class="width-10">
+          <a
+            class="flex justify-center items-center gap-0-25rem"
+            href="../index.html"
+            title="الصفحة الرئيسية"
+          >
+            <img src="../media/mufeed-favicon.png" alt="صورة مفيد" />
+            <p class="font-s-h5 font-w-600 logo-color">مفيد</p>
+          </a>
+        </div>
+        <!-- end logo -->
+        <div
+          class="width-90 flex bordered-right justify-space-between items-center p-r-2rem p-l-2rem"
+        >
+          <!-- start page title -->
+          <div class="PAGE_TITLE flex items-center justify-start gap-0-25rem">
+            <i class="bi bi-file-earmark-text-fill line-h-1 font-s-h5"></i>
+            <h1 class="font-w-400 font-s-h6">فهرس مستندات فتح حساب</h1>
           </div>
+          <!-- end page title -->
+          <!-- start description -->
+          <p class="font-s-base">إعمل بذكاء وانجز مهامك بسهولة.</p>
+          <!-- end description -->
         </div>
       </header>
       <!-- END APP_HEADER -->
@@ -86,7 +105,7 @@
               class="back-shade-200 flex justify-start items-center gap-0-5rem"
             >
               <button
-                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="خروج"
                 id="exit_to_main_page_btn"
@@ -95,32 +114,32 @@
                   href="../index.html"
                   class="flex justify-center items-center"
                 >
-                  <i class="bi bi-x-lg font-s-h2 font-red"></i>
+                  <i class="bi bi-x-lg line-h-1 font-s-h3 font-red"></i>
                 </a>
               </button>
               <button
-                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="طباعة فهرس المستندات"
                 id="print_index_btn"
               >
-                <i class="bi bi-list-check font-s-h2 font-prim"></i>
+                <i class="bi bi-journal-check line-h-1 font-s-h3 font-prim"></i>
               </button>
               <button
-                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="طباعة غلاف ملصق للملف"
                 id="print_cust_cover_btn"
               >
-                <i class="bi bi-card-heading font-s-h2 font-prim"></i>
+                <i class="bi bi-card-text line-h-1 font-s-h3 font-prim"></i>
               </button>
               <button
-                class="bordered p-t-0-5rem p-b-0-5rem p-l-1rem p-r-1rem radius-base flex items-center justify-center back-shade-300"
+                class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
                 type="button"
                 title="مسح جميع الحقول"
                 id="reset_form_btn"
               >
-                <i class="bi bi-eraser font-s-h2 font-prim"></i>
+                <i class="bi bi-eraser-fill line-h-1 font-s-h3 font-prim"></i>
               </button>
 
               <!-- <button
@@ -216,6 +235,7 @@
                           <option>التجاري</option>
                           <option>للتجارة</option>
                           <option>المحدودة</option>
+                          <option>المتحدة</option>
                           <option>التضامنية</option>
                           <option>للأرضيات</option>
                           <option>للأرضيات والمفروشات</option>
@@ -1006,15 +1026,15 @@
             <!-- START EMPLOYEE_SIGN -->
             <section class="new_acc_form-section">
               <div
-                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+                class="row items-center justify-center text-left p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
               >
                 <!-- START MAKE_EMPLOYEE_NAME -->
-                <div class="col-1 text-left">
+                <div class="col-1">
                   <label class="new_acc_form-label" for="MAKE_EMPLOYEE_NAME">
                     إعداد :
                   </label>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <select
                     class="new_acc_form-input"
                     name="MAKE_EMPLOYEE_NAME"
@@ -1024,7 +1044,7 @@
                     <option>أ/ خالد عبدالناصر</option>
                     <option>أ/ كريم أبوعيد</option>
                     <option>أ/ مها علي</option>
-                    <option>أ/ رحمة حسن</option>
+                    <option selected>أ/ رحمة حسن</option>
                   </select>
                 </div>
                 <!-- END MAKE_EMPLOYEE_NAME -->
@@ -1034,7 +1054,7 @@
                     مراجعة :
                   </label>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <select
                     class="new_acc_form-input"
                     name="REVIEW_EMPLOYEE_NAME"
@@ -1043,18 +1063,18 @@
                     <option value="">لا يوجد</option>
                     <option>أ/ خالد عبدالناصر</option>
                     <option>أ/ كريم أبوعيد</option>
-                    <option>أ/ مها علي</option>
+                    <option selected>أ/ مها علي</option>
                     <option>أ/ رحمة حسن</option>
                   </select>
                 </div>
                 <!-- END REVIEW_EMPLOYEE_NAME -->
                 <!-- START REGIST_EMPLOYEE_NAME -->
-                <div class="col-1 text-left p-0">
+                <div class="col-2 text-left p-0">
                   <label class="new_acc_form-label" for="REGIST_EMPLOYEE_NAME">
                     تسجيل في النظام الآلي :
                   </label>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <select
                     class="new_acc_form-input"
                     name="REGIST_EMPLOYEE_NAME"
@@ -1062,7 +1082,7 @@
                   >
                     <option value="">لا يوجد</option>
                     <option>أ/ خالد عبدالناصر</option>
-                    <option>أ/ كريم أبوعيد</option>
+                    <option selected>أ/ كريم أبوعيد</option>
                     <option>أ/ مها علي</option>
                     <option>أ/ رحمة حسن</option>
                   </select>
