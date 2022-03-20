@@ -1,8 +1,5 @@
 # For more info https://help.github.com/articles/ignoring-files
 
-# test files
-/pages/test.html
-
 # dependencies
 /node_modules
 
@@ -22,3 +19,4 @@ _config.yml
 .env.production.local
 
 npm-debug.log*
+pages/test.html
