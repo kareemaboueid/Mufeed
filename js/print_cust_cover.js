@@ -12,150 +12,42 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
   //==========================================//
   // THE INDEX RESULT:
   let INDEX_RESULT_PAGE = `
-<table
-      style="
-        border-collapse: collapse;
-        border-spacing: 0;
-        table-layout: fixed;
-        width: 665px;
-      "
-      class="tg"
-    >
-      <colgroup>
-        <col style="width: 188px" />
-        <col style="width: 477px" />
-      </colgroup>
-      <thead>
-        <tr>
-          <th
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            اسم العميل
-          </th>
-          <th
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            ${custNameAll.textContent.replace("(", " ").replace(")",
-    "").trim().replace(/\s+/g, " ")}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            رقم العميل
-          </td>
-          <td
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            ${CUST_NO.value}
-          </td>
-        </tr>
-        <tr>
-          <td
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            المنفذ
-          </td>
-          <td
-            style="
-              background-color: #ffffff;
-              border-color: #000000;
-              border-style: solid;
-              border-width: 1px;
-              color: #000000;
-              font-family: inherit;
-              font-size: 26px;
-              font-weight: bold;
-              overflow: hidden;
-              padding: 18px 20px;
-              text-align: center;
-              vertical-align: middle;
-              word-break: normal;
-            "
-          >
-            ${CUST_MARKET.value}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+<section id="RESULT_CONTENT">
+<div class="p-t-2rem"></div>
+        <table class="tg">
+          <tbody>
+            <tr>
+              <td class="width-30 table-header">
+                <div class="p-1rem font-s-h6">أسم العميل</div>
+              </td>
+              <td class="table-data font-s-h6 p-0">
+                ${custNameAll.textContent.trim().replace(/\s+/g, " ")}
+              </td>
+            </tr>
+            <tr>
+              <td class="width-30 table-header">
+                <div class="p-1rem font-s-h6">رقم العميل</div>
+              </td>
+              <td class="table-data font-s-h6 p-0">${CUST_NO.value}</td>
+            </tr>
+            <tr>
+              <td class="width-30 table-header">
+                <div class="p-1rem font-s-h6">المنفذ</div>
+              </td>
+              <td class="table-data font-s-h6 p-0">${CUST_MARKET.value}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
   `;
   //==========================================//
   // check if all inputs are filled
 
-  if (CUST_MARKET.value !== "" && CUST_NO.value !== "" && CUST_NAME.value !== "") {
+  if (
+    CUST_MARKET.value !== "" &&
+    CUST_NO.value !== "" &&
+    CUST_NAME.value !== ""
+  ) {
     // 1. show loading window for 1500 s:
     document.querySelector("#LOADING_WIN").classList.remove("hide");
     document.querySelector("#LOADING_WIN_LAYOUT").classList.remove("hide");
@@ -168,7 +60,8 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
       document.getElementById("INDEX_MAIN_PAGE").classList.add("hide");
       document.getElementById("INDEX_RESULT_PAGE").classList.remove("hide");
       document.getElementById("RESULT_ACTION_BUTTONS").classList.remove("hide");
-      document.getElementById("INDEX_RESULT_PAGE").innerHTML = INDEX_RESULT_PAGE;
+      document.getElementById("INDEX_RESULT_PAGE").innerHTML =
+        INDEX_RESULT_PAGE;
       document.body.style.backgroundColor = "#fff";
     }, 2000);
     // 3. show success message:

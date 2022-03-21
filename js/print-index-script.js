@@ -105,11 +105,7 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
           <tr>
             <td class="table-data">${CUST_NO.value}</td>
             <td class="table-data">
-              ${custNameAll.textContent
-                .replace("(", " ")
-                .replace(")", "")
-                .trim()
-                .replace(/\s+/g, " ")}
+              ${custNameAll.textContent.trim().replace(/\s+/g, " ")}
             </td>
             <td class="table-data">
               ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
