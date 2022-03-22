@@ -18,9 +18,9 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
           <tbody>
             <tr>
               <td class="width-30 table-header">
-                <div class="p-1rem font-s-h6">أسم العميل</div>
+                <div class="p-1rem font-s-h4">أسم العميل</div>
               </td>
-              <td class="table-data font-s-h6 p-0">
+              <td class="table-data font-s-h4 p-0">
                 ${
                   $("#parenthesis1").hasClass("hide") &&
                   $("#parenthesis2").hasClass("hide")
@@ -36,15 +36,15 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
             </tr>
             <tr>
               <td class="width-30 table-header">
-                <div class="p-1rem font-s-h6">رقم العميل</div>
+                <div class="p-1rem font-s-h4">رقم العميل</div>
               </td>
-              <td class="table-data font-s-h6 p-0">${CUST_NO.value}</td>
+              <td class="table-data font-s-h3 p-0">${CUST_NO.value}</td>
             </tr>
             <tr>
               <td class="width-30 table-header">
-                <div class="p-1rem font-s-h6">المنفذ</div>
+                <div class="p-1rem font-s-h4">المنفذ</div>
               </td>
-              <td class="table-data font-s-h6 p-0">${CUST_MARKET.value}</td>
+              <td class="table-data font-s-h3 p-0">${CUST_MARKET.value}</td>
             </tr>
           </tbody>
         </table>
