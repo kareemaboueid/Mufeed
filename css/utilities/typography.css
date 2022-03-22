@@ -49,27 +49,27 @@ Utilities: typography
 }
 
 .font-s-h1 {
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-h1) !important ;
 }
 
 .font-s-h2 {
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h2) !important ;
 }
 
 .font-s-h3 {
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-h3) !important ;
 }
 
 .font-s-h4 {
-  font-size: var(--font-size-h4);
+  font-size: var(--font-size-h4) !important ;
 }
 
 .font-s-h5 {
-  font-size: var(--font-size-h5);
+  font-size: var(--font-size-h5) !important ;
 }
 
 .font-s-h6 {
-  font-size: var(--font-size-h6);
+  font-size: var(--font-size-h6) !important ;
 }
 
 /* text transform */

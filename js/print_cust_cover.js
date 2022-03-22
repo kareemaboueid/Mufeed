@@ -21,7 +21,17 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
                 <div class="p-1rem font-s-h6">أسم العميل</div>
               </td>
               <td class="table-data font-s-h6 p-0">
-                ${custNameAll.textContent.trim().replace(/\s+/g, " ")}
+                ${
+                  $("#parenthesis1").hasClass("hide") &&
+                  $("#parenthesis2").hasClass("hide")
+                    ? custNameAll.textContent
+                        .replace("(", "")
+                        .replace(")", "")
+                        .trim()
+                        .replace(/\s+/g, " ")
+                    : custNameAll.textContent.trim().replace(/\s+/g, " ")
+                }
+
               </td>
             </tr>
             <tr>

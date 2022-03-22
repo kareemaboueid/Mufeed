@@ -16,6 +16,13 @@ const CUST_CREDIT_LIMIT = document.getElementById("CUST_CREDIT_LIMIT");
 const CUST_CREDIT_LIMIT_CURRENCY = document.getElementById(
   "CUST_CREDIT_LIMIT_CURRENCY"
 );
+// TEST /////////////////
+function numberWithCommas(x) {
+  var parts = x.toString().split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return parts.join(".");
+}
+// TEST /////////////////
 // CUSTOMER_NO:
 const CUST_NO = document.getElementById("CUST_NO");
 //=========================================================================
@@ -105,10 +112,21 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
           <tr>
             <td class="table-data">${CUST_NO.value}</td>
             <td class="table-data">
-              ${custNameAll.textContent.trim().replace(/\s+/g, " ")}
+              ${
+                $("#parenthesis1").hasClass("hide") &&
+                $("#parenthesis2").hasClass("hide")
+                  ? custNameAll.textContent
+                      .replace("(", "")
+                      .replace(")", "")
+                      .trim()
+                      .replace(/\s+/g, " ")
+                  : custNameAll.textContent.trim().replace(/\s+/g, " ")
+              }
             </td>
             <td class="table-data">
-              ${CUST_CREDIT_LIMIT.value} ${CUST_CREDIT_LIMIT_CURRENCY.value}
+              ${numberWithCommas(CUST_CREDIT_LIMIT.value)} ${
+    CUST_CREDIT_LIMIT_CURRENCY.value
+  }
             </td>
           </tr>
         </tbody>
