@@ -68,9 +68,8 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
   // check if all inputs are filled
 
   if (
-    CUST_MARKET.value !== "" &&
-    CUST_NO.value !== "" &&
-    CUST_NAME.value !== ""
+    CUST_MARKET.disabled == true ||
+    (CUST_MARKET.value !== "" && CUST_NO.value !== "" && CUST_NAME.value !== "")
   ) {
     // 1. show loading window for 1500 s:
     document.querySelector("#LOADING_WIN").classList.remove("hide");
