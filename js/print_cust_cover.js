@@ -6,6 +6,16 @@
 
 const PRINT_CUST_COVER_BTN = document.querySelector("#print_cust_cover_btn");
 const CUST_MARKET = document.getElementById("CUST_MARKET");
+const CUST_PROJECT_CHECK = document.getElementById("CUST_PROJECT_CHECK");
+
+// check if user chose a market or project:
+CUST_PROJECT_CHECK.addEventListener("click", () => {
+  if (CUST_PROJECT_CHECK.checked == true) {
+    CUST_MARKET.disabled = true;
+  } else {
+    CUST_MARKET.disabled = false;
+  }
+});
 
 // PRINT BUTTON FUNCTION:
 PRINT_CUST_COVER_BTN.addEventListener("click", () => {
@@ -44,7 +54,11 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
               <td class="width-30 table-header">
                 <div class="p-1rem font-s-h4">المنفذ</div>
               </td>
-              <td class="table-data font-s-h3 p-0">${CUST_MARKET.value}</td>
+              <td class="table-data font-s-h3 p-0">${
+                CUST_MARKET.disabled == true
+                  ? "قسم المشاريع والتصدير"
+                  : CUST_MARKET.value
+              }</td>
             </tr>
           </tbody>
         </table>
