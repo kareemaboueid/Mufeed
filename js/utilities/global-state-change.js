@@ -134,7 +134,7 @@ setInterval(function () {
 // change state of MOVE_CREDIT_TEXT_RESULT text every 200 ms:
 setInterval(function () {
   let resText =
-    "نقل رصيد حساب عميل رقم" +
+    "نقل رصيد حساب عميل رقم:" +
     " " +
     $("#OLD_CUST_NO").val() +
     " " +
@@ -144,7 +144,7 @@ setInterval(function () {
     $("#VIEW_OLD_CUST_NAME").text() +
     ")" +
     " " +
-    "إلى حساب عميل رقم" +
+    "إلى حساب عميل رقم:" +
     " " +
     $("#CUST_NO").val() +
     " " +
