@@ -235,8 +235,18 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <td class="table-header">11</td>
             <td class="table-data">تاريخ إنتهاء السجل التجاري</td>
             <td class="table-data">
-              ${CUST_TRADE_DATE_DAY.value} / ${CUST_TRADE_DATE_MONTH.value} /
-              ${CUST_TRADE_DATE_YEAR.value} هـ
+            ${
+              CUST_TRADE_DATE_DAY.value.length < 1 ||
+              CUST_TRADE_DATE_MONTH.value.length < 1 ||
+              CUST_TRADE_DATE_YEAR.value.length
+                ? "-"
+                : CUST_TRADE_DATE_DAY.value +
+                  "/" +
+                  CUST_TRADE_DATE_MONTH.value +
+                  "/" +
+                  CUST_TRADE_DATE_YEAR.value +
+                  "هـ"
+            }
             </td>
           </tr>
         </tbody>
@@ -284,9 +294,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
     CUST_NAME.value !== "" &&
     CUST_CREDIT_LIMIT.value !== "" &&
     CUST_NO.value !== "" &&
-    CUST_TRADE_DATE_DAY.value !== "" &&
-    CUST_TRADE_DATE_MONTH.value !== "" &&
-    CUST_TRADE_DATE_YEAR.value !== "" &&
     MAKE_EMPLOYEE_NAME.value !== "" &&
     REVIEW_EMPLOYEE_NAME.value !== "" &&
     REGIST_EMPLOYEE_NAME.value !== ""

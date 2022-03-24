@@ -16,8 +16,8 @@ Utilities: container
   display: none !important;
 }
 
-.word-break-all {
-  word-break: break-all;
+.word-keep-all {
+  word-break: keep-all;
 }
 
 .radius-base {

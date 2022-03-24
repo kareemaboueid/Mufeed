@@ -58,7 +58,7 @@ Utilities: space helpers
 
 /* Main Spacers */
 .p-0 {
-  padding: var(--padding-0);
+  padding: var(--padding-0) !important;
 }
 .p-0-25rem {
   padding: var(--padding-0-25rem);

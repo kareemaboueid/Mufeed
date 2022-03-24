@@ -40,14 +40,16 @@
     />
     <!-- app stylesheet -->
     <link rel="stylesheet" href="../css/index.css" />
-    <!-- app script -->
+    <!-- app JS scripts -->
     <script defer src="../js/vendors/jquery.min.js"></script>
-    <script defer src="../js/global-state-change.js"></script>
-    <script defer src="../js/copy-viewed-cust-name.js"></script>
-    <script defer src="../js/copy-viewed-docs-text.js"></script>
-    <!-- main page script -->
-    <script defer src="../js/print-cust-checklist.js"></script>
-    <script defer src="../js/print_cust_cover.js"></script>
+    <script defer src="../js/utilities/global-state-change.js"></script>
+    <!-- JS copy scripts -->
+    <script defer src="../js/copy_scripts/copy-viewed-cust-name.js"></script>
+    <script defer src="../js/copy_scripts/copy-viewed-docs-text.js"></script>
+    <script defer src="../js/copy_scripts/copy_move_credit_text.js"></script>
+    <!-- JS print scripts -->
+    <script defer src="../js/print_scripts/print-cust-checklist.js"></script>
+    <script defer src="../js/print_scripts/print_cust_cover.js"></script>
   </head>
 
   <body>
@@ -260,10 +262,18 @@
                           id="CUST_NAME_SUFFIX"
                           placeholder="(إضافة)"
                         />
-                        <!-- add pra -->
+                        <!-- add_parenthesis -->
                         <button
-                          id="add_parenthesis"
+                          id="ADD_SUFFIX_PARENS_BTN"
                           class="width-20 back-shade-50 bordered-right"
+                          type="button"
+                          title="إضافة قوسين"
+                        >
+                          ( )
+                        </button>
+                        <button
+                          id="REMOVE_SUFFIX_PARENS_BTN"
+                          class="width-20 back-shade-50 bordered-right hide"
                           type="button"
                           title="إضافة قوسين"
                         >
@@ -278,17 +288,13 @@
                 <!-- START VIEW_CUST_NAME -->
                 <div class="col-3">
                   <div class="flex justify-end items-center gap-0-5rem">
-                    <p
-                      class="word-break-all"
-                      id="VIEW_CUST_NAME"
-                      title="عرض إسم العميل: هكذا سيظهر إسم العميل"
-                    >
-                      <span id="VIEW_CUST_NAME1"></span>
+                    <p id="VIEW_CUST_NAME">
+                      <!-- <span id="VIEW_CUST_NAME1"></span>
                       <span id="VIEW_CUST_NAME2"></span>
                       <span id="VIEW_CUST_NAME3"></span>
                       <span id="parenthesis1" class="hide">(</span>
                       <span id="VIEW_CUST_NAME4"></span>
-                      <span id="parenthesis2" class="hide">)</span>
+                      <span id="parenthesis2" class="hide">)</span> -->
                     </p>
                     <button
                       id="COPY_VIEW_CUST_NAME"
@@ -1103,6 +1109,7 @@
               </div>
             </section>
             <!-- END CHECK_CUST_SAVED -->
+
             <!-- START EMPLOYEE_SIGN -->
             <section class="new_acc_form-section">
               <div
@@ -1170,7 +1177,221 @@
                 <!-- END REGIST_EMPLOYEE_NAME -->
               </div>
             </section>
-            <!-- START EMPLOYEE_SIGN -->
+            <!-- END EMPLOYEE_SIGN -->
+
+            <!-- START MOVE_CREDIT_TEXT_CHECK -->
+            <section class="new_acc_form-section">
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <div class="col-1 text-center p-0">
+                  <p class="new_acc_form-label">بيان نقل الرصيد :</p>
+                </div>
+
+                <div class="col-2 p-r-1rem p-l-1rem">
+                  <div class="new_acc_toggle_radio">
+                    <input
+                      class="hide new_acc_toggle_radio-true"
+                      type="radio"
+                      name="MOVE_CREDIT_TEXT_CHECK"
+                      id="MOVE_CREDIT_TEXT_CHECK_TRUE"
+                      value="MOVE_CREDIT_TEXT_CHECK_TRUE"
+                    />
+                    <input
+                      checked
+                      class="hide new_acc_toggle_radio-false"
+                      type="radio"
+                      name="MOVE_CREDIT_TEXT_CHECK"
+                      id="MOVE_CREDIT_TEXT_CHECK_FALSE"
+                      value="MOVE_CREDIT_TEXT_CHECK_FALSE"
+                    />
+                    <div class="new_acc_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="MOVE_CREDIT_TEXT_CHECK_TRUE"
+                        >نعم</label
+                      >
+                      <i class="bi bi-check-square"></i>
+                      <i class="bi bi-x-square"></i>
+                      <label
+                        class="check-label-false"
+                        for="MOVE_CREDIT_TEXT_CHECK_FALSE"
+                        >لا</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- START OLD_CUST_NO -->
+                <div class="col-3 text-left p-0">
+                  <div id="OLD_CUST_NO_BOX" class="hide">
+                    <div class="flex items-center justify-start gap-0-25rem">
+                      <p class="new_acc_form-label width-80">
+                        بيانات العميل القديم :
+                      </p>
+                      <input
+                        class="new_acc_form-input p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                        type="number"
+                        name="OLD_CUST_NO"
+                        id="OLD_CUST_NO"
+                        required
+                        placeholder="رقم العميل القديم"
+                        min="1"
+                        max="9999"
+                      />
+                      <div class="p-0-5rem">-</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END OLD_CUST_NO -->
+
+                <!-- START OLD_CUST_NAME -->
+                <div class="col-6 text-left p-0">
+                  <div id="OLD_CUST_NAME_BOX" class="hide">
+                    <div class="flex items-center justify-start gap-0-25rem">
+                      <div class="date-input-div">
+                        <div
+                          class="row flex items-center justify-space-between p-r-1rem p-l-1rem"
+                        >
+                          <!-- START OLD_CUST_NAME_START -->
+                          <div class="col-3 bordered-left">
+                            <select
+                              class="new_acc_form-input width-100"
+                              name="OLD_CUST_NAME_START"
+                              id="OLD_CUST_NAME_START"
+                            >
+                              <option selected value="">لا يوجد</option>
+                              <option>مؤسسة</option>
+                              <option>شركة</option>
+                              <option>مكتب</option>
+                              <option>وزارة</option>
+                              <option>محل</option>
+                              <option>مفروشات</option>
+                              <option>هيئة</option>
+                              <option>مجموعة</option>
+                              <option>مركز</option>
+                              <option>مستشفى</option>
+                              <option>المؤسسة</option>
+                              <option>الشركة</option>
+                              <option>المكتب</option>
+                              <option>الوزارة</option>
+                              <option>المحل</option>
+                              <option>المفروشات</option>
+                              <option>الهيئة</option>
+                              <option>المجموعة</option>
+                              <option>المركز</option>
+                              <option>المستشفى</option>
+                            </select>
+                          </div>
+                          <!-- END OLD_CUST_NAME_START -->
+
+                          <!-- START OLD_CUST_NAME -->
+                          <div class="col-3 bordered-left">
+                            <input
+                              class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
+                              type="text"
+                              name="OLD_CUST_NAME"
+                              id="OLD_CUST_NAME"
+                              placeholder="اسم العميل القديم"
+                              required
+                            />
+                          </div>
+                          <!-- END OLD_CUST_NAME -->
+
+                          <!-- START OLD_CUST_NAME_END -->
+                          <div class="col-3 bordered-left">
+                            <select
+                              class="new_acc_form-input width-100"
+                              name="OLD_CUST_NAME_END"
+                              id="OLD_CUST_NAME_END"
+                            >
+                              <option selected value="">لا يوجد</option>
+                              <option>التجارية</option>
+                              <option>التجاري</option>
+                              <option>للتجارة</option>
+                              <option>المحدودة</option>
+                              <option>المتحدة</option>
+                              <option>التضامنية</option>
+                              <option>للتضامن</option>
+                              <option>للأرضيات</option>
+                              <option>للأرضيات والمفروشات</option>
+                              <option>للمفروشات</option>
+                              <option>للسجاد</option>
+                              <option>للأثاث</option>
+                              <option>للمقاولات</option>
+                              <option>للمقاولات العامة</option>
+                              <option>للتصدير</option>
+                              <option>للإستيراد والتصدير</option>
+                              <option>شركة شخص واحد</option>
+                              <option>الوطنية</option>
+                              <option>الدولية</option>
+                              <option>العالمية</option>
+                            </select>
+                          </div>
+                          <!-- END OLD_CUST_NAME_END -->
+
+                          <!-- START OLD_CUST_NAME_SUFFIX -->
+                          <div
+                            class="col-3 flex items-center justify-space-between"
+                          >
+                            <input
+                              class="new_acc_form-input width-80 p-0"
+                              type="text"
+                              name="OLD_CUST_NAME_SUFFIX"
+                              id="OLD_CUST_NAME_SUFFIX"
+                              placeholder="(إضافة)"
+                            />
+                            <!-- add_parenthesis -->
+                            <button
+                              id="ADD_OLD_SUFFIX_PARENS_BTN"
+                              class="width-20 back-shade-50 bordered-right"
+                              type="button"
+                              title="إضافة قوسين"
+                            >
+                              ( )
+                            </button>
+                            <button
+                              id="REMOVE_OLD_SUFFIX_PARENS_BTN"
+                              class="width-20 back-shade-50 bordered-right hide"
+                              type="button"
+                              title="إضافة قوسين"
+                            >
+                              ( )
+                            </button>
+                          </div>
+                          <!-- END OLD_CUST_NAME_SUFFIX -->
+                          <p id="VIEW_OLD_CUST_NAME" class="hide"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- END OLD_CUST_NAME -->
+              </div>
+
+              <div class="_______sperator_______"></div>
+              <div id="MOVE_CREDIT_TEXT_RESULT_BOX" class="p-1rem hide">
+                <div class="flex justify-start items-center gap-0-5rem">
+                  <p
+                    id="MOVE_CREDIT_TEXT_RESULT"
+                    class="p-0-5rem bordered radius-base width-90"
+                  ></p>
+                  <button
+                    id="COPY_MOVE_CREDIT_TEXT_RESULT"
+                    class="btn-reset p-0-25rem"
+                    title="نسخ بيان نقل الرصيد"
+                    type="button"
+                  >
+                    <i class="bi bi-clipboard-fill font-s-h5 font-prim"></i>
+                    <i
+                      class="bi bi-clipboard-check-fill font-s-h5 font-prim hide"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <!-- END MOVE_CREDIT_TEXT_CHECK -->
           </div>
         </form>
         <!-- END </1.new_acc_form> -->
