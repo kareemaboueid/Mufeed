@@ -98,8 +98,6 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
       ALERT_BOX.style.backgroundColor = "none";
       ALERT_BOX.style.border = "none";
       ALERT_BOX.classList.add("hide");
-      document.querySelector(".bi-clipboard").classList.remove("hide");
-      document.querySelector(".bi-clipboard-check").classList.add("hide");
     }, 4900);
   } else {
     ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";

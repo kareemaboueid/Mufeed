@@ -236,16 +236,17 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
             <td class="table-data">تاريخ إنتهاء السجل التجاري</td>
             <td class="table-data">
             ${
-              CUST_TRADE_DATE_DAY.value.length < 1 ||
-              CUST_TRADE_DATE_MONTH.value.length < 1 ||
-              CUST_TRADE_DATE_YEAR.value.length
+              CUST_TRADE_DATE_DAY.value == "" ||
+              CUST_TRADE_DATE_MONTH.value == "" ||
+              CUST_TRADE_DATE_YEAR.value == "" ||
+              CUST_TRADE_LOG_CHECK[1].checked == true
                 ? "-"
                 : CUST_TRADE_DATE_DAY.value +
-                  "/" +
+                  " / " +
                   CUST_TRADE_DATE_MONTH.value +
-                  "/" +
+                  " / " +
                   CUST_TRADE_DATE_YEAR.value +
-                  "هـ"
+                  " هـ"
             }
             </td>
           </tr>
@@ -325,8 +326,6 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
       ALERT_BOX.style.backgroundColor = "none";
       ALERT_BOX.style.border = "none";
       ALERT_BOX.classList.add("hide");
-      document.querySelector(".bi-clipboard").classList.remove("hide");
-      document.querySelector(".bi-clipboard-check").classList.add("hide");
     }, 4900);
   } else {
     ALERT_BOX.textContent = "تأكد من إدخال البيانات بشكل صحيح!";

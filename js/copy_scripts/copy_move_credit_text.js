@@ -1,35 +1,12 @@
 "use strict";
 
-// change state of MOVE_CREDIT_TEXT_RESULT text every 200 ms:
-setInterval(function () {
-  let resText =
-    "نقل رصيد حساب عميل رقم" +
-    " " +
-    $("#OLD_CUST_NO").val() +
-    " " +
-    "بإسم" +
-    " " +
-    $("#VIEW_OLD_CUST_NAME").text() +
-    " " +
-    "إلى حساب عميل رقم" +
-    " " +
-    $("#CUST_NO").val() +
-    " " +
-    "بإسم" +
-    " " +
-    $("#VIEW_CUST_NAME").text() +
-    " " +
-    "بتعميد أ/ هشام ياسين";
-  // ---------------
-
-  $("#MOVE_CREDIT_TEXT_RESULT").text(resText.trim().replace(/\s\s+/g, " "));
-}, 200);
-
 // ckick COPY_MOVE_CREDIT_TEXT_RESULT and select and copy the whole customer name from MOVE_CREDIT_TEXT_RESULT text to clipboard:
 function copyMoveCreditText() {
   if (
     $("#OLD_CUST_NO").val().length < 1 ||
-    $("#OLD_CUST_NAME").val().length < 1
+    $("#CUST_NO").val().length < 1 ||
+    $("#OLD_CUST_NAME").val().length < 1 ||
+    $("#CUST_NAME").val().length < 1
   ) {
     ALERT_BOX.textContent = "يجب إدخال بيانات العميل القديم حتى يتم النسخ!";
     ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";

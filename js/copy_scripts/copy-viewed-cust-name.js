@@ -2,7 +2,6 @@
 
 // ckick COPY_VIEW_CUST_NAME and select and copy the whole customer name from VIEW_CUST_NAME text to clipboard:
 function copyCustName() {
-  // if custName1 and custName2 and custName3 and custName4 are empty then show the ALERT_BOX for 2800ms and then close it:
   if ($("#CUST_NAME").val().length < 1) {
     ALERT_BOX.textContent = "يجب إدخال اسم العميل بشكل صحيح حتى يتم النسخ!";
     ALERT_BOX.style.backgroundColor = "rgb(243, 164, 164)";
@@ -13,9 +12,7 @@ function copyCustName() {
       ALERT_BOX.style.border = "none";
       ALERT_BOX.classList.add("hide");
     }, 2800);
-  }
-  // else copy the whole customer name from VIEW_CUST_NAME text to clipboard:
-  else {
+  } else {
     navigator.clipboard.writeText($("#VIEW_CUST_NAME").text());
     ALERT_BOX.textContent = "تم نسخ الاسم بنجاح!";
     ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
