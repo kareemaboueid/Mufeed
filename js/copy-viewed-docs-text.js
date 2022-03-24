@@ -2,29 +2,9 @@
 
 // every 100 ms ACC_DOCS_TEXT.textContent = "hello world":
 setInterval(function () {
-  $("#ACC_DOCS_TEXT").text(`
-${
-  TASHEEL_APP_CHECK[0].checked
-    ? "ملف طلب تسهيلات" + " " + TASHEEL_APP_VERFIY.value + " -"
-    : "لا يوجد ملف طلب تسهيلات" + " -"
-}
-${
-  WARRANT_SUPPORT_CHECK[0].checked
-    ? "سند لأمر" + " " + WARRANT_SUPPORT_VERFIY.value
-    : "لا يوجد سند لأمر"
-}
-${CUST_TRADE_LOG_CHECK[0].checked ? " - " + "سجل تجاري" : ""}
-${
-  VAT_CERT_CHECK[0].checked
-    ? " - " + "شهادة ضريبية"
-    : " - " + "لا يوجد شهادة ضريبية"
-}
-${NATIONAL_ID_CHECK[0].checked ? " - " + "هوية وطنية" : ""}
-${FORIGN_ID_CHECK[0].checked ? " - " + "هوية أجنبي" : ""}
-${MOVE_CREDIT_CHECK[0].checked ? " - " + "إقرار نقل رصيد" : ""}
-${CUST_ATTORNEY_CHECK[0].checked ? " - " + "إثبات وكالة" : ""}
-${CUST_LICENSE_CHECK[0].checked ? " - " + "رخصة بلدية" : ""}
-${NATIONAL_ADDRESS_CHECK[0].checked ? " - " + "عنوان وطني" : ""}
+  $(
+    "#ACC_DOCS_TEXT"
+  ).text(`${TASHEEL_APP_CHECK[0].checked ? "ملف طلب تسهيلات" + " " + TASHEEL_APP_VERFIY.value + " -" : "لا يوجد ملف طلب تسهيلات" + " -"}${WARRANT_SUPPORT_CHECK[0].checked ? "سند لأمر" + " " + WARRANT_SUPPORT_VERFIY.value : "لا يوجد سند لأمر"}${CUST_TRADE_LOG_CHECK[0].checked ? " - " + "سجل تجاري" : ""}${VAT_CERT_CHECK[0].checked ? " - " + "شهادة ضريبية" : " - " + "لا يوجد شهادة ضريبية"}${NATIONAL_ID_CHECK[0].checked ? " - " + "هوية وطنية" : ""}${FORIGN_ID_CHECK[0].checked ? " - " + "هوية أجنبي" : ""}${MOVE_CREDIT_CHECK[0].checked ? " - " + "إقرار نقل رصيد" : ""}${CUST_ATTORNEY_CHECK[0].checked ? " - " + "إثبات وكالة" : ""}${CUST_LICENSE_CHECK[0].checked ? " - " + "رخصة بلدية" : ""}${NATIONAL_ADDRESS_CHECK[0].checked ? " - " + "عنوان وطني" : ""}
 `);
 }, 200);
 
