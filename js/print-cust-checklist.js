@@ -349,6 +349,7 @@ document
 document.getElementById("reset_form_btn").addEventListener("click", () => {
   // reset all inputs:
   CUST_NAME.value = "";
+  custNameAll.textContent = "";
   CUST_CREDIT_LIMIT.value = "";
   CUST_NO.value = "";
   CUST_TRADE_DATE_DAY.value = "";

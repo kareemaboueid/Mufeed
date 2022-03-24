@@ -42,10 +42,11 @@
     <link rel="stylesheet" href="../css/index.css" />
     <!-- app script -->
     <script defer src="../js/vendors/jquery.min.js"></script>
+    <script defer src="../js/global-state-change.js"></script>
     <script defer src="../js/copy-viewed-cust-name.js"></script>
-    <script defer src="../js/checkboxs-data-vars.js"></script>
+    <script defer src="../js/copy-viewed-docs-text.js"></script>
     <!-- main page script -->
-    <script defer src="../js/print-index-script.js"></script>
+    <script defer src="../js/print-cust-checklist.js"></script>
     <script defer src="../js/print_cust_cover.js"></script>
   </head>
 
@@ -151,23 +152,6 @@
               >
                 <i class="bi bi-eraser-fill line-h-1 font-s-h3 font-prim"></i>
               </button>
-
-              <!-- <button
-                class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
-                type="button"
-                title="إيميل التعميد بفتح الحساب"
-                id="email0_auth_open_acc_btn"
-              >
-                <img src="../media/verify-email.png" width="42px" />
-              </button>
-              <button
-                class="bordered p-0-25rem radius-base flex items-center justify-center back-shade-300"
-                type="button"
-                title="إيميل تأكيد فتح الحساب"
-                id="email_confirm_open_acc_btn"
-              >
-                <img src="../media/send-email.png" width="42px" />
-              </button> -->
             </div>
             <!-- END SUBMIT BUTTONS -->
 
@@ -295,6 +279,7 @@
                 <div class="col-3">
                   <div class="flex justify-end items-center gap-0-5rem">
                     <p
+                      class="word-break-all"
                       id="VIEW_CUST_NAME"
                       title="عرض إسم العميل: هكذا سيظهر إسم العميل"
                     >
@@ -307,11 +292,14 @@
                     </p>
                     <button
                       id="COPY_VIEW_CUST_NAME"
-                      class="font-prim bordered p-0-25rem radius-base"
+                      class="btn-reset p-0-25rem"
                       title="نسخ اسم العميل"
+                      type="button"
                     >
-                      <i class="bi bi-clipboard font-s-h6"></i>
-                      <i class="bi bi-clipboard-check font-s-h6 hide"></i>
+                      <i class="bi bi-clipboard-fill font-s-h5 font-prim"></i>
+                      <i
+                        class="bi bi-clipboard-check-fill font-s-h5 font-prim hide"
+                      ></i>
                     </button>
                   </div>
                 </div>
@@ -479,7 +467,7 @@
                     id="TASHEEL_APP_VERFIY"
                   >
                     <option selected>مصدق</option>
-                    <option>مصدق - إلكتروني</option>
+                    <option>مصدق إلكتروني</option>
                     <option>غير مصدق</option>
                   </select>
                 </div>
@@ -963,7 +951,7 @@
             </section>
             <!-- =================================================== -->
 
-            <!-- START OPEN_ACC_DOCS_TEXT -->
+            <!-- START ACC_DOCS_TEXT -->
             <section class="new_acc_form-section">
               <div
                 class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
@@ -971,18 +959,28 @@
                 <div class="col-2 text-center">
                   <p class="new_acc_form-label">نص مستندات فتح الحساب :</p>
                 </div>
-                <div class="col-9 bordered p-t-0-25rem p-b-0-25rem">
-                  <p id="OPEN_ACC_DOCS_TEXT">
-                    ملف طلب تسهيلات - سند لأمر - مستند 3 - مستند 4 - مستند -
-                    مستند
-                  </p>
+                <div
+                  id="ACC_DOCS_TEXT_BOX"
+                  class="col-9 p-0-5rem bordered radius-base"
+                >
+                  <p id="ACC_DOCS_TEXT" class="word-break-all"></p>
                 </div>
                 <div class="col-1">
-                  <button>نسخ</button>
+                  <button
+                    id="COPY_ACC_DOCS_TEXT"
+                    class="btn-reset p-0-25rem"
+                    title="نسخ نص مستندات فتح الحساب"
+                    type="button"
+                  >
+                    <i class="bi bi-clipboard-fill font-s-h5 font-prim"></i>
+                    <i
+                      class="bi bi-clipboard-check-fill font-s-h5 font-prim hide"
+                    ></i>
+                  </button>
                 </div>
               </div>
             </section>
-            <!-- END OPEN_ACC_DOCS_TEXT -->
+            <!-- END ACC_DOCS_TEXT -->
 
             <!-- START CHECK_CUST_SAVED -->
             <section class="new_acc_form-section">

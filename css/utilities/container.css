@@ -16,6 +16,10 @@ Utilities: container
   display: none !important;
 }
 
+.word-break-all {
+  word-break: break-all;
+}
+
 .radius-base {
   border-radius: var(--border-radius-base);
   -webkit-border-radius: var(--border-radius-base);
