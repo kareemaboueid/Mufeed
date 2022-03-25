@@ -30,7 +30,6 @@ button:focus-visible,
 select:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  transition: none;
-  outline-offset: -0.5rem;
-  outline: dashed 1px rgba(0, 0, 0, 0.5);
+  outline-offset: -0.2rem;
+  outline: solid 1px rgba(0, 0, 0, 0.8);
 }

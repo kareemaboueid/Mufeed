@@ -22,10 +22,10 @@ Utilities: container
 
 .radius-base {
   border-radius: var(--border-radius-base);
-  -webkit-border-radius: var(--border-radius-base);
-  -moz-border-radius: var(--border-radius-base);
-  -ms-border-radius: var(--border-radius-base);
-  -o-border-radius: var(--border-radius-base);
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .radius-t-r {
@@ -43,10 +43,10 @@ Utilities: container
 
 .radius-round {
   border-radius: var(--border-radius-round) !important;
-  -webkit-border-radius: var(--border-radius-round) !important;
-  -moz-border-radius: var(--border-radius-round) !important;
-  -ms-border-radius: var(--border-radius-round) !important;
-  -o-border-radius: var(--border-radius-round) !important;
+  -webkit-border-radius: ;
+  -moz-border-radius: ;
+  -ms-border-radius: ;
+  -o-border-radius: ;
 }
 
 .overflow-hidden {
@@ -87,6 +87,10 @@ Utilities: container
 
 .font-red {
   color: rgb(221, 67, 67);
+}
+
+.font-grey {
+  color: var(--sec-color-700);
 }
 
 .logo-color {

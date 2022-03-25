@@ -481,12 +481,6 @@
                     <option>غير مصدق</option>
                   </select>
                 </div>
-                <div class="col-3 flex items-center justify-center">
-                  <p class="font-s-base font-w-400">
-                    جاري العمل على إضافة رابط للتحقق من ملف التسهيلات عبر موقع
-                    الغرفة التجارية...
-                  </p>
-                </div>
               </div>
               <!-- END TASHEEL_APP_CHECK -->
 
@@ -594,52 +588,32 @@
                   </div>
                 </div>
                 <div class="col-1"></div>
-                <div class="col-3 flex items-center justify-center">
+                <!-- START CUST_TRADE_LOG_VERFIY -->
+                <div class="col-3 text-left">
                   <div id="CUST_TRADE_LOG_VERFIY">
-                    <div
-                      class="date-input-div flex items-stretch justify-start gap-0-25rem p-r-0-5rem p-l-0-5rem"
-                    >
-                      <p
-                        class="width-100 bordered-left flex items-center justify-start"
+                    <div class="flex items-center justify-start gap-0-25rem">
+                      <label
+                        title="ستكون خانة تاريخ إنتهاء السجل فارغة في حالة عدم تسجيله."
+                        class="new_acc_form-label width-40"
+                        for="CUST_TRADE_DATE_EXP"
                       >
-                        تاريخ الإنتهاء
-                      </p>
+                        تاريخ الإنتهاء :
+                      </label>
                       <input
-                        class="width-60 p-t-0-5rem p-b-0-5rem"
+                        class="new_acc_form-input p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                        title="ستكون خانة تاريخ إنتهاء السجل فارغة في حالة عدم تسجيله."
                         type="number"
-                        name="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
-                        id="CUST_TRADE_LOG_EXPIRY_DATE-DAY"
-                        required
-                        placeholder="1"
-                        min="1"
-                        max="31"
+                        name="CUST_TRADE_DATE_EXP"
+                        id="CUST_TRADE_DATE_EXP"
+                        placeholder="أدخل تاريخ إنتهاء السجل التجاري"
                       />
-                      <span class="flex items-center justify-start">/</span>
-                      <input
-                        class="width-70 p-t-0-5rem p-b-0-5rem"
-                        type="number"
-                        name="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
-                        id="CUST_TRADE_LOG_EXPIRY_DATE-MONTH"
-                        required
-                        placeholder="12"
-                        min="1"
-                        max="12"
-                      />
-                      <span class="flex items-center justify-start">/</span>
-                      <input
-                        class="width-70 p-t-0-5rem p-b-0-5rem"
-                        type="number"
-                        name="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
-                        id="CUST_TRADE_LOG_EXPIRY_DATE-YEAR"
-                        required
-                        placeholder="1444"
-                        min="1400"
-                        max="9999"
-                      />
-                      <span class="font-w-900 p-t-0-5rem p-b-0-5rem">هـ</span>
                     </div>
                   </div>
                 </div>
+                <div class="col-2 p-0 p-r-0-5rem">
+                  <p id="VIEW_TRADE_DATE_EXP" class="font-grey"></p>
+                </div>
+                <!-- END CUST_TRADE_LOG_VERFIY -->
                 <!-- END CUST_TRADE_LOG -->
               </div>
 
@@ -1045,7 +1019,7 @@
                         >رقم العميل :</label
                       >
                       <input
-                        class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                        class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
                         type="number"
                         name="CUST_NO"
                         id="CUST_NO"
@@ -1060,56 +1034,33 @@
                 <!-- END CUST_NO -->
 
                 <!-- START MAKE_DATE DIV -->
-                <div class="col-3 flex items-center justify-center">
+                <div class="col-3 text-left">
                   <div id="CUST_SAVED_DATE" class="hide">
-                    <div
-                      class="date-input-div flex items-stretch justify-start gap-0-25rem p-r-0-5rem p-l-0-5rem"
-                    >
-                      <p
-                        class="width-100 bordered-left flex items-center justify-start"
+                    <div class="flex items-center justify-start gap-0-25rem">
+                      <label
+                        class="new_acc_form-label width-40"
+                        for="MAKE_DATE"
                       >
-                        تاريخ الإعداد
-                      </p>
+                        تاريخ الإعداد :
+                      </label>
                       <input
-                        class="width-60 p-t-0-5rem p-b-0-5rem"
+                        class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                        title="يتم تحديد التاريخ بشكل تلقائي في حالة عدم تحديد التاريخ"
                         type="number"
-                        name="MAKE_DATE-DAY"
-                        id="MAKE_DATE-DAY"
-                        required
-                        placeholder="1"
-                        min="1"
-                        max="31"
+                        name="MAKE_DATE"
+                        id="MAKE_DATE"
+                        placeholder="أدخل تاريخ الإعداد (إختياري)"
                       />
-                      <span class="flex items-center justify-start">/</span>
-                      <input
-                        class="width-70 p-t-0-5rem p-b-0-5rem"
-                        type="number"
-                        name="MAKE_DATE-MONTH"
-                        id="MAKE_DATE-MONTH"
-                        required
-                        placeholder="12"
-                        min="1"
-                        max="12"
-                      />
-                      <span class="flex items-center justify-start">/</span>
-                      <input
-                        class="width-70 p-t-0-5rem p-b-0-5rem"
-                        type="number"
-                        name="MAKE_DATE-YEAR"
-                        id="MAKE_DATE-YEAR"
-                        required
-                        placeholder="2022"
-                        min="2000"
-                        max="9999"
-                      />
-                      <span class="font-w-900 p-t-0-5rem p-b-0-5rem">م</span>
                     </div>
                   </div>
                 </div>
-                <!-- END MAKE_DATE DIV -->
-                <div id="MAKE_DATE_NOTE" class="col-2 hide font-w-500">
-                  سيحدد مفيد تاريخ اليوم اتوماتيكياً في حالة عدم تسجيله.
+                <div
+                  class="col-2 p-0 p-r-0-5rem"
+                  title="يتم تحديد التاريخ بشكل تلقائي في حالة عدم تحديد التاريخ"
+                >
+                  <p id="VIEW_MAKE_DATE" class="hide font-grey"></p>
                 </div>
+                <!-- END MAKE_DATE DIV -->
               </div>
             </section>
             <!-- END CHECK_CUST_SAVED -->
