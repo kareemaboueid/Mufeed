@@ -34,12 +34,12 @@ PRINT_CUST_COVER_BTN.addEventListener("click", () => {
                 ${
                   $("#parenthesis1").hasClass("hide") &&
                   $("#parenthesis2").hasClass("hide")
-                    ? custNameAll.textContent
+                    ? VIEW_CUST_NAME.textContent
                         .replace("(", "")
                         .replace(")", "")
                         .trim()
                         .replace(/\s+/g, " ")
-                    : custNameAll.textContent.trim().replace(/\s+/g, " ")
+                    : VIEW_CUST_NAME.textContent.trim().replace(/\s+/g, " ")
                 }
 
               </td>
