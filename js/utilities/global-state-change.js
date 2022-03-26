@@ -142,10 +142,14 @@ $("#CHECK_CUST_SAVED_TRUE").click(() => {
   $("#VIEW_MAKE_DATE").removeClass("hide");
 });
 $("#MOVE_CREDIT_FALSE").click(() => {
-  $("#MOVE_CREDIT_TEXT_CHECK_BOX").addClass("hide");
+  $("#MOVE_CREDIT_IN_NO_BOX").addClass("hide");
+  $("#MOVE_CREDIT_IN_NAME_BOX").addClass("hide");
+  $("#MOVE_CREDIT_IN_RES_BOX").addClass("hide");
 });
 $("#MOVE_CREDIT_TRUE").click(() => {
-  $("#MOVE_CREDIT_TEXT_CHECK_BOX").removeClass("hide");
+  $("#MOVE_CREDIT_IN_NO_BOX").removeClass("hide");
+  $("#MOVE_CREDIT_IN_NAME_BOX").removeClass("hide");
+  $("#MOVE_CREDIT_IN_RES_BOX").removeClass("hide");
 });
 // ==========================================================================
 

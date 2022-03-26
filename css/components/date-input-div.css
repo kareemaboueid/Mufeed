@@ -17,6 +17,7 @@
 .date-input-div input,
 .date-input-div select {
   display: inline-block;
+  font-weight: 600;
   background-color: inherit;
   border: none;
   text-align: center;

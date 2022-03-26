@@ -19,7 +19,7 @@ const PRINT_INDEX_BTN = document.querySelector("#print_index_btn");
 // CUSTOMER DATA VARIABLES:
 // CUSTOMER_NAME:
 const CUST_NAME = document.querySelector("#CUST_NAME");
-const custNameAll = document.getElementById("VIEW_CUST_NAME");
+const VIEW_CUST_NAME = document.getElementById("VIEW_CUST_NAME");
 //CREDIT_LIMIT:
 const CUST_CREDIT_LIMIT = document.getElementById("CUST_CREDIT_LIMIT");
 const CUST_CREDIT_LIMIT_CURRENCY = document.getElementById(
@@ -103,12 +103,12 @@ PRINT_INDEX_BTN.addEventListener("click", () => {
               ${
                 $("#parenthesis1").hasClass("hide") &&
                 $("#parenthesis2").hasClass("hide")
-                  ? custNameAll.textContent
+                  ? VIEW_CUST_NAME.textContent
                       .replace("(", "")
                       .replace(")", "")
                       .trim()
                       .replace(/\s+/g, " ")
-                  : custNameAll.textContent.trim().replace(/\s+/g, " ")
+                  : VIEW_CUST_NAME.textContent.trim().replace(/\s+/g, " ")
               }
             </td>
             <td class="table-data">
@@ -328,24 +328,3 @@ document
     document.getElementById("INDEX_RESULT_PAGE").innerHTML = "";
     document.body.style.backgroundColor = "var(--sec-color-200)";
   });
-
-// Reset Button
-document.getElementById("reset_form_btn").addEventListener("click", () => {
-  // reset all inputs:
-  CUST_NAME.value = "";
-  custNameAll.textContent = "";
-  CUST_CREDIT_LIMIT.value = "";
-  CUST_NO.value = "";
-  CUST_TRADE_DATE_EXP.value = "";
-  MAKE_DATE.value = "";
-  // show alert box:
-  ALERT_BOX.textContent = "تم مسح جميع حقول الإدخال!";
-  ALERT_BOX.style.backgroundColor = "rgb(164, 243, 200)";
-  ALERT_BOX.style.border = "1px solid rgb(84, 182, 97)";
-  ALERT_BOX.classList.remove("hide");
-  setTimeout(function () {
-    ALERT_BOX.style.backgroundColor = "none";
-    ALERT_BOX.style.border = "none";
-    ALERT_BOX.classList.add("hide");
-  }, 2800);
-});

@@ -48,6 +48,10 @@ Utilities: space helpers
   width: 20%;
 }
 
+.width-10rem {
+  width: 11rem;
+}
+
 .width-10 {
   width: 10%;
 }
