@@ -1,16 +1,31 @@
 "use strict";
 
-// generate date dow day / month / year:
+/*GLOBAL STATE CHANGE*/
+
+// VARIABLE: get html elements:
+const TASHEEL_APP_CHECK = $Name("TASHEEL_APP_CHECK");
+const WARRANT_SUPPORT_CHECK = $Name("WARRANT_SUPPORT_CHECK");
+const CUST_TRADE_LOG_CHECK = $Name("CUST_TRADE_LOG_CHECK");
+const VAT_CERT_CHECK = $Name("VAT_CERT_CHECK");
+const NATIONAL_ID_CHECK = $Name("NATIONAL_ID_CHECK");
+const FORIGN_ID_CHECK = $Name("FORIGN_ID_CHECK");
+const MOVE_CREDIT_CHECK = $Name("MOVE_CREDIT_CHECK");
+const CUST_ATTORNEY_CHECK = $Name("CUST_ATTORNEY_CHECK");
+const CUST_LICENSE_CHECK = $Name("CUST_LICENSE_CHECK");
+const NATIONAL_ADDRESS_CHECK = $Name("NATIONAL_ADDRESS_CHECK");
+
+// VARIABLE: set the update state rate:
+const updateStateRate = 200;
+
+// VARIABLE: get generated dow date: day & month & year:
 const nowDay = new Date().getDate();
 const nowMonth = new Date().getMonth() + 1;
 const nowYear = new Date().getFullYear();
 
-// print number of 2 digits as two digits:
-const padtwo = num => {
-  return num < 10 ? `0${num}` : num;
-};
+// FUNCTION: get 2 numbers as two digits:
+const padtwo = num => (num < 10 ? `0${num}` : num);
 
-// convert latin numbers to arabic numbers and export it:
+// FUNCTION: convert latin numbers to arabic numbers and export it:
 const latinToArNum = number => {
   let arNumOpj = {
     0: "٠",
@@ -26,13 +41,11 @@ const latinToArNum = number => {
     "/": "/",
   };
   let arNumStr = "";
-  for (let i = 0; i < number.length; i++) {
-    arNumStr += arNumOpj[number[i]];
-  }
+  for (let i = 0; i < number.length; i++) arNumStr += arNumOpj[number[i]];
   return arNumStr;
 };
 
-// print number of only 8 digits as a date format:
+// FUNCTION: print number of only 8 digits as a date format:
 const formatDate = date => {
   // check if entered number length is 8:
   let dateParts = date.split("");
@@ -77,10 +90,8 @@ const formatDate = date => {
 };
 // ==========================================================
 
-// click on ADD_SUFFIX_PARENS_BTN to add parentheses to CUST_NAME_SUFFIX.value:
-// click on REMOVE_SUFFIX_PARENS_BTN to remove parentheses from CUST_NAME_SUFFIX.value:
-// change state of VIEW_CUST_NAME text every 200 ms:
-$("#ADD_SUFFIX_PARENS_BTN").click(function (e) {
+// FUNCTION: click ADD_SUFFIX_PARENS_BTN:
+$("#ADD_SUFFIX_PARENS_BTN").click(e => {
   e.preventDefault();
   if ($("#CUST_NAME_SUFFIX").val().length > 0) {
     $("#CUST_NAME_SUFFIX").val(`(${$("#CUST_NAME_SUFFIX").val()})`);
@@ -88,7 +99,7 @@ $("#ADD_SUFFIX_PARENS_BTN").click(function (e) {
     $("#REMOVE_SUFFIX_PARENS_BTN").removeClass("hide");
   }
 });
-$("#REMOVE_SUFFIX_PARENS_BTN").click(function (e) {
+$("#REMOVE_SUFFIX_PARENS_BTN").click(e => {
   e.preventDefault();
   if ($("#CUST_NAME_SUFFIX").val().length > 0) {
     $("#CUST_NAME_SUFFIX").val($("#CUST_NAME_SUFFIX").val().slice(1, -1));
@@ -96,7 +107,8 @@ $("#REMOVE_SUFFIX_PARENS_BTN").click(function (e) {
     $("#ADD_SUFFIX_PARENS_BTN").removeClass("hide");
   }
 });
-setInterval(function () {
+// show customer name result every 200ms;
+setInterval(() => {
   let resText =
     $("select#CUST_NAME_START option:checked").val() +
     " " +
@@ -107,10 +119,10 @@ setInterval(function () {
     $("#CUST_NAME_SUFFIX").val();
 
   $("#VIEW_CUST_NAME").text(resText.trim().replace(/\s\s+/g, " "));
-}, 200);
+}, updateStateRate);
 // ==========================================================================
 
-// state of all cust checklist radio buttons:
+// Change state of all radio buttons for checklist:
 $("#TASHEEL_APP_CHECK_FALSE").click(() => {
   $("#TASHEEL_APP_VERFIY").addClass("hide");
 });
@@ -154,50 +166,52 @@ $("#MOVE_CREDIT_TRUE").click(() => {
 // ==========================================================================
 
 // change state of VIEW_MAKE_DATE and VIEW_TRADE_DATE_EXP text every 200 ms:
-setInterval(function () {
-  // if #MAKE_DATE is empty, return now date. else return #MAKE_DATE value:
-  $($("#VIEW_MAKE_DATE")).text(
+setInterval(() => {
+  $("#VIEW_MAKE_DATE").text(
     $("#MAKE_DATE").val() == ""
-      ? formatDate(padtwo(nowDay) + padtwo(nowMonth) + nowYear)
-      : formatDate($("#MAKE_DATE").val())
+      ? // if #MAKE_DATE is empty, return now date.
+        formatDate(padtwo(nowDay) + padtwo(nowMonth) + nowYear)
+      : // else return #MAKE_DATE value
+        formatDate($("#MAKE_DATE").val())
   );
 
   // VIEW_TRADE_DATE_EXP text = #TRADE_DATE_EXP value:
-  $($("#VIEW_TRADE_DATE_EXP")).text(
-    formatDate($("#CUST_TRADE_DATE_EXP").val())
-  );
-}, 200);
+  $("#VIEW_TRADE_DATE_EXP").text(formatDate($("#CUST_TRADE_DATE_EXP").val()));
+}, updateStateRate);
 
 // change state of ACC_DOCS_TEXT text every 200 ms:
-setInterval(function () {
-  let resText = `${
+setInterval(() => {
+  let resText = `
+  ${
     TASHEEL_APP_CHECK[0].checked
-      ? "ملف طلب تسهيلات" + " " + TASHEEL_APP_VERFIY.value + " - "
+      ? "ملف طلب تسهيلات" + " " + $("#TASHEEL_APP_VERFIY").val() + " - "
       : "لا يوجد ملف طلب تسهيلات" + " -"
-  }${
+  }
+  ${
     WARRANT_SUPPORT_CHECK[0].checked
-      ? "سند لأمر" + " " + WARRANT_SUPPORT_VERFIY.value
+      ? "سند لأمر" + " " + $("#WARRANT_SUPPORT_VERFIY").val()
       : "لا يوجد سند لأمر"
-  }${CUST_TRADE_LOG_CHECK[0].checked ? " - " + "سجل تجاري" : ""}${
+  }
+  ${CUST_TRADE_LOG_CHECK[0].checked ? " - " + "سجل تجاري" : ""}
+  ${
     VAT_CERT_CHECK[0].checked
       ? " - " + "شهادة ضريبية"
       : " - " + "لا يوجد شهادة ضريبية"
-  }${NATIONAL_ID_CHECK[0].checked ? " - " + "هوية وطنية" : ""}${
-    FORIGN_ID_CHECK[0].checked ? " - " + "هوية أجنبي" : ""
-  }${MOVE_CREDIT_CHECK[0].checked ? " - " + "إقرار نقل رصيد" : ""}${
-    CUST_ATTORNEY_CHECK[0].checked ? " - " + "إثبات وكالة" : ""
-  }${CUST_LICENSE_CHECK[0].checked ? " - " + "رخصة بلدية" : ""}${
-    NATIONAL_ADDRESS_CHECK[0].checked ? " - " + "عنوان وطني" : ""
-  }`;
+  }
+  ${NATIONAL_ID_CHECK[0].checked ? " - " + "هوية وطنية" : ""}
+  ${FORIGN_ID_CHECK[0].checked ? " - " + "هوية أجنبي" : ""}
+  ${MOVE_CREDIT_CHECK[0].checked ? " - " + "إقرار نقل رصيد" : ""}
+  ${CUST_ATTORNEY_CHECK[0].checked ? " - " + "إثبات وكالة" : ""}
+  ${CUST_LICENSE_CHECK[0].checked ? " - " + "رخصة بلدية" : ""}
+  ${NATIONAL_ADDRESS_CHECK[0].checked ? " - " + "عنوان وطني" : ""}
+`;
 
   $("#ACC_DOCS_TEXT").text(resText.trim().replace(/\s\s+/g, " "));
-}, 200);
+}, updateStateRate);
 // ==========================================================================
 
-// click on ADD_OLD_SUFFIX_PARENS_BTN to add parentheses to OLD_CUST_NAME_SUFFIX.value:
-// click on REMOVE_OLD_SUFFIX_PARENS_BTN to remove parentheses from OLD_CUST_NAME_SUFFIX.value:
-// change state of VIEW_OLD_CUST_NAME text every 200 ms:
-$("#ADD_OLD_SUFFIX_PARENS_BTN").click(function (e) {
+// click on ADD_OLD_SUFFIX_PARENS_BTN
+$("#ADD_OLD_SUFFIX_PARENS_BTN").click(e => {
   e.preventDefault();
   if ($("#OLD_CUST_NAME_SUFFIX").val().length > 0) {
     $("#OLD_CUST_NAME_SUFFIX").val(`(${$("#OLD_CUST_NAME_SUFFIX").val()})`);
@@ -205,7 +219,7 @@ $("#ADD_OLD_SUFFIX_PARENS_BTN").click(function (e) {
     $("#REMOVE_OLD_SUFFIX_PARENS_BTN").removeClass("hide");
   }
 });
-$("#REMOVE_OLD_SUFFIX_PARENS_BTN").click(function (e) {
+$("#REMOVE_OLD_SUFFIX_PARENS_BTN").click(e => {
   e.preventDefault();
   if ($("#OLD_CUST_NAME_SUFFIX").val().length > 0) {
     $("#OLD_CUST_NAME_SUFFIX").val(
@@ -215,7 +229,7 @@ $("#REMOVE_OLD_SUFFIX_PARENS_BTN").click(function (e) {
     $("#ADD_OLD_SUFFIX_PARENS_BTN").removeClass("hide");
   }
 });
-setInterval(function () {
+setInterval(() => {
   let resText =
     $("select#OLD_CUST_NAME_START option:checked").val() +
     " " +
@@ -226,11 +240,11 @@ setInterval(function () {
     $("#OLD_CUST_NAME_SUFFIX").val();
 
   $("#VIEW_OLD_CUST_NAME").text(resText.trim().replace(/\s\s+/g, " "));
-}, 200);
+}, updateStateRate);
 // ==========================================================================
 
 // change state of MOVE_CREDIT_TEXT_RESULT text every 200 ms:
-setInterval(function () {
+setInterval(() => {
   let resText =
     "نقل رصيد حساب عميل رقم:" +
     " " +
@@ -256,5 +270,5 @@ setInterval(function () {
   // ---------------
 
   $("#MOVE_CREDIT_TEXT_RESULT").text(resText.trim().replace(/\s\s+/g, " "));
-}, 200);
+}, updateStateRate);
 // ==========================================================================
