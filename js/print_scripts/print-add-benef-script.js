@@ -114,26 +114,26 @@ $("#REQUEST_GENERATE_BTN").click(() => {
                       </div>
                     </td>
                   </tr>
-                  <tr>
+                  ${
+                    $("#BENEFICIARY_ACCOUNT_NO").val() == ""
+                      ? ""
+                      : `<tr>
                     <td class="table-data width-30 p-1rem">
                       رقم حساب المستفيد
                     </td>
                     <td class="table-data">
                       <div class="table-data-flex font-w-400 font-s-h6">
-                        ${
-                          $("#BENEFICIARY_ACCOUNT_NO").val() == ""
-                            ? "-"
-                            : $("#BENEFICIARY_ACCOUNT_NO").val()
-                        }
+                          ${$("#BENEFICIARY_ACCOUNT_NO").val()}
                       </div>
                     </td>
-                  </tr>
+                  </tr>`
+                  }
                   <tr>
                     <td class="table-data width-30 p-1rem">
                       رمز آيبان للمستفيد<br>IBAN Number
                     </td>
                     <td class="table-data">
-                      <div class="table-data-flex font-w-700 font-s-h6">
+                      <div class="table-data-flex font-w-700 font-s-h6 letter-s-1">
                         ${$("#BENEFICIARY_ACCOUNT_IBAN").val()}
                       </div>
                     </td>
@@ -172,10 +172,9 @@ $("#REQUEST_GENERATE_BTN").click(() => {
   if (
     $("#REQUESTER_NAME").val() == "" ||
     $("#REQUESTER_STATMENT").val() == "" ||
-    (($("#BENEFICIARY_NAME").val() == "" ||
-      $("#BENEFICIARY_BANK_NAME-LOCAL").val() == "") &&
-      ($("#BENEFICIARY_BANK_NAME-FOREIGN").val() == "" ||
-        $("#BENEFICIARY_ACCOUNT_IBAN").val() == ""))
+    $("#BENEFICIARY_NAME").val() == "" ||
+    ($("#BENEFICIARY_BANK_NAME-LOCAL").val() == "" &&
+      $("#BENEFICIARY_BANK_NAME-FOREIGN").val() == "")
   ) {
     // PROGRESS 1: show fail message:
     showFailMessage("تأكد من إدخال البيانات بشكل صحيح!", 0);
@@ -183,6 +182,24 @@ $("#REQUEST_GENERATE_BTN").click(() => {
     // PROGRESS 2: hide fail message (for startTime + 100):
     hideFailMessage(1000);
   }
+  // IBAN number validation check on #BENEFICIARY_ACCOUNT_IBAN:
+  else if (
+    IBAN.isValid($("#BENEFICIARY_ACCOUNT_IBAN").val()) == false ||
+    $("#BENEFICIARY_ACCOUNT_IBAN").val() == ""
+  ) {
+    // PROGRESS 1: show fail message:
+    showFailMessage("رقم آيبان غير صحيح!", 0);
+
+    // PROGRESS 2: hide fail message (for startTime + 100):
+    hideFailMessage(1000);
+
+    // PROGRESS 3: colorize #BENEFICIARY_ACCOUNT_IBAN border red:
+    $("#BENEFICIARY_ACCOUNT_IBAN").css("border-color", "red");
+
+    // PROGRESS 4: focus on #BENEFICIARY_ACCOUNT_IBAN input:
+    $("#BENEFICIARY_ACCOUNT_IBAN").focus();
+  }
+
   // VALIDATION 2: check if fields are filled:
   else {
     // PROGRESS 1: show loading window (for startTime):
@@ -196,5 +213,8 @@ $("#REQUEST_GENERATE_BTN").click(() => {
 
     // PROGRESS 4: hide success message (for startTime + 300):
     hideSuccessMessage(2150);
+
+    // PROGRESS 5: colorize #BENEFICIARY_ACCOUNT_IBAN border normal:
+    $("#BENEFICIARY_ACCOUNT_IBAN").css("border-color", "hsl(0, 0%, 62%)");
   }
 });

@@ -16,16 +16,16 @@ const padtwo = num => (num < 10 ? `0${num}` : num);
 // GLOBAL - FUNCTION: convert latin numbers to arabic numbers and export it:
 const latinToArNum = number => {
   let arNumOpj = {
-    0: "٠",
-    1: "١",
-    2: "٢",
-    3: "٣",
-    4: "٤",
-    5: "٥",
-    6: "٦",
-    7: "٧",
-    8: "٨",
-    9: "٩",
+    0: "0",
+    1: "1",
+    2: "2",
+    3: "3",
+    4: "4",
+    5: "5",
+    6: "6",
+    7: "7",
+    8: "8",
+    9: "9",
     "/": "/",
   };
   let arNumStr = "";
