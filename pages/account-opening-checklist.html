@@ -39,6 +39,7 @@
     <script defer src="../js/vendors/jquery.min.js"></script>
     <script defer src="../js/utilities/global-buttons.js"></script>
     <script defer src="../js/utilities/global-state-change.js"></script>
+    <script defer src="../js/local_state/acc-open-checklist-state.js"></script>
     <!-- JS copy scripts -->
     <script defer src="../js/copy_scripts/copy-viewed-cust-name.js"></script>
     <script defer src="../js/copy_scripts/copy-viewed-docs-text.js"></script>
@@ -46,7 +47,6 @@
     <!-- JS print scripts -->
     <script defer src="../js/print_scripts/print-cust-checklist.js"></script>
     <script defer src="../js/print_scripts/print_cust_cover.js"></script>
-    <script defer src="../js/print_scripts/reset_form_btn.js"></script>
   </head>
 
   <body>
@@ -153,7 +153,7 @@
               </button>
               <button
                 class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center gap-0-5rem back-shade-300"
-                type="button"
+                type="reset"
                 title="إعادة تهيئة النموذج"
                 id="RESET_FORM_BTN"
               >
@@ -339,7 +339,7 @@
                     >
                       <div class="width-60 bordered-left">
                         <input
-                          class="new_acc_form-input"
+                          class="new_acc_form-input width-100"
                           type="number"
                           min="1"
                           name="CUST_CREDIT_LIMIT"
@@ -350,7 +350,7 @@
                       </div>
                       <div class="width-40">
                         <select
-                          class="new_acc_form-input"
+                          class="new_acc_form-input width-100"
                           name="CUST_CREDIT_LIMIT_CURRENCY"
                           id="CUST_CREDIT_LIMIT_CURRENCY"
                         >
@@ -376,7 +376,7 @@
                 </div>
                 <div class="col-3">
                   <select
-                    class="new_acc_form-input"
+                    class="new_acc_form-input width-100"
                     name="CUST_MARKET"
                     id="CUST_MARKET"
                   >
@@ -479,7 +479,7 @@
                 <div class="col-1"></div>
                 <div class="col-3 flex items-center justify-space-between">
                   <select
-                    class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
+                    class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
                     name="TASHEEL_APP_VERFIY"
                     id="TASHEEL_APP_VERFIY"
                   >
@@ -539,7 +539,7 @@
                 <div class="col-1"></div>
                 <div class="col-3 flex items-center justify-space-between">
                   <select
-                    class="new_acc_form-input p-l-0-5rem p-r-0-5rem"
+                    class="new_acc_form-input width-100 p-l-0-5rem p-r-0-5rem"
                     name="WARRANT_SUPPORT_VERFIY"
                     id="WARRANT_SUPPORT_VERFIY"
                   >
@@ -607,7 +607,7 @@
                         تاريخ الإنتهاء :
                       </label>
                       <input
-                        class="new_acc_form-input p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                        class="new_acc_form-input width-100 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
                         title="ستكون خانة تاريخ إنتهاء السجل فارغة في حالة عدم تسجيله."
                         type="number"
                         name="CUST_TRADE_DATE_EXP"
@@ -809,7 +809,7 @@
                 <!-- START OLD_CUST_DATA DIV -->
                 <div id="MOVE_CREDIT_IN_NO_BOX" class="hide width-10rem p-0">
                   <input
-                    class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                    class="new_acc_form-input width-100 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
                     type="number"
                     name="OLD_CUST_NO"
                     id="OLD_CUST_NO"
@@ -1163,7 +1163,7 @@
                         >رقم العميل :</label
                       >
                       <input
-                        class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                        class="new_acc_form-input width-100 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
                         type="number"
                         name="CUST_NO"
                         id="CUST_NO"
@@ -1188,7 +1188,7 @@
                         تاريخ الإعداد :
                       </label>
                       <input
-                        class="new_acc_form-input width-50 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                        class="new_acc_form-input width-100 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
                         title="يتم تحديد التاريخ بشكل تلقائي في حالة عدم تحديد التاريخ"
                         type="number"
                         name="MAKE_DATE"
@@ -1222,15 +1222,14 @@
                 </div>
                 <div class="col-2">
                   <select
-                    class="new_acc_form-input"
+                    class="new_acc_form-input width-100"
                     name="MAKE_EMPLOYEE_NAME"
                     id="MAKE_EMPLOYEE_NAME"
                   >
                     <option value="">لا يوجد</option>
                     <option>أ/ خالد عبدالناصر</option>
                     <option>أ/ كريم أبوعيد</option>
-                    <option>أ/ مها علي</option>
-                    <option selected>أ/ رحمة حسن</option>
+                    <option selected>أ/ مها علي</option>
                   </select>
                 </div>
                 <!-- END MAKE_EMPLOYEE_NAME -->
@@ -1242,15 +1241,14 @@
                 </div>
                 <div class="col-2">
                   <select
-                    class="new_acc_form-input"
+                    class="new_acc_form-input width-100"
                     name="REVIEW_EMPLOYEE_NAME"
                     id="REVIEW_EMPLOYEE_NAME"
                   >
                     <option value="">لا يوجد</option>
-                    <option>أ/ خالد عبدالناصر</option>
+                    <option selected>أ/ خالد عبدالناصر</option>
                     <option>أ/ كريم أبوعيد</option>
-                    <option selected>أ/ مها علي</option>
-                    <option>أ/ رحمة حسن</option>
+                    <option>أ/ مها علي</option>
                   </select>
                 </div>
                 <!-- END REVIEW_EMPLOYEE_NAME -->
@@ -1262,7 +1260,7 @@
                 </div>
                 <div class="col-2">
                   <select
-                    class="new_acc_form-input"
+                    class="new_acc_form-input width-100"
                     name="REGIST_EMPLOYEE_NAME"
                     id="REGIST_EMPLOYEE_NAME"
                   >
@@ -1270,7 +1268,6 @@
                     <option>أ/ خالد عبدالناصر</option>
                     <option selected>أ/ كريم أبوعيد</option>
                     <option>أ/ مها علي</option>
-                    <option>أ/ رحمة حسن</option>
                   </select>
                 </div>
                 <!-- END REGIST_EMPLOYEE_NAME -->

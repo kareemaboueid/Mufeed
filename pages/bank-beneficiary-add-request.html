@@ -1,0 +1,519 @@
+<!-- BANK_BENEFICIARY_ADD_REQUEST page -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- primary tags -->
+    <meta charset="UTF-8" />
+    <title>مفيد | نموذج طلب إضافة مستفيد'</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- app favicons -->
+    <link rel="icon" href="../media/mufeed-favicon.png" type="image/png" />
+    <!-- app info -->
+    <meta name="title" content="Mufeed" />
+    <meta
+      name="description"
+      content="Mufeed is a daily office-work tasks organizer - مفيد ينجز لك مهامك اليومية بسرعة وذكاء"
+    />
+    <meta
+      name="keywords"
+      content="Mufeed, Task Organizer, Task Manager, Office Work"
+    />
+    <meta name="author" content="Kareem Aboueid" />
+    <meta name="language" content="arabic" />
+    <!-- app og tags -->
+    <meta property="og:title" content="Mufeed" />
+    <meta property="og:url" content="https://kareemabo3id.github.io/Mufeed" />
+    <meta property="og:type" content="PWA" />
+    <meta
+      property="og:description"
+      content="Mufeed is a daily office-work tasks organizer - مفيد ينجز لك مهامك اليومية بسرعة وذكاء"
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/KareemAbo3id/Mufeed/master/media/mufeed-ogimage.jpg"
+    />
+    <!-- app stylesheet -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <!-- app JS scripts -->
+    <script defer src="../js/vendors/jquery.min.js"></script>
+    <script defer src="../js/utilities/global-buttons.js"></script>
+    <script defer src="../js/utilities/global-state-change.js"></script>
+    <script defer src="../js/local_state/benef-add-req-state.js"></script>
+    <script defer src="../js/print_scripts/print-add-benef-script.js"></script>
+  </head>
+  <body>
+    <!-- START RESULT_ACTION_BUTTONS -->
+    <div id="RESULT_ACTION_BUTTONS" class="hide">
+      <div>
+        <button
+          class="btn-reset p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
+          type="button"
+          title="إغلاق"
+          id="RESULT_CONTENT_CLOSE_BUTTON"
+        >
+          <i class="bi bi-x-lg line-h-1 font-s-h3 font-red"></i>
+        </button>
+        <button
+          class="btn-reset p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center back-shade-300"
+          type="button"
+          title="طباعة"
+          onclick="window.print()"
+        >
+          <i class="bi bi-printer-fill line-h-1 font-s-h3 font-prim"></i>
+        </button>
+      </div>
+      <div>
+        <img src="../media/mufeed-favicon.png" />
+      </div>
+    </div>
+    <!-- END RESULT_ACTION_BUTTONS -->
+    <div id="INDEX_RESULT_PAGE" class="hide"></div>
+    <main id="INDEX_MAIN_PAGE" class>
+      <!-- START APP_HEADER -->
+      <header class="app_header flex justify-space-between items-center">
+        <!-- start logo -->
+        <div class="width-10">
+          <a
+            class="flex justify-center items-center gap-0-25rem"
+            href="../"
+            title="الصفحة الرئيسية"
+          >
+            <img src="../media/mufeed-favicon.png" alt="صورة مفيد" />
+            <p class="font-s-h5 font-w-600 logo-color">مفيد</p>
+          </a>
+        </div>
+        <!-- end logo -->
+        <div
+          class="width-90 flex bordered-right justify-space-between items-center p-r-2rem p-l-2rem"
+        >
+          <!-- start page title -->
+          <div class="PAGE_TITLE flex items-center justify-start gap-0-25rem">
+            <i class="bi bi-file-person-fill line-h-1 font-s-h5"></i>
+            <h1 class="font-w-400 font-s-h6">نموذج طلب إضافة مستفيد بنكي</h1>
+          </div>
+          <!-- end page title -->
+          <!-- start description -->
+          <p class="font-s-base">إعمل بذكاء وانجز مهامك بسهولة.</p>
+          <!-- end description -->
+        </div>
+      </header>
+      <!-- END APP_HEADER -->
+
+      <!-- START BANK_BENEFICIARY_ADD_REQUEST SECTION -->
+      <section class="new_acc_section p-t-1rem p-b-1rem">
+        <!-- START </1.new_acc_form> -->
+        <form action="" id="new_acc_form">
+          <div class="container flex f-column gap-1rem">
+            <!-- START SUBMIT BUTTONS -->
+            <div class="flex justify-space-between items-center gap-0-5rem">
+              <div class="flex justify-start items-center gap-0-5rem">
+                <button
+                  class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center gap-0-5rem back-shade-300"
+                  type="button"
+                  title="خروج"
+                  id="EXIT_TO_MAIN_PAGE_BTN"
+                >
+                  <a href="../" class="flex justify-center items-center">
+                    <i
+                      class="bi bi-arrow-right line-h-1 font-s-h4 font-red"
+                    ></i>
+                  </a>
+                </button>
+                <button
+                  class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center gap-0-5rem back-shade-300"
+                  type="button"
+                  title="إعداد النموذج"
+                  id="REQUEST_GENERATE_BTN"
+                >
+                  <i
+                    class="bi bi-file-earmark-check-fill line-h-1 font-s-h4 font-prim"
+                  ></i>
+                  <span class="line-h-1 font-w-400 font-s-base font-prim">
+                    إعداد النموذج
+                  </span>
+                </button>
+                <button
+                  class="bordered p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem radius-base flex items-center justify-center gap-0-5rem back-shade-300"
+                  type="reset"
+                  title="إعادة تهيئة النموذج"
+                  id="RESET_FORM_BTN"
+                >
+                  <i class="bi bi-gear-fill line-h-1 font-s-h4 font-prim"></i>
+                  <span class="line-h-1 font-w-400 font-s-base font-prim">
+                    تهيئة النموذج
+                  </span>
+                </button>
+              </div>
+              <div>
+                <!-- tell the user to use tap key to move across the inputs: -->
+                <p class="font-s-base font-w-500 font-grey">
+                  استخدم <kbd>Tab</kbd> للتنقل بين الحقول
+                </p>
+              </div>
+            </div>
+            <!-- END SUBMIT BUTTONS -->
+
+            <!-- new_acc_form-section -->
+            <section class="new_acc_form-section">
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START REQUEST_DATE DIV -->
+                <div
+                  class="col-4 text-left flex items-center justify-start gap-1rem"
+                >
+                  <label class="new_acc_form-label" for="REQUEST_DATE">
+                    تاريخ :
+                  </label>
+                  <input
+                    class="new_acc_form-input width-40 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-center"
+                    title="يتم تسجيل تاريخ اليوم في حالة ترك الحقل فارغ"
+                    type="number"
+                    name="REQUEST_DATE"
+                    id="REQUEST_DATE"
+                    placeholder="التاريخ"
+                  />
+                  <p
+                    id="VIEW_REQUEST_DATE"
+                    class="font-grey p-0-5rem radius-base back-shade-100 width-30 text-center"
+                  ></p>
+                </div>
+                <!-- END REQUEST_DATE DIV -->
+
+                <!-- START REQUESTER_NAME DIV -->
+                <div
+                  class="col-4 text-left flex items-center justify-start gap-1rem"
+                >
+                  <label
+                    class="new_acc_form-label width-30"
+                    for="REQUESTER_NAME"
+                  >
+                    إسم مقدم الطلب:
+                  </label>
+                  <input
+                    class="new_acc_form-input width-70 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                    type="text"
+                    name="REQUESTER_NAME"
+                    id="REQUESTER_NAME"
+                    required
+                    placeholder="إسم مقدم الطلب"
+                  />
+                </div>
+                <!-- END REQUESTER_NAME DIV -->
+              </div>
+
+              <div class="_______sperator_______"></div>
+
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START REQUESTER_STATMENT -->
+                <div
+                  class="col-12 text-left flex items-center justify-start gap-1rem"
+                >
+                  <label class="new_acc_form-label" for="REQUESTER_STATMENT">
+                    البيان:
+                  </label>
+                  <input
+                    dir="auto"
+                    class="new_acc_form-input width-100 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-right"
+                    title="سبب إضافة المستفيد"
+                    type="text"
+                    name="REQUESTER_STATMENT"
+                    id="REQUESTER_STATMENT"
+                    required
+                    placeholder="أدخل البيان"
+                  />
+                </div>
+
+                <!-- END REQUESTER_STATMENT -->
+              </div>
+            </section>
+            <!-- ========================================= -->
+            <br />
+            <!-- START BENEFICIARY DATA SECTION  -->
+            <section class="new_acc_form-section">
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START BENEFICIARY_NAME DIV -->
+                <div class="col-6 flex items-center justify-start gap-0-5rem">
+                  <label class="new_acc_form-label" for="BENEFICIARY_NAME">
+                    الإسم:
+                  </label>
+                  <input
+                    dir="auto"
+                    class="new_acc_form-input width-90 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-right"
+                    type="text"
+                    name="BENEFICIARY_NAME"
+                    id="BENEFICIARY_NAME"
+                    title="أدخل الإسم باللغة العربية أو الإنجليزية"
+                    required
+                    placeholder="أدخل إسم المستفيد"
+                  />
+                </div>
+                <!-- END BENEFICIARY_NAME DIV -->
+                <!-- START BENEFICIARY_ADDRESS DIV -->
+                <div class="col-3 flex items-center justify-start gap-0-5rem">
+                  <label class="new_acc_form-label" for="BENEFICIARY_ADDRESS">
+                    العنوان:
+                  </label>
+                  <input
+                    dir="auto"
+                    class="new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-right"
+                    type="text"
+                    name="BENEFICIARY_ADDRESS"
+                    id="BENEFICIARY_ADDRESS"
+                    placeholder="أدخل عنوان المستفيد"
+                  />
+                </div>
+                <!-- END BENEFICIARY_ADDRESS DIV -->
+                <!-- START BENEFICIARY_CURRENCY DIV -->
+                <div class="col-3 flex items-center justify-start gap-0-5rem">
+                  <label class="new_acc_form-label" for="BENEFICIARY_CURRENCY">
+                    العملة:
+                  </label>
+                  <select
+                    class="new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                    name="BENEFICIARY_CURRENCY"
+                    id="BENEFICIARY_CURRENCY"
+                  >
+                    <option value="">إختر العملة</option>
+                    <option selected>ريال سعودي</option>
+                    <option>دولار أمريكي</option>
+                    <option>يورو</option>
+                    <option>درهم إماراتي</option>
+                    <option>ريال قطري</option>
+                    <option>دينار بحريني</option>
+                    <option>دينار أردني</option>
+                    <option>دينار كويتي</option>
+                    <option>جنيه مصري</option>
+                    <option>دينار ليبي</option>
+                    <option>ريال عماني</option>
+                    <option>دينار تونسي</option>
+                    <option>ريال سعودي</option>
+                    <option>دينار بحريني</option>
+                  </select>
+                </div>
+                <!-- END BENEFICIARY_CURRENCY DIV -->
+              </div>
+
+              <div class="_______sperator_______"></div>
+
+              <div
+                class="row items-center justify-start p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START BENEFICIARY_BANK_TYPE DIV -->
+                <div class="col-4 flex items-center justify-start gap-0-5rem">
+                  <div class="prim_toggle_radio width-100 p-l-2rem">
+                    <input
+                      checked
+                      class="hide prim_toggle_radio-true"
+                      type="radio"
+                      name="BENEFICIARY_BANK_TYPE"
+                      id="BENEFICIARY_BANK_TYPE_LOCAL"
+                      value="BENEFICIARY_BANK_TYPE_LOCAL"
+                    />
+                    <input
+                      class="hide prim_toggle_radio-false"
+                      type="radio"
+                      name="BENEFICIARY_BANK_TYPE"
+                      id="BENEFICIARY_BANK_TYPE_FOREIGN"
+                      value="BENEFICIARY_BANK_TYPE_FOREIGN"
+                    />
+                    <div class="prim_switch bordered">
+                      <label
+                        class="check-label-true"
+                        for="BENEFICIARY_BANK_TYPE_LOCAL"
+                      >
+                        بنك محلي
+                      </label>
+                      <i class="bi bi-globe2"></i>
+                      <i class="bi bi-geo-fill"></i>
+                      <label
+                        class="check-label-false"
+                        for="BENEFICIARY_BANK_TYPE_FOREIGN"
+                      >
+                        بنك دولي
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- END BENEFICIARY_BANK_TYPE DIV -->
+
+                <!-- START BENEFICIARY_BANK_NAME DIV -->
+                <div class="col-4 flex items-center justify-start gap-0-5rem">
+                  <label class="new_acc_form-label" for="BENEFICIARY_BANK_NAME">
+                    إسم البنك:
+                  </label>
+                  <select
+                    class="new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                    id="BENEFICIARY_BANK_NAME-LOCAL"
+                  >
+                    <option selected value="">إختر البنك</option>
+                    <option value="البنك الأهلي">01 - البنك الأهلي</option>
+                    <option value="مصرف الراجحي">02 - مصرف الراجحي</option>
+                    <option value="مجموعة سامبا المالية">
+                      03 - مجموعة سامبا المالية
+                    </option>
+                    <option value="بنك الرياض">04 - بنك الرياض</option>
+                    <option value="البنك السعودي الفرنسي">
+                      05 - البنك السعودي الفرنسي
+                    </option>
+                    <option value="البنك العربي">06 - البنك العربي</option>
+                    <option value="البنك السعودي البريطاني (ساب SABB)">
+                      07 - البنك السعودي البريطاني (ساب SABB)
+                    </option>
+                    <option value="مصرف الإنماء">08 - مصرف الإنماء</option>
+                    <option value="البنك السعودي للاستثمار">
+                      09 - البنك السعودي للاستثمار
+                    </option>
+                    <option value="البنك الأول">10 - البنك الأول</option>
+                    <option value="بنك البلاد">11 - بنك البلاد</option>
+                    <option value="بنك الجزيرة">12 - بنك الجزيرة</option>
+                    <option value="بنك الخليج الدولي">
+                      13 - بنك الخليج الدولي
+                    </option>
+                  </select>
+                  <input
+                    class="hide new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem"
+                    type="text"
+                    id="BENEFICIARY_BANK_NAME-FOREIGN"
+                    placeholder="أدخل اسم البنك"
+                  />
+                </div>
+                <!-- END BENEFICIARY_BANK_NAME DIV -->
+              </div>
+
+              <div class="_______sperator_______"></div>
+              <div
+                class="row items-center justify-center p-r-1-5rem p-l-1-5rem p-t-1rem p-b-1rem"
+              >
+                <!-- START BENEFICIARY_ACCOUNT_IBAN DIV -->
+                <div class="col-6 flex items-center justify-start gap-0-5rem">
+                  <label
+                    class="new_acc_form-label"
+                    for="BENEFICIARY_ACCOUNT_IBAN"
+                  >
+                    رقم الآيبان:
+                  </label>
+                  <input
+                    dir="ltr"
+                    class="new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-left"
+                    type="text"
+                    maxlength="31"
+                    id="BENEFICIARY_ACCOUNT_IBAN"
+                    placeholder="Type IBAN"
+                  />
+                </div>
+                <!-- END BENEFICIARY_ACCOUNT_IBAN DIV -->
+
+                <!-- START BENEFICIARY_ACCOUNT_NO DIV -->
+                <div class="col-6 flex items-center justify-start gap-0-5rem">
+                  <label
+                    class="new_acc_form-label"
+                    for="BENEFICIARY_ACCOUNT_NO"
+                  >
+                    رقم الحساب:
+                  </label>
+                  <input
+                    dir="ltr"
+                    class="new_acc_form-input width-80 p-t-0-25rem p-b-0-25rem p-l-0-5rem p-r-0-5rem text-left"
+                    type="text"
+                    maxlength="31"
+                    id="BENEFICIARY_ACCOUNT_NO"
+                    placeholder="Type Account Number"
+                  />
+                </div>
+                <!-- END BENEFICIARY_ACCOUNT_NO DIV -->
+              </div>
+            </section>
+            <!-- END BENEFICIARY DATA SECTION ============ -->
+          </div>
+        </form>
+      </section>
+      <!-- END BANK_BENEFICIARY_ADD_REQUEST SECTION -->
+      <br />
+      <div class="container">
+        <div class="row justify-center items-center gap-1rem">
+          <a
+            href="https://www.iban.ma/structure"
+            target="_blank"
+            class="btn-reset radius-base underline font-prim"
+            title="IBAN Examples, Structure and Length"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            IBAN Examples, Structure and Length
+          </a>
+          -
+          <a
+            href="https://www.alahli.com/ar-sa/useful-tools/Pages/IBAN-Converter.aspx"
+            target="_blank"
+            class="btn-reset radius-base underline font-prim"
+            title="تحويل رقم الآيبان - البنك الاهلي"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            تحويل رقم الآيبان - البنك الاهلي
+          </a>
+          -
+          <a
+            href="https://www.riyadbank.com/ar/info-tools/iban-generator"
+            target="_blank"
+            class="btn-reset radius-base underline font-prim"
+            title="الحصول على رقم الآيبان - بنك الرياض"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            الحصول على رقم الآيبان - بنك الرياض
+          </a>
+          -
+          <a
+            href="https://www.iban.ma/calculate-iban"
+            target="_blank"
+            class="btn-reset radius-base underline font-prim"
+            title="حاسبة رفم الآيبان العالمية"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            حاسبة رفم الآيبان العالمية
+          </a>
+          -
+          <a
+            href="https://www.qnb.com/sites/qnb/qnbqatar/page/ar/aribanconverter.html"
+            target="_blank"
+            class="btn-reset radius-base underline font-prim"
+            title="محول رقم الآيبان - QNB"
+          >
+            <i class="bi bi-box-arrow-up-right"></i>
+            محول رقم الآيبان - QNB Bank
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- START LOADING WINDOW -->
+    <div
+      id="LOADING_WIN_LAYOUT"
+      class="hide"
+      title="جاري معالجة البيانات المدخلة"
+    ></div>
+    <div id="LOADING_WIN" class="hide">
+      <div
+        class="loading_window flex f-column items-center justify-center"
+        title="جاري معالجة البيانات المدخلة"
+      >
+        <img
+          src="../media/mufeed-loading-img.gif"
+          alt="loading-screen-mufeed"
+        />
+      </div>
+    </div>
+    <!-- END LOADING WINDOW -->
+    <!-- START ALERT BOX -->
+    <div id="ALERT_BOX" class="hide">
+      <div class="flex items-center justify-center">
+        <p id="ALERT_BOX_TEXT"></p>
+      </div>
+    </div>
+    <!-- END ALERT BOX -->
+  </body>
+</html>

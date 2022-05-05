@@ -28,3 +28,7 @@
 .back-shade-900 {
   background-color: var(--sec-color-900);
 }
+
+.back-shade-prim {
+  background-color: var(--prim-color);
+}

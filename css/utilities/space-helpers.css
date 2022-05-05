@@ -48,6 +48,10 @@ Utilities: space helpers
   width: 20%;
 }
 
+.width-15 {
+  width: 15%;
+}
+
 .width-10rem {
   width: 11rem;
 }
@@ -65,130 +69,130 @@ Utilities: space helpers
   padding: var(--padding-0) !important;
 }
 .p-0-25rem {
-  padding: var(--padding-0-25rem);
+  padding: var(--padding-0-25rem) !important;
 }
 .p-0-5rem {
-  padding: var(--padding-0-5rem);
+  padding: var(--padding-0-5rem) !important;
 }
 .p-1rem {
-  padding: var(--padding-1rem);
+  padding: var(--padding-1rem) !important;
 }
 .p-1-5rem {
-  padding: var(--padding-1-5rem);
+  padding: var(--padding-1-5rem) !important;
 }
 .p-2rem {
-  padding: var(--padding-2rem);
+  padding: var(--padding-2rem) !important;
 }
 .p-3rem {
-  padding: var(--padding-3rem);
+  padding: var(--padding-3rem) !important;
 }
 .p-4rem {
-  padding: var(--padding-4rem);
+  padding: var(--padding-4rem) !important;
 }
 .p-5rem {
-  padding: var(--padding-5rem);
+  padding: var(--padding-5rem) !important;
 }
 
 /* Vertical Spacers */
 .p-t-0-25rem {
-  padding-top: var(--padding-0-25rem);
+  padding-top: var(--padding-0-25rem) !important;
 }
 .p-t-0-5rem {
-  padding-top: var(--padding-0-5rem);
+  padding-top: var(--padding-0-5rem) !important;
 }
 .p-t-1rem {
-  padding-top: var(--padding-1rem);
+  padding-top: var(--padding-1rem) !important;
 }
 .p-t-1-5rem {
-  padding-top: var(--padding-1-5rem);
+  padding-top: var(--padding-1-5rem) !important;
 }
 .p-t-2rem {
-  padding-top: var(--padding-2rem);
+  padding-top: var(--padding-2rem) !important;
 }
 .p-t-3rem {
-  padding-top: var(--padding-3rem);
+  padding-top: var(--padding-3rem) !important;
 }
 .p-t-4rem {
-  padding-top: var(--padding-4rem);
+  padding-top: var(--padding-4rem) !important;
 }
 .p-t-5rem {
-  padding-top: var(--padding-5rem);
+  padding-top: var(--padding-5rem) !important;
 }
 
 .p-b-0-25rem {
-  padding-bottom: var(--padding-0-25rem);
+  padding-bottom: var(--padding-0-25rem) !important;
 }
 .p-b-0-5rem {
-  padding-bottom: var(--padding-0-5rem);
+  padding-bottom: var(--padding-0-5rem) !important;
 }
 .p-b-1rem {
-  padding-bottom: var(--padding-1rem);
+  padding-bottom: var(--padding-1rem) !important;
 }
 .p-b-1-5rem {
-  padding-bottom: var(--padding-1-5rem);
+  padding-bottom: var(--padding-1-5rem) !important;
 }
 .p-b-2rem {
-  padding-bottom: var(--padding-2rem);
+  padding-bottom: var(--padding-2rem) !important;
 }
 .p-b-3rem {
-  padding-bottom: var(--padding-3rem);
+  padding-bottom: var(--padding-3rem) !important;
 }
 .p-b-4rem {
-  padding-bottom: var(--padding-4rem);
+  padding-bottom: var(--padding-4rem) !important;
 }
 .p-b-5rem {
-  padding-bottom: var(--padding-5rem);
+  padding-bottom: var(--padding-5rem) !important;
 }
 
 /* Horizontal Spacers */
 .p-l-0-25rem {
-  padding-left: var(--padding-0-25rem);
+  padding-left: var(--padding-0-25rem) !important;
 }
 .p-l-0-5rem {
-  padding-left: var(--padding-0-5rem);
+  padding-left: var(--padding-0-5rem) !important;
 }
 .p-l-1rem {
-  padding-left: var(--padding-1rem);
+  padding-left: var(--padding-1rem) !important;
 }
 .p-l-1-5rem {
-  padding-left: var(--padding-1-5rem);
+  padding-left: var(--padding-1-5rem) !important;
 }
 .p-l-2rem {
-  padding-left: var(--padding-2rem);
+  padding-left: var(--padding-2rem) !important;
 }
 .p-l-3rem {
-  padding-left: var(--padding-3rem);
+  padding-left: var(--padding-3rem) !important;
 }
 .p-l-4rem {
-  padding-left: var(--padding-4rem);
+  padding-left: var(--padding-4rem) !important;
 }
 .p-l-5rem {
-  padding-left: var(--padding-5rem);
+  padding-left: var(--padding-5rem) !important;
 }
 
 .p-r-0-25rem {
-  padding-right: var(--padding-0-25rem);
+  padding-right: var(--padding-0-25rem) !important;
 }
 .p-r-0-5rem {
-  padding-right: var(--padding-0-5rem);
+  padding-right: var(--padding-0-5rem) !important;
 }
 .p-r-1rem {
-  padding-right: var(--padding-1rem);
+  padding-right: var(--padding-1rem) !important;
 }
 .p-r-1-5rem {
-  padding-right: var(--padding-1-5rem);
+  padding-right: var(--padding-1-5rem) !important;
 }
 .p-r-2rem {
-  padding-right: var(--padding-2rem);
+  padding-right: var(--padding-2rem) !important;
 }
 .p-r-3rem {
-  padding-right: var(--padding-3rem);
+  padding-right: var(--padding-3rem) !important;
 }
 .p-r-4rem {
-  padding-right: var(--padding-4rem);
+  padding-right: var(--padding-4rem) !important;
 }
 .p-r-5rem {
-  padding-right: var(--padding-5rem);
+  padding-right: var(--padding-5rem) !important;
 }
 
 /* ------------------------------------

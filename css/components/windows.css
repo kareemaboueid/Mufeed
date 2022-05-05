@@ -33,3 +33,26 @@
   left: 0;
   z-index: 1;
 }
+
+.modal_window {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.modal_window .modal_content {
+  height: 30rem;
+  overflow: auto;
+}
+
+.modal_window header,
+.modal_window header button {
+  color: #fff;
+}

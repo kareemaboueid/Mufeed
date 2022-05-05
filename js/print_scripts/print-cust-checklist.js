@@ -17,7 +17,7 @@ const falseMark = `<i class="bi bi-x"></i>`;
 $("#PRINT_INDEX_BTN").click(() => {
   // HTML: set the index result html:
   let INDEX_RESULT_HTML = `
-<section id=RESULT_CONTENT><div class=page_head><img alt="شركة السريع التجارية للأرضيات والمفروشات"src=../media/alsourayia-logo.png width=100px><div></div></div><h4 class=index-title>فهرس مستندات فتح حساب</h4><div><table class=tg><thead><tr><th class=table-header style=width:20%>رقم العميل<th class=table-header style=width:50%>إسم العميل<th class=table-header style=width:30%>قيمة الحد الإئتماني<tbody><tr><td class=table-data>${$(
+<section id=RESULT_CONTENT><div class=page_head><img alt="شركة السريع التجارية للأرضيات والمفروشات"src=../media/alsourayia-logo.png width=100px><div></div></div><h1 class="index-title">فهرس مستندات فتح حساب</h1><div><table class=tg><thead><tr><th class=table-header style=width:20%>رقم العميل<th class=table-header style=width:50%>إسم العميل<th class=table-header style=width:30%>قيمة الحد الإئتماني<tr><td class=table-data>${$(
     "#CUST_NO"
   ).val()}<td class=table-data>${
     $("#parenthesis1").hasClass("hide") && $("#parenthesis2").hasClass("hide")
@@ -30,7 +30,7 @@ $("#PRINT_INDEX_BTN").click(() => {
       : $("#VIEW_CUST_NAME").text().trim().replace(/\s+/g, " ")
   }<td class=table-data>${numberWithCommas($("#CUST_CREDIT_LIMIT").val())} ${$(
     "#CUST_CREDIT_LIMIT_CURRENCY"
-  ).val()}</table></div><br><br><div><table class=tg><thead><tr><th class=table-header style=width:10%>م<th class=table-header style=width:50%>المستنــــــــــــــد<th class=table-header style=width:40%>الحالــــــــــــــة<br>( موجود - غير موجود )<tbody><tr><td class=table-header>1<td class=table-data>ملف طلب تسهيلات<td class=table-data><div class=table-data-flex>${
+  ).val()}</table></div><br><br><div><table class=tg><thead><tr><th class=table-header style=width:10%>م<th class=table-header style=width:50%>المستنــــــــــــــد<th class=table-header style=width:40%>الحالــــــــــــــة<br>( موجود - غير موجود )<tr><td class=table-header>1<td class=table-data>ملف طلب تسهيلات<td class=table-data><div class=table-data-flex>${
     $Name("TASHEEL_APP_CHECK")[0].checked
       ? trueMark + $("#TASHEEL_APP_VERFIY").val()
       : falseMark
@@ -59,13 +59,25 @@ $("#PRINT_INDEX_BTN").click(() => {
     $Name("CUST_TRADE_LOG_CHECK")[1].checked == true
       ? "-"
       : $("#VIEW_TRADE_DATE_EXP").text()
-  }</table></div><br><br><div class=employees-signs><div class=sign-container><div class=sign-title>إعداد :</div><div class=sign-name>${$(
-    "#MAKE_EMPLOYEE_NAME"
-  ).val()}</div></div><div class=sign-container><div class=sign-title>مراجعة :</div><div class=sign-name>${$(
-    "#REVIEW_EMPLOYEE_NAME"
-  ).val()}</div></div><div class=sign-container><div class=sign-title>تسجيل في النظام الآلي :</div><div class=sign-name>${$(
-    "#REGIST_EMPLOYEE_NAME"
-  ).val()}</div></div></div><br><br><br><br><div class=make-date><div class=make-date-container><div class=make-date-title>تاريخ الإعداد :</div><div class=make-date-value>${$(
+  }</table></div><br><br><div class=employees-signs>${
+    $("#MAKE_EMPLOYEE_NAME").val() == ""
+      ? ""
+      : `<div class=sign-container><div class=sign-title>إعداد :</div><div class=sign-name>${$(
+          "#MAKE_EMPLOYEE_NAME"
+        ).val()}</div></div>`
+  }${
+    $("#REVIEW_EMPLOYEE_NAME").val() == ""
+      ? ""
+      : `<div class=sign-container><div class=sign-title>مراجعة :</div><div class=sign-name>${$(
+          "#REVIEW_EMPLOYEE_NAME"
+        ).val()}</div></div>`
+  }${
+    $("#REGIST_EMPLOYEE_NAME").val() == ""
+      ? ""
+      : `<div class=sign-container><div class=sign-title>تسجيل في النظام الآلي :</div><div class=sign-name>${$(
+          "#REGIST_EMPLOYEE_NAME"
+        ).val()}</div></div>`
+  }</div><br><br><br><br><div class=make-date><div class=make-date-container><div class=make-date-title>تاريخ الإعداد :</div><div class=make-date-value>${$(
     "#VIEW_MAKE_DATE"
   ).text()}</div></div><div class=make-date-container></div><div class=make-date-container></div></div></section>
   `;
@@ -74,10 +86,7 @@ $("#PRINT_INDEX_BTN").click(() => {
   if (
     $("#CUST_NAME").val().length < 1 ||
     $("#CUST_CREDIT_LIMIT").val().length < 1 ||
-    $("#CUST_NO").val().length < 1 ||
-    $("#MAKE_EMPLOYEE_NAME").val().length < 1 ||
-    $("#REVIEW_EMPLOYEE_NAME").val().length < 1 ||
-    $("#REGIST_EMPLOYEE_NAME").val().length < 1
+    $("#CUST_NO").val().length < 1
   ) {
     // PROGRESS 1: show fail message:
     showFailMessage("تأكد من إدخال البيانات بشكل صحيح!", 0);
@@ -98,5 +107,57 @@ $("#PRINT_INDEX_BTN").click(() => {
 
     // PROGRESS 4: hide success message (for startTime + 300):
     hideSuccessMessage(2150);
+  }
+});
+
+// FUNCTION: click RESET_FORM_BTN:
+$("#RESET_FORM_BTN").click(() => {
+  if (
+    $("#ADD_SUFFIX_PARENS_BTN").hasClass("hide") ||
+    $("#ADD_OLD_SUFFIX_PARENS_BTN").hasClass("hide")
+  ) {
+    $("#ADD_SUFFIX_PARENS_BTN").removeClass("hide");
+    $("#REMOVE_SUFFIX_PARENS_BTN").addClass("hide");
+    $("#ADD_OLD_SUFFIX_PARENS_BTN").removeClass("hide");
+    $("#REMOVE_OLD_SUFFIX_PARENS_BTN").addClass("hide");
+  }
+  if ($("#CUST_PROJECT_CHECK").is(":checked")) {
+    $("#CUST_PROJECT_CHECK").prop("checked", false);
+  }
+  if ($("#CUST_MARKET").prop("disabled", true)) {
+    $("#CUST_MARKET").prop("disabled", false);
+  }
+  if (
+    $Name("MOVE_CREDIT_CHECK")[0].checked == true ||
+    $Name("CHECK_CUST_SAVED")[0].checked == true
+  ) {
+    $Name("MOVE_CREDIT_CHECK")[0].checked = false;
+    $Name("MOVE_CREDIT_CHECK")[1].checked = true;
+    $Name("CHECK_CUST_SAVED")[0].checked = false;
+    $Name("CHECK_CUST_SAVED")[1].checked = true;
+  }
+
+  if (
+    !$("#MOVE_CREDIT_IN_NO_BOX").hasClass("hide") ||
+    !$("#MOVE_CREDIT_IN_NAME_BOX").hasClass("hide") ||
+    !$("#MOVE_CREDIT_IN_RES_BOX").hasClass("hide") ||
+    !$("#CUST_SAVED_NO").hasClass("hide") ||
+    !$("#CUST_SAVED_DATE").hasClass("hide") ||
+    !$("#VIEW_MAKE_DATE").hasClass("hide") ||
+    $("#TASHEEL_APP_VERFIY").hasClass("hide") ||
+    $("#WARRANT_SUPPORT_VERFIY").hasClass("hide") ||
+    $("#CUST_TRADE_LOG_VERFIY").hasClass("hide") ||
+    $("#VIEW_TRADE_DATE_EXP").hasClass("hide")
+  ) {
+    $("#MOVE_CREDIT_IN_NO_BOX").addClass("hide");
+    $("#MOVE_CREDIT_IN_NAME_BOX").addClass("hide");
+    $("#MOVE_CREDIT_IN_RES_BOX").addClass("hide");
+    $("#CUST_SAVED_NO").addClass("hide");
+    $("#CUST_SAVED_DATE").addClass("hide");
+    $("#VIEW_MAKE_DATE").addClass("hide");
+    $("#TASHEEL_APP_VERFIY").removeClass("hide");
+    $("#WARRANT_SUPPORT_VERFIY").removeClass("hide");
+    $("#CUST_TRADE_LOG_VERFIY").removeClass("hide");
+    $("#VIEW_TRADE_DATE_EXP").removeClass("hide");
   }
 });

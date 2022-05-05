@@ -36,6 +36,9 @@
     <!-- app stylesheet -->
     <link rel="stylesheet" href="./css/index.css" />
     <!-- test js -->
+    <!-- jquery -->
+    <script defer src="./js/vendors/jquery.min.js"></script>
+    <script defer src="./js/utilities/global-buttons.js"></script>
     <script defer src="./js/global-script.js"></script>
   </head>
 
@@ -71,6 +74,32 @@
       </header>
       <!-- END APP_HEADER -->
 
+      <!-- START MODAL WINDOW -->
+      <div id="LOADING_WIN_LAYOUT" class="hide"></div>
+      <div
+        id="MODAL_WINDOW"
+        class="modal_window width-90 back-shade-200 radius-base hide"
+      >
+        <header
+          class="flex justify-space-between items-center back-shade-prim p-r-0-5rem p-l-0-5rem"
+        >
+          <button
+            id="MODAL_CLOSE_BTN"
+            class="btn-reset font-s-h3"
+            title="إغلاق النافذة"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+          <h2 id="MODAL_TITLE" class="font-w-400 font-s-h6"></h2>
+          <div></div>
+        </header>
+        <div
+          id="MODAL_CONTENT"
+          class="modal_content back-shade-300 p-2rem"
+        ></div>
+      </div>
+      <!-- END MODAL WINDOW -->
+
       <!-- START SERVICES SECTION -->
       <section class="app_services m-t-2rem m-b-2rem">
         <div
@@ -93,108 +122,14 @@
             <!-- START MUFEED SERVICE -->
             <div class="col-4">
               <a
+                id="DOCS_AND_STATEMENTS"
                 class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة غلاف ملصق للملف"
+                href="#docs"
+                title="ذهاب الى صفحة نماذج ومستندات"
               >
-                <i class="bi bi-card-text line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">غلاف ملصق للملف</h2>
+                <i class="bi bi-file-earmark-text-fill line-h-1 font-s-h3"></i>
+                <h2 class="mufeed_service-title">نماذج ومستندات</h2>
               </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل التعميد بفتح الحساب"
-              >
-                <i class="bi bi-envelope-check-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">إيميل التعميد بفتح الحساب</h2>
-              </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-          </div>
-          <div class="row">
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل تأكيد بفتح حساب"
-              >
-                <i class="bi bi-envelope-paper-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">إيميل تأكيد بفتح حساب</h2>
-              </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل تعميد بنقل رصيد"
-              >
-                <i class="bi bi-envelope-check-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">إيميل تعميد بنقل رصيد</h2>
-              </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل تأكيد بنقل رصيد"
-              >
-                <i class="bi bi-envelope-paper-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">إيميل تأكيد بنقل رصيد</h2>
-              </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-          </div>
-          <div class="row">
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل تأكيد فتح حساب مشاريع"
-              >
-                <i class="bi bi-envelope-paper-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">
-                  إيميل تأكيد فتح حساب مشاريع
-                </h2>
-              </a>
-            </div>
-            <!-- END MUFEED SERVICE -->
-
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <!-- <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة غلاف ملصق للملف"
-              >
-                <i class="bi bi-card-text line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">غلاف ملصق للملف</h2>
-              </a> -->
-            </div>
-            <!-- END MUFEED SERVICE -->
-
-            <!-- START MUFEED SERVICE -->
-            <div class="col-4">
-              <!-- <a
-                class="mufeed_service-link card"
-                href="#"
-                title="ذهاب الى صفحة إيميل التعميد بفتح الحساب"
-              >
-                <i class="bi bi-envelope-check-fill line-h-1 font-s-h3"></i>
-                <h2 class="mufeed_service-title">إيميل التعميد بفتح الحساب</h2>
-              </a> -->
             </div>
             <!-- END MUFEED SERVICE -->
           </div>

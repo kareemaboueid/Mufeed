@@ -1,5 +1,7 @@
 /* new_acc_switch */
-.new_acc_switch {
+
+.new_acc_switch,
+.prim_switch {
   background: rgb(177, 177, 177);
   transition: all 0.2s ease;
   border-radius: var(--border-radius-base);
@@ -17,13 +19,15 @@
   -o-transition: all 0.2s ease;
 }
 
-.new_acc_switch i {
+.new_acc_switch i,
+.prim_switch i {
   color: #fff;
   font-size: var(--font-size-h6);
   font-weight: 800;
 }
 
-.new_acc_switch label {
+.new_acc_switch label,
+.prim_switch label {
   font-size: 1rem;
   padding: 0.65rem 0.1rem;
   cursor: pointer;
@@ -38,6 +42,11 @@
   -o-transition: all 0.2s ease;
 }
 
+.prim_toggle_radio-false:checked ~ .prim_switch,
+.prim_toggle_radio-true:checked ~ .prim_switch {
+  background: var(--prim-color);
+}
+
 .new_acc_toggle_radio-false:checked ~ .new_acc_switch {
   background: #eb4f37;
 }
@@ -45,6 +54,21 @@
 .new_acc_toggle_radio-true:checked ~ .new_acc_switch {
   background: #00bc9c;
 }
+
+/*  */
+.prim_switch i.bi-globe2 {
+  display: none;
+}
+
+.prim_toggle_radio-false:checked ~ .prim_switch i.bi-geo-fill {
+  display: none;
+}
+
+.prim_toggle_radio-false:checked ~ .prim_switch i.bi-globe2 {
+  display: block;
+}
+
+/* ----- */
 
 .new_acc_switch i.bi-x-square {
   display: none;
@@ -58,10 +82,12 @@
   display: block;
 }
 
-.new_acc_toggle_radio-true:checked ~ .new_acc_switch label.check-label-true {
+.new_acc_toggle_radio-true:checked ~ .new_acc_switch label.check-label-true,
+.prim_toggle_radio-true:checked ~ .prim_switch label.check-label-true {
   color: #fff;
 }
 
-.new_acc_toggle_radio-false:checked ~ .new_acc_switch label.check-label-false {
+.new_acc_toggle_radio-false:checked ~ .new_acc_switch label.check-label-false,
+.prim_toggle_radio-false:checked ~ .prim_switch label.check-label-false {
   color: #fff;
 }

@@ -16,36 +16,36 @@ Utilities: typography
 
 /* font weight */
 .font-w-100 {
-  font-weight: var(--font-weight-100);
+  font-weight: var(--font-weight-100) !important;
 }
 .font-w-200 {
-  font-weight: var(--font-weight-200);
+  font-weight: var(--font-weight-200) !important;
 }
 .font-w-300 {
-  font-weight: var(--font-weight-300);
+  font-weight: var(--font-weight-300) !important;
 }
 .font-w-400 {
-  font-weight: var(--font-weight-400);
+  font-weight: var(--font-weight-400) !important;
 }
 .font-w-500 {
-  font-weight: var(--font-weight-500);
+  font-weight: var(--font-weight-500) !important;
 }
 .font-w-600 {
-  font-weight: var(--font-weight-600);
+  font-weight: var(--font-weight-600) !important;
 }
 .font-w-700 {
-  font-weight: var(--font-weight-700);
+  font-weight: var(--font-weight-700) !important;
 }
 .font-w-800 {
-  font-weight: var(--font-weight-800);
+  font-weight: var(--font-weight-800) !important;
 }
 .font-w-900 {
-  font-weight: var(--font-weight-900);
+  font-weight: var(--font-weight-900) !important;
 }
 
 /* font size */
 .font-s-base {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-base) !important;
 }
 
 .font-s-h1 {
@@ -70,6 +70,10 @@ Utilities: typography
 
 .font-s-h6 {
   font-size: var(--font-size-h6) !important ;
+}
+
+.font-s-h7 {
+  font-size: var(--font-size-h7) !important ;
 }
 
 /* text transform */

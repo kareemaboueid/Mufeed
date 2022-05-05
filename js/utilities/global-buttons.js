@@ -5,6 +5,33 @@
 // FUNCTION: get elements by name:
 const $Name = name => document.getElementsByName(name);
 
+// FUNCTION: open modal window:
+const openModalWindow = (modalTitle, modalContent) => {
+  // open modal window by removing hide class:
+  $("#LOADING_WIN_LAYOUT").removeClass("hide");
+  $("#MODAL_WINDOW").removeClass("hide");
+  // set modal window title:
+  $("#MODAL_TITLE").text(modalTitle);
+  // set modal window content:
+  $("#MODAL_CONTENT").html(modalContent);
+};
+
+// FUNCTION: close modal window:
+const closeModalWindow = () => {
+  // close modal window by adding hide class:
+  $("#LOADING_WIN_LAYOUT").addClass("hide");
+  $("#MODAL_WINDOW").addClass("hide");
+  // clear modal window title:
+  $("#MODAL_TITLE").text("");
+  // clear modal window content:
+  $("#MODAL_CONTENT").html("");
+};
+
+// FUNCTION: close modal window:
+$("#MODAL_CLOSE_BTN").click(() => {
+  closeModalWindow();
+});
+
 // FUNCTION: show loading window:
 const showLoadingWindow = time => {
   $("#LOADING_WIN").removeClass("hide");

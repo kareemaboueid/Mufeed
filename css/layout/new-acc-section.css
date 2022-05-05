@@ -11,6 +11,7 @@
 
 .new_acc_form-label {
   font-weight: var(--font-weight-700);
+  display: block;
 }
 
 .new_acc_form-input {
@@ -21,7 +22,7 @@
   font-weight: var(--font-weight-600);
   border: var(--border-500);
   outline: none;
-  width: 100%;
+  display: block;
   border-radius: var(--border-radius-base);
   -webkit-border-radius: var(--border-radius-base);
   -moz-border-radius: var(--border-radius-base);
