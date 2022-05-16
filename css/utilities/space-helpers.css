@@ -4,6 +4,14 @@ Utilities: space helpers
 ==============================================
 */
 
+/*  vertical separator line: */
+.space-v {
+  margin: 0 0.2rem;
+  height: 25px;
+  background-color: var(--sec-color-500);
+  width: 1px;
+}
+
 /* ------------------------------------
 * Letter Spacing
 ------------------------------------ */

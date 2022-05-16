@@ -161,3 +161,155 @@ $("#RESET_FORM_BTN").click(() => {
     $("#VIEW_TRADE_DATE_EXP").removeClass("hide");
   }
 });
+
+// FUNCTION: click PRINT_EMPTY_PAGE_BTN:
+$("#PRINT_EMPTY_PAGE_BTN").click(() => {
+  // HTML: set the index result html:
+  let INDEX_RESULT_HTML = `
+<section id="RESULT_CONTENT">
+        <div class="page_head">
+          <img
+            alt="شركة السريع التجارية للأرضيات والمفروشات"
+            src="../media/alsourayia-logo.png"
+            width="100px"
+          />
+          <div></div>
+        </div>
+        <h4 class="index-title">فهرس مستندات فتح حساب</h4>
+        <div>
+          <table class="tg">
+            <thead>
+              <tr>
+                <th class="table-header" style="width: 20%">رقم العميل</th>
+                <th class="table-header" style="width: 50%">إسم العميل</th>
+                <th class="table-header" style="width: 30%">
+                  قيمة الحد الإئتماني
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-data p-1-5rem"></td>
+                <td class="table-data p-1-5rem"></td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br /><br />
+        <div>
+          <table class="tg">
+            <thead>
+              <tr>
+                <th class="table-header" style="width: 10%">م</th>
+                <th class="table-header" style="width: 50%">
+                  المستنــــــــــــــد
+                </th>
+                <th class="table-header" style="width: 40%">
+                  الحالــــــــــــــة<br />( موجود - غير موجود )
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-header">1</td>
+                <td class="table-data">ملف طلب تسهيلات</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">2</td>
+                <td class="table-data">أصل سند لأمر</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">3</td>
+                <td class="table-data">السجل التجاري</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">4</td>
+                <td class="table-data">
+                  شهادة التسجيل في ضريبة القيمة المضافة
+                </td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">5</td>
+                <td class="table-data">هوية سعودي</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">6</td>
+                <td class="table-data">هوية أجنبي</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">7</td>
+                <td class="table-data">إقرار نقل رصيد</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">8</td>
+                <td class="table-data">إثبات وكالة</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">9</td>
+                <td class="table-data">رخصة نشاط تجاري</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">10</td>
+                <td class="table-data">عنوان وطني</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+              <tr>
+                <td class="table-header">11</td>
+                <td class="table-data">تاريخ إنتهاء السجل التجاري</td>
+                <td class="table-data p-1-5rem"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <br /><br />
+        <div class="employees-signs">
+          <div class="sign-container">
+            <div class="sign-title">إعداد :</div>
+            <div class="sign-name"></div>
+          </div>
+          <div class="sign-container">
+            <div class="sign-title">مراجعة :</div>
+            <div class="sign-name"></div>
+          </div>
+          <div class="sign-container">
+            <div class="sign-title">تسجيل في النظام الآلي :</div>
+            <div class="sign-name"></div>
+          </div>
+        </div>
+        <br /><br /><br /><br />
+        <div class="make-date">
+          <div class="make-date-container">
+            <div class="make-date-title">تاريخ الإعداد :</div>
+            <div class="make-date-value"></div>
+          </div>
+          <div class="make-date-container"></div>
+          <div class="make-date-container"></div>
+        </div>
+      </section>
+  `;
+
+  // PROGRESS 2: close form page and show result html (for startTime + 100):
+  generateReport(INDEX_RESULT_HTML, 0);
+
+  setTimeout(() => {
+    window.print();
+  }, 50);
+
+  setTimeout(() => {
+    $("#INDEX_MAIN_PAGE").removeClass("hide");
+    $("#INDEX_RESULT_PAGE").addClass("hide");
+    $("#RESULT_ACTION_BUTTONS").addClass("hide");
+    $("#INDEX_RESULT_PAGE").html("");
+    $("body").css("background-color", "var(--sec-color-200)");
+  }, 55);
+});
