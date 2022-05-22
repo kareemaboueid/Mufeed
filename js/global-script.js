@@ -20,6 +20,18 @@ $("#DOCS_AND_STATEMENTS").click(() => {
             </h3>
           </a>
         </div>
+        <div class="col-4">
+          <a
+          class="mufeed_service-link card"
+          href="./pages/quittance-statment.html"
+          title="ذهاب الى صفحة بيان مخالصة مالية"
+          >
+            <i class="bi bi-cash-coin line-h-1 font-s-h4"></i>
+            <h3 class="mufeed_service-title font-s-h6">
+              بيان مخالصة مالية
+            </h3>
+          </a>
+        </div>
       </div>
     </div>
     `
